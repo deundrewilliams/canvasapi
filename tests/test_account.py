@@ -36,6 +36,7 @@ from canvasapi.user import User
 from tests import settings
 from tests.util import register_uris
 
+from tests import object_ids
 
 @requests_mock.Mocker()
 class TestAccount(unittest.TestCase):
@@ -46,9 +47,9 @@ class TestAccount(unittest.TestCase):
             requires = {"account": ["get_by_id", "get_role"], "user": ["get_by_id"]}
             register_uris(requires, m)
 
-            self.account = self.canvas.get_account(1)
-            self.user = self.canvas.get_user(1)
-            self.role = self.account.get_role(2)
+            self.account = self.canvas.get_account(object_ids.ACCOUNT_ID)
+            self.user = self.canvas.get_user(object_ids.USER_ID)
+            self.role = self.account.get_role(object_ids.ROLE_ID)
 
     # __str__()
     def test__str__(self, m):
@@ -59,7 +60,7 @@ class TestAccount(unittest.TestCase):
     def test_get_global_notification(self, m):
         register_uris({"account": ["get_notification"]}, m)
 
-        notif_id = 1
+        notif_id = object_ids.ACCOUNT_NOTIFICATION_ID
         notification = self.account.get_global_notification(notif_id)
 
         self.assertIsInstance(notification, AccountNotification)
@@ -186,7 +187,7 @@ class TestAccount(unittest.TestCase):
         required = {"external_tool": ["get_by_id_account"]}
         register_uris(required, m)
 
-        tool_by_id = self.account.get_external_tool(1)
+        tool_by_id = self.account.get_external_tool(object_ids.EXTERNAL_TOOL_ID)
         self.assertIsInstance(tool_by_id, ExternalTool)
         self.assertTrue(hasattr(tool_by_id, "name"))
 
@@ -396,7 +397,7 @@ class TestAccount(unittest.TestCase):
     def test_get_role(self, m):
         register_uris({"account": ["get_role"]}, m)
 
-        target_role_by_id = self.account.get_role(2)
+        target_role_by_id = self.account.get_role(object_ids.ROLE_ID)
         self.assertIsInstance(target_role_by_id, Role)
         self.assertTrue(hasattr(target_role_by_id, "role"))
         self.assertTrue(hasattr(target_role_by_id, "label"))
@@ -409,7 +410,7 @@ class TestAccount(unittest.TestCase):
     def test_create_role(self, m):
         register_uris({"account": ["create_role"]}, m)
 
-        new_role = self.account.create_role(1)
+        new_role = self.account.create_role(object_ids.ROLE_ID)
         self.assertIsInstance(new_role, Role)
         self.assertTrue(hasattr(new_role, "role"))
         self.assertTrue(hasattr(new_role, "label"))
@@ -417,7 +418,7 @@ class TestAccount(unittest.TestCase):
     def test_deactivate_role(self, m):
         register_uris({"account": ["deactivate_role"]}, m)
 
-        old_role_by_id = self.account.deactivate_role(2)
+        old_role_by_id = self.account.deactivate_role(object_ids.ROLE_ID)
         self.assertIsInstance(old_role_by_id, Role)
         self.assertTrue(hasattr(old_role_by_id, "role"))
         self.assertTrue(hasattr(old_role_by_id, "label"))
@@ -430,7 +431,7 @@ class TestAccount(unittest.TestCase):
     def test_activate_role(self, m):
         register_uris({"account": ["activate_role"]}, m)
 
-        activated_role_by_id = self.account.activate_role(2)
+        activated_role_by_id = self.account.activate_role(object_ids.ROLE_ID)
         self.assertIsInstance(activated_role_by_id, Role)
         self.assertTrue(hasattr(activated_role_by_id, "role"))
         self.assertTrue(hasattr(activated_role_by_id, "label"))
@@ -443,7 +444,7 @@ class TestAccount(unittest.TestCase):
     def test_update_role(self, m):
         register_uris({"account": ["update_role"]}, m)
 
-        updated_role_by_id = self.account.update_role(2)
+        updated_role_by_id = self.account.update_role(object_ids.ROLE_ID)
         self.assertIsInstance(updated_role_by_id, Role)
         self.assertTrue(hasattr(updated_role_by_id, "role"))
         self.assertTrue(hasattr(updated_role_by_id, "label"))
@@ -457,7 +458,7 @@ class TestAccount(unittest.TestCase):
     def test_get_enrollment(self, m):
         register_uris({"enrollment": ["get_by_id"]}, m)
 
-        enrollment_by_id = self.account.get_enrollment(1)
+        enrollment_by_id = self.account.get_enrollment(object_ids.ENROLLMENT_ID)
         self.assertIsInstance(enrollment_by_id, Enrollment)
 
         enrollment_by_obj = self.account.get_enrollment(enrollment_by_id)
@@ -520,7 +521,7 @@ class TestAccount(unittest.TestCase):
     def test_get_enrollment_term(self, m):
         register_uris({"account": ["get_enrollment_term"]}, m)
 
-        enrollment_term = self.account.get_enrollment_term(1)
+        enrollment_term = self.account.get_enrollment_term(object_ids.ENROLLMENT_TERM_ID)
 
         self.assertIsInstance(enrollment_term, EnrollmentTerm)
 
@@ -611,7 +612,7 @@ class TestAccount(unittest.TestCase):
             {"account": ["get_department_level_grade_data_with_given_term"]}, m
         )
 
-        response = self.account.get_department_level_grade_data_with_given_term(1)
+        response = self.account.get_department_level_grade_data_with_given_term(object_ids.ENROLLMENT_TERM_ID)
 
         self.assertIsInstance(response, list)
 
@@ -637,7 +638,7 @@ class TestAccount(unittest.TestCase):
             {"account": ["get_department_level_statistics_with_given_term"]}, m
         )
 
-        response = self.account.get_department_level_statistics_with_given_term(1)
+        response = self.account.get_department_level_statistics_with_given_term(object_ids.ENROLLMENT_TERM_ID)
 
         self.assertIsInstance(response, list)
 
@@ -692,7 +693,7 @@ class TestAccount(unittest.TestCase):
     def test_get_authentication_provider(self, m):
         register_uris({"account": ["get_authentication_providers"]}, m)
 
-        authentication_provider_by_id = self.account.get_authentication_provider(1)
+        authentication_provider_by_id = self.account.get_authentication_provider(object_ids.AUTHENTICATION_PROVIDER_ID)
         self.assertIsInstance(authentication_provider_by_id, AuthenticationProvider)
 
         authentication_provider_by_obj = self.account.get_authentication_provider(
@@ -730,7 +731,7 @@ class TestAccount(unittest.TestCase):
     def test_get_outcome_group(self, m):
         register_uris({"outcome": ["account_get_outcome_group"]}, m)
 
-        outcome_group_by_id = self.account.get_outcome_group(1)
+        outcome_group_by_id = self.account.get_outcome_group(object_ids.OUTCOME_GROUP_ID)
         self.assertIsInstance(outcome_group_by_id, OutcomeGroup)
         self.assertEqual(outcome_group_by_id.id, 1)
         self.assertEqual(outcome_group_by_id.title, "Account outcome group title")
@@ -814,7 +815,7 @@ class TestAccount(unittest.TestCase):
     def test_get_single_grading_standard(self, m):
         register_uris({"account": ["get_single_grading_standard"]}, m)
 
-        response = self.account.get_single_grading_standard(1)
+        response = self.account.get_single_grading_standard(object_ids.GRADING_STANDARD_ID)
 
         self.assertIsInstance(response, GradingStandard)
         self.assertTrue(hasattr(response, "id"))
@@ -876,13 +877,13 @@ class TestAccount(unittest.TestCase):
         register_uris({"account": ["create_content_migration"]}, m)
 
         with self.assertRaises(TypeError):
-            self.account.create_content_migration(1)
+            self.account.create_content_migration(object_ids.CONTENT_MIGRATION_ID)
 
     # get_content_migration
     def test_get_content_migration(self, m):
         register_uris({"account": ["get_content_migration_single"]}, m)
 
-        content_migration = self.account.get_content_migration(1)
+        content_migration = self.account.get_content_migration(object_ids.CONTENT_MIGRATION_ID)
 
         self.assertIsInstance(content_migration, ContentMigration)
         self.assertTrue(hasattr(content_migration, "migration_type"))
@@ -1057,7 +1058,7 @@ class TestAccount(unittest.TestCase):
     # get_outcome_import_status()
     def test_get_outcome_import_status(self, m):
         register_uris({"account": ["get_outcome_import_status"]}, m)
-        outcome_import = self.account.get_outcome_import_status(1)
+        outcome_import = self.account.get_outcome_import_status(object_ids.OUTCOME_IMPORT_ID)
 
         self.assertIsInstance(outcome_import, OutcomeImport)
         self.assertEqual(outcome_import.id, 1)
@@ -1145,7 +1146,7 @@ class TestAccount(unittest.TestCase):
             self.canvas._Canvas__requester,
             {"title": "grading period 1", "id": 1, "course_id": 1},
         )
-        self.assertTrue(self.account.delete_grading_period(1))
+        self.assertTrue(self.account.delete_grading_period(object_ids.GRADING_PERIOD_ID))
         self.assertTrue(self.account.delete_grading_period(self.grading_period))
 
     # get_scopes()
@@ -1187,8 +1188,8 @@ class TestAccount(unittest.TestCase):
                 "message": "",
                 "start_at": "",
                 "end_at": "",
-                "id": 1,
-                "account_id": 1,
+                "id": 3,
+                "account_id": 2,
             },
         )
 
@@ -1197,8 +1198,8 @@ class TestAccount(unittest.TestCase):
             "message": "Message",
             "start_at": "2015-04-01T00:00:00Z",
             "end_at": "2018-04-01T00:00:00Z",
-            "id": 1,
-            "account_id": 1,
+            "id": 3,
+            "account_id": 2,
         }
 
         updated_notif = self.AccountNotification.update_global_notification(notif)

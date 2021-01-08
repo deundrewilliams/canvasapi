@@ -49,9 +49,9 @@
 	},
 	"get_by_id_account": {
 		"method": "GET",
-		"endpoint": "accounts/1/external_tools/1",
+		"endpoint": "accounts/2/external_tools/40",
 		"data": {
-			"id": 1,
+			"id": 40,
 			"name": "External Tool #1 (Account)",
 			"description": "This is an external tool for an account.",
 			"url": "http://www.example.com/ims/lti",
