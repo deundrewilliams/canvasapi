@@ -17,11 +17,11 @@ class Favorite(CanvasObject):
 
         :rtype: :class:`canvasapi.favorite.Favorite`
         """
-        if self.context_type.lower() == "course":
+        if self.context_type == "course":
             id = self.context_id
             uri_str = "users/self/favorites/courses/{}"
 
-        elif self.context_type.lower() == "group":
+        elif self.context_type == "group":
             id = self.context_id
             uri_str = "users/self/favorites/groups/{}"
 
