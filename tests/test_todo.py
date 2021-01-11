@@ -6,6 +6,8 @@ from canvasapi import Canvas
 from canvasapi.todo import Todo
 from tests import settings
 
+from tests import object_ids
+
 
 @requests_mock.Mocker()
 class TestTodo(unittest.TestCase):
@@ -22,7 +24,7 @@ class TestTodo(unittest.TestCase):
                 "html_url": ".. url ..",
                 "needs_grading_count": 3,
                 "context_type": "course",
-                "course_id": 1,
+                "course_id": object_ids.COURSE_ID,
                 "group_id": None,
             },
         )

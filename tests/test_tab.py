@@ -7,6 +7,7 @@ from canvasapi.tab import Tab
 from tests import settings
 from tests.util import register_uris
 
+from tests import object_ids
 
 @requests_mock.Mocker()
 class TestTab(unittest.TestCase):
@@ -22,12 +23,12 @@ class TestTab(unittest.TestCase):
                 m,
             )
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
 
             tabs = self.course.get_tabs()
             self.tab = tabs[1]
 
-            self.group = self.canvas.get_group(1)
+            self.group = self.canvas.get_group(object_ids.GROUP_ID)
             group_tabs = self.group.get_tabs()
             self.tab_group = group_tabs[1]
 
