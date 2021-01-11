@@ -20,6 +20,8 @@ from canvasapi.util import (
 from tests import settings
 from tests.util import cleanup_file, register_uris
 
+from tests import object_ids
+
 
 @requests_mock.Mocker()
 class TestUtil(unittest.TestCase):
@@ -378,16 +380,16 @@ class TestUtil(unittest.TestCase):
 
     # obj_or_id()
     def test_obj_or_id_int(self, m):
-        user_id = obj_or_id(1, "user_id", (User,))
+        user_id = obj_or_id(object_ids.USER_ID, "user_id", (User,))
 
         self.assertIsInstance(user_id, int)
-        self.assertEqual(user_id, 1)
+        self.assertEqual(user_id, object_ids.USER_ID)
 
     def test_obj_or_id_str_valid(self, m):
-        user_id = obj_or_id("1", "user_id", (User,))
+        user_id = obj_or_id("86", "user_id", (User,))
 
         self.assertIsInstance(user_id, int)
-        self.assertEqual(user_id, 1)
+        self.assertEqual(user_id, object_ids.USER_ID)
 
     def test_obj_or_id_str_invalid(self, m):
         with self.assertRaises(TypeError):
@@ -396,17 +398,17 @@ class TestUtil(unittest.TestCase):
     def test_obj_or_id_obj(self, m):
         register_uris({"user": ["get_by_id"]}, m)
 
-        user = self.canvas.get_user(1)
+        user = self.canvas.get_user(object_ids.USER_ID)
 
         user_id = obj_or_id(user, "user_id", (User,))
 
         self.assertIsInstance(user_id, int)
-        self.assertEqual(user_id, 1)
+        self.assertEqual(user_id, object_ids.USER_ID)
 
     def test_obj_or_id_obj_no_id(self, m):
         register_uris({"user": ["course_nickname"]}, m)
 
-        nick = self.canvas.get_course_nickname(1)
+        nick = self.canvas.get_course_nickname(object_ids.COURSE_NICKNAME_ID)
 
         with self.assertRaises(TypeError):
             obj_or_id(nick, "nickname_id", (CourseNickname,))
@@ -414,12 +416,12 @@ class TestUtil(unittest.TestCase):
     def test_obj_or_id_multiple_objs(self, m):
         register_uris({"user": ["get_by_id"]}, m)
 
-        user = self.canvas.get_user(1)
+        user = self.canvas.get_user(object_ids.USER_ID)
 
         user_id = obj_or_id(user, "user_id", (CourseNickname, User))
 
         self.assertIsInstance(user_id, int)
-        self.assertEqual(user_id, 1)
+        self.assertEqual(user_id, object_ids.USER_ID)
 
     def test_obj_or_id_user_self(self, m):
         user_id = obj_or_id("self", "user_id", (User,))
@@ -435,7 +437,7 @@ class TestUtil(unittest.TestCase):
     def test_obj_or_str_obj_attr(self, m):
         register_uris({"user": ["get_by_id"]}, m)
 
-        user = self.canvas.get_user(1)
+        user = self.canvas.get_user(object_ids.USER_ID)
 
         user_name = obj_or_str(user, "name", (User,))
 
@@ -445,7 +447,7 @@ class TestUtil(unittest.TestCase):
     def test_obj_or_str_obj_no_attr(self, m):
         register_uris({"user": ["get_by_id"]}, m)
 
-        user = self.canvas.get_user(1)
+        user = self.canvas.get_user(object_ids.USER_ID)
 
         with self.assertRaises(AttributeError):
             obj_or_str(user, "display_name", (User,))
@@ -453,7 +455,7 @@ class TestUtil(unittest.TestCase):
     def test_obj_or_str_mult_obj(self, m):
         register_uris({"user": ["get_by_id"]}, m)
 
-        user = self.canvas.get_user(1)
+        user = self.canvas.get_user(object_ids.USER_ID)
 
         user_name = obj_or_str(user, "name", (CourseNickname, User))
 
@@ -462,7 +464,7 @@ class TestUtil(unittest.TestCase):
     def test_obj_or_str_invalid_attr_parameter(self, m):
         register_uris({"user": ["get_by_id"]}, m)
 
-        user = self.canvas.get_user(1)
+        user = self.canvas.get_user(object_ids.USER_ID)
 
         with self.assertRaises(TypeError):
             obj_or_str(user, user, (User,))

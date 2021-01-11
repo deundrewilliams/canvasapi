@@ -18,7 +18,7 @@
 	},
 	"avatars": {
 		"method": "GET",
-		"endpoint": "users/1/avatars",
+		"endpoint": "users/86/avatars",
 		"data": [
 			{
 				"type": "gravatar",
@@ -32,13 +32,13 @@
 			}
 		],
 		"headers": {
-			"Link": "<https://example.com/api/v1/users/1/avatars?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/users/86/avatars?page=2&per_page=2>; rel=\"next\""
 		},
 		"status_code": 200
 	},
 	"avatars_p2": {
 		"method": "GET",
-		"endpoint": "users/1/avatars?page=2&per_page=2",
+		"endpoint": "users/86/avatars?page=2&per_page=2",
 		"data": [
 			{
 				"type": "gravatar",
@@ -55,7 +55,7 @@
 	},
 	"color": {
 		"method": "GET",
-		"endpoint": "users/1/colors/course_1",
+		"endpoint": "users/86/colors/course_1",
 		"data": {
 			"hexcode": "#abc123"
 		},
@@ -63,7 +63,7 @@
 	},
 	"color_update": {
 		"method": "PUT",
-		"endpoint": "users/1/colors/course_1",
+		"endpoint": "users/86/colors/course_1",
 		"data": {
 			"hexcode": "#f00f00"
 		},
@@ -71,7 +71,7 @@
 	},
 	"colors": {
 		"method": "GET",
-		"endpoint": "users/1/colors",
+		"endpoint": "users/86/colors",
 		"data": {
 			"custom_colors": {
 				"course_42": "#abc123",
@@ -82,9 +82,9 @@
 	},
 	"course_nickname": {
 		"method": "GET",
-		"endpoint": "users/self/course_nicknames/1",
+		"endpoint": "users/self/course_nicknames/30",
 		"data": {
-			"course_id": 1,
+			"course_id": 30,
 			"name": "One is the Loneliest Number",
 			"nickname": "ONE"
 		},
@@ -147,7 +147,7 @@
 	},
 	"courses": {
 		"method": "GET",
-		"endpoint": "users/1/courses",
+		"endpoint": "users/86/courses",
 		"data": [
 			{
 				"id": 101,
@@ -161,13 +161,13 @@
 			}
 		],
 		"headers": {
-			"Link": "<https://example.com/api/v1/users/1/courses?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/users/86/courses?page=2&per_page=2>; rel=\"next\""
 		},
 		"status_code": 200
 	},
 	"courses_p2": {
 		"method": "GET",
-		"endpoint": "users/1/courses?page=2&per_page=2",
+		"endpoint": "users/86/courses?page=2&per_page=2",
 		"data": [
 			{
 				"id": 103,
@@ -184,7 +184,7 @@
 	},
 	"create_folder": {
         "method": "POST",
-        "endpoint": "users/1/folders",
+        "endpoint": "users/86/folders",
         "data": {
             "id": 2,
             "name": "Test String",
@@ -195,7 +195,7 @@
     },
 	"edit": {
 		"method": "PUT",
-		"endpoint": "users/1",
+		"endpoint": "users/86",
 		"data": {
 			"id": 1,
 			"name": "New User Name"
@@ -236,9 +236,9 @@
 	},
 	"get_file": {
 		"method": "GET",
-		"endpoint": "users/1/files/1",
+		"endpoint": "users/86/files/44",
 		"data": {
-			"id": 1,
+			"id": 44,
 			"display_name": "User_File.docx",
 			"size": 1024
 		},
@@ -246,9 +246,9 @@
 	},
 	"get_folder": {
         "method": "GET",
-        "endpoint": "users/1/folders/1",
+        "endpoint": "users/86/folders/45",
         "data": {
-            "id": 1,
+            "id": 45,
             "files_count": 10,
             "folders_count": 2,
             "name": "Folder 1",
@@ -258,7 +258,7 @@
     },
 	"get_folder_2": {
         "method": "GET",
-        "endpoint": "users/1/folders/2",
+        "endpoint": "users/86/folders/2",
         "data": {
             "id": 2,
             "files_count": 10,
@@ -270,7 +270,7 @@
 	},
 	"observer_pairing_codes": {
 		"method": "POST",
-		"endpoint": "users/1/observer_pairing_codes",
+		"endpoint": "users/86/observer_pairing_codes",
 		"data": {
 			"user_id": 1,
 			"code": "abc123",
@@ -281,29 +281,29 @@
 	},
 	"get_user_assignments": {
 		"method": "GET",
-		"endpoint": "users/1/courses/1/assignments",
+		"endpoint": "users/86/courses/29/assignments",
 		"data": [
 			{
 				"id": 1,
-				"course_id": 1,
+				"course_id": 29,
 				"name": "Assignment 1",
 				"description": "Do this assignment"
 			},
 			{
 				"id": 2,
-				"course_id": 1,
+				"course_id": 29,
 				"name": "Assignment 2",
 				"description": "Do this assignment too"
 			}
 		],
 		"status_code": 200,
 		"headers": {
-			"Link": "<https://example.com/api/v1/users/1/courses/1/list_assignments?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/users/86/courses/29/list_assignments?page=2&per_page=2>; rel=\"next\""
 		}
 	},
 	"get_user_assignments2": {
 		"method": "GET",
-		"endpoint": "users/1/courses/1/list_assignments?page=2&per_page=2",
+		"endpoint": "users/86/courses/29/list_assignments?page=2&per_page=2",
 		"data": [
 			{
 				"id": 3,
@@ -322,7 +322,7 @@
 	},
 	"get_user_files": {
 		"method": "GET",
-		"endpoint": "users/1/files",
+		"endpoint": "users/86/files",
 		"data": [
 			{
 				"id": 1,
@@ -337,12 +337,12 @@
 		],
 		"status_code": 200,
 		"headers": {
-			"Link": "<https://example.com/api/v1/users/1/files?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/users/86/files?page=2&per_page=2>; rel=\"next\""
 		}
 	},
 	"get_user_files2": {
 		"method": "GET",
-		"endpoint": "users/1/files?page=2&per_page=2",
+		"endpoint": "users/86/files?page=2&per_page=2",
 		"data": [
 			{
 				"id": 3,
@@ -359,7 +359,7 @@
 	},
 	"list_calendar_events_for_user": {
 		"method": "GET",
-		"endpoint": "users/1/calendar_events",
+		"endpoint": "users/86/calendar_events",
 		"data": [
 			{
 				"id": 123,
@@ -376,7 +376,7 @@
 	},
 	"list_comm_channels": {
 		"method": "GET",
-		"endpoint": "users/1/communication_channels",
+		"endpoint": "users/86/communication_channels",
 		"data": [
 			{
 				"id": 11,
@@ -397,12 +397,12 @@
 		],
 		"status_code": 200,
 		"headers": {
-			"Link": "<https://example.com/api/v1/users/1/communication_channels?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/users/86/communication_channels?page=2&per_page=2>; rel=\"next\""
 		}
 	},
 	"list_comm_channels2": {
 		"method": "GET",
-		"endpoint": "users/1/communication_channels?page=2&per_page=2",
+		"endpoint": "users/86/communication_channels?page=2&per_page=2",
 		"data": [
 			{
 				"id": 13,
@@ -425,7 +425,7 @@
 	},
 	"create_comm_channel": {
 		"method": "POST",
-		"endpoint": "users/1/communication_channels",
+		"endpoint": "users/86/communication_channels",
 		"data": {
 			"id": 1,
 			"address": "username@example.org",
@@ -438,7 +438,7 @@
 	},
 	"list_enrollments": {
 		"method": "GET",
-		"endpoint": "users/1/enrollments",
+		"endpoint": "users/86/enrollments",
 		"data": [
 			{
 				"id": 1,
@@ -451,12 +451,12 @@
 		],
 		"status_code": 200,
 		"headers": {
-			"Link": "<https://example.com/api/v1/users/1/list_enrollments?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/users/86/list_enrollments?page=2&per_page=2>; rel=\"next\""
 		}
 	},
 	"list_enrollments_2": {
 		"method": "GET",
-		"endpoint": "users/1/list_enrollments?page=2&per_page=2",
+		"endpoint": "users/86/list_enrollments?page=2&per_page=2",
 		"data": [
 			{
 				"id": 3,
@@ -471,7 +471,7 @@
 	},
 	"list_folders": {
         "method": "GET",
-        "endpoint": "users/1/folders",
+        "endpoint": "users/86/folders",
         "data": [
             {
                 "id": 2,
@@ -492,7 +492,7 @@
     },
 	"merge": {
 		"method": "PUT",
-		"endpoint": "users/1/merge_into/2",
+		"endpoint": "users/86/merge_into/2",
 		"data": {
 			"id": 1,
 			"name": "John Smith"
@@ -500,7 +500,7 @@
 	},
 	"missing_sub": {
 		"method": "GET",
-		"endpoint": "users/1/missing_submissions",
+		"endpoint": "users/86/missing_submissions",
 		"data": [
 			{
 				"id": 1,
@@ -514,13 +514,13 @@
 			}
 		],
 		"headers": {
-			"Link": "<https://example.com/api/v1/users/1/missing_submissions?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/users/86/missing_submissions?page=2&per_page=2>; rel=\"next\""
 		},
 		"status_code": 200
 	},
 	"missing_sub_p2": {
 		"method": "GET",
-		"endpoint": "users/1/missing_submissions?page=2&per_page=2",
+		"endpoint": "users/86/missing_submissions?page=2&per_page=2",
 		"data": [
 			{
 				"id": 3,
@@ -537,7 +537,7 @@
 	},
 	"page_views": {
 		"method": "GET",
-		"endpoint": "users/1/page_views",
+		"endpoint": "users/86/page_views",
 		"data": [
 			{
 				"id": "123fb561-c9ce-7ed9-8e42-31e0aab47e18",
@@ -553,13 +553,13 @@
 			}
 		],
 		"headers": {
-			"Link": "<https://example.com/api/v1/users/1/page_views?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/users/86/page_views?page=2&per_page=2>; rel=\"next\""
 		},
 		"status_code": 200
 	},
 	"page_views_p2": {
 		"method": "GET",
-		"endpoint": "users/1/page_views?page=2&per_page=2",
+		"endpoint": "users/86/page_views?page=2&per_page=2",
 		"data": [
 			{
 				"id": "77f111c9-5b0b-46cb-92a2-34108ebe7b5b",
@@ -578,7 +578,7 @@
 	},
 	"profile": {
 		"method": "GET",
-		"endpoint": "users/1/profile",
+		"endpoint": "users/86/profile",
 		"data": {
 			"id": 1,
 			"name": "Sample User"
@@ -635,14 +635,14 @@
 	},
 	"update_settings": {
 		"method": "PUT",
-		"endpoint": "users/1/settings",
+		"endpoint": "users/86/settings",
 		"data": {
 			"manual_mark_as_read": true
 		}
 	},
 	"upload": {
 		"method": "POST",
-		"endpoint": "users/1/files",
+		"endpoint": "users/86/files",
 		"data": {
 			"upload_url": "https://example.com/api/v1/files/upload_response_upload_url",
 			"upload_params": {
@@ -660,7 +660,7 @@
 	},
 	"list_user_logins": {
 		"method": "GET",
-		"endpoint": "users/1/logins",
+		"endpoint": "users/86/logins",
 		"data": [
 			{
 				"account_id": 1,
@@ -673,13 +673,13 @@
 			}
 		],
 		"headers": {
-			"Link": "<https://example.com/api/v1/users/1/logins/?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/users/86/logins/?page=2&per_page=2>; rel=\"next\""
 		},
 		"status_code": 200
 	},
 	"list_user_logins_2": {
 		"method": "GET",
-		"endpoint": "users/1/logins/?page=2&per_page=2",
+		"endpoint": "users/86/logins/?page=2&per_page=2",
 		"data": [
 			{
 				"account_id": 1,
@@ -695,7 +695,7 @@
 	},
 	"list_observees": {
 		"method": "GET",
-		"endpoint": "users/1/observees",
+		"endpoint": "users/86/observees",
 		"data": [
 			{
 				"id": 1,
@@ -707,13 +707,13 @@
 			}
 		],
 		"headers": {
-			"Link": "<https://example.com/api/v1/users/1/observees?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/users/86/observees?page=2&per_page=2>; rel=\"next\""
 		},
 		"status_code": 200
 	},
 	"list_observees_2": {
 		"method": "GET",
-		"endpoint": "users/1/observees?page=2&per_page=2",
+		"endpoint": "users/86/observees?page=2&per_page=2",
 		"data": [
 			{
 				"id": 3,
@@ -728,7 +728,7 @@
 	},
 	"add_observee_with_credentials": {
 		"method": "POST",
-		"endpoint": "users/1/observees",
+		"endpoint": "users/86/observees",
 		"data": {
 			"id": 5,
 			"name": "User 5"
@@ -736,7 +736,7 @@
 	},
 	"show_observee": {
 		"method": "GET",
-		"endpoint": "users/1/observees/6",
+		"endpoint": "users/86/observees/6",
 		"data": {
 			"id": 6,
 			"name": "User 6"
@@ -744,7 +744,7 @@
 	},
 	"add_observee": {
 		"method": "PUT",
-		"endpoint": "users/1/observees/7",
+		"endpoint": "users/86/observees/7",
 		"data": {
 			"id": 7,
 			"name": "User 7"
@@ -752,7 +752,7 @@
 	},
 	"remove_observee": {
 		"method": "DELETE",
-		"endpoint": "users/1/observees/8",
+		"endpoint": "users/86/observees/8",
 		"data": {
 			"id": 8,
 			"name": "User 8"
@@ -779,7 +779,7 @@
 	},
 	"create_content_migration": {
 		"method": "POST",
-		"endpoint": "users/1/content_migrations",
+		"endpoint": "users/86/content_migrations",
 		"data": {
 			"id": 1,
 			"migration_type": "dummy_importer",
@@ -789,9 +789,9 @@
 	},
 	"get_content_migration_single": {
 		"method": "GET",
-		"endpoint": "users/1/content_migrations/1",
+		"endpoint": "users/86/content_migrations/25",
 		"data": {
-			"id": 1,
+			"id": 15,
 			"migration_type": "dummy_importer",
 			"migration_type_title": "Dummy Importer",
 			"progress_url": "https://example.com/api/v1/progress/4"
@@ -800,7 +800,7 @@
 	},
 	"get_content_migration_multiple": {
 		"method": "GET",
-		"endpoint": "users/1/content_migrations",
+		"endpoint": "users/86/content_migrations",
 		"data": [
 			{
 				"id": 1,
@@ -817,7 +817,7 @@
 	},
 	"get_migration_systems_multiple": {
 		"method": "GET",
-		"endpoint": "users/1/content_migrations/migrators",
+		"endpoint": "users/86/content_migrations/migrators",
 		"data": [
 			{
 				"type": "dummy_importer",
@@ -834,7 +834,7 @@
 	},
 	"multiple_content_exports": {
 		"method": "GET",
-		"endpoint": "users/1/content_exports",
+		"endpoint": "users/86/content_exports",
 		"data": [
 			{
 				"user_id": 1,
@@ -851,7 +851,7 @@
 	},
 	"single_content_export": {
 		"method": "GET",
-		"endpoint": "users/1/content_exports/11",
+		"endpoint": "users/86/content_exports/11",
 		"data": {
 			"user_id": 1,
 			"id": 11,
@@ -861,7 +861,7 @@
 	},
 	"export_content": {
 		"method": "POST",
-		"endpoint": "users/1/content_exports",
+		"endpoint": "users/86/content_exports",
 		"data": {
 			"user_id": 1,
 			"id": 111,
@@ -871,7 +871,7 @@
 	},
 	"get_features": {
 		"method": "GET",
-		"endpoint": "users/1/features",
+		"endpoint": "users/86/features",
 		"data": [
 			{
 				"name": "high_contrast",
@@ -888,7 +888,7 @@
 	},
 	"get_enabled_features": {
 		"method": "GET",
-		"endpoint": "users/1/features/enabled",
+		"endpoint": "users/86/features/enabled",
 		"data": [
 			{
 				"name": "feature_one",
@@ -905,7 +905,7 @@
 	},
 	"get_feature_flag": {
 		"method": "GET",
-		"endpoint": "users/1/features/flags/high_contrast",
+		"endpoint": "users/86/features/flags/high_contrast",
 		"data": {
 			"feature": "high_contrast",
 			"state": "allowed"
@@ -914,7 +914,7 @@
 	},
 	"set_feature_flag": {
 		"method": "PUT",
-		"endpoint": "users/1/features/flags/high_contrast",
+		"endpoint": "users/86/features/flags/high_contrast",
 		"data": {
 			"feature": "high_contrast",
 			"state": "allowed"
@@ -923,7 +923,7 @@
 	},
 	"delete_feature_flag": {
 		"method": "DELETE",
-		"endpoint": "users/1/features/flags/high_contrast",
+		"endpoint": "users/86/features/flags/high_contrast",
 		"data": {
 			"feature": "high_contrast",
 			"state": "allowed"
@@ -932,7 +932,7 @@
 	},
 	"get_authentication_events": {
 		"method": "GET",
-		"endpoint": "audit/authentication/users/1",
+		"endpoint": "audit/authentication/users/86",
 		"data": [
 			{
 				"created_at": "2012-07-19T15:00:00-06:00",
@@ -949,7 +949,7 @@
 	},
 	"set_usage_rights": {
 		"method": "PUT",
-		"endpoint": "users/1/usage_rights",
+		"endpoint": "users/86/usage_rights",
 		"data": {
 			"use_justification": "fair_use",
 			"license": "private",
@@ -960,7 +960,7 @@
 	},
 	"remove_usage_rights": {
 		"method": "DELETE",
-		"endpoint": "users/1/usage_rights",
+		"endpoint": "users/86/usage_rights",
 		"data": {
 			"message": "2 files updated",
 			"file_ids": [1,2]
@@ -969,7 +969,7 @@
 	},
 	"get_licenses": {
 		"method": "GET",
-		"endpoint": "users/1/content_licenses",
+		"endpoint": "users/86/content_licenses",
 		"data": [
 			{
 				"id": "private",
@@ -986,7 +986,7 @@
 	},
     "resolve_path": {
 		"method": "GET",
-		"endpoint": "users/1/folders/by_path/Folder_Level_1/Folder_Level_2/Folder_Level_3",
+		"endpoint": "users/86/folders/by_path/Folder_Level_1/Folder_Level_2/Folder_Level_3",
 		"data": [
             {
 				"id": 2,
@@ -1021,7 +1021,7 @@
 	},
     "resolve_path_null": {
 		"method": "GET",
-		"endpoint": "users/1/folders/by_path",
+		"endpoint": "users/86/folders/by_path",
 		"data": [
             {
 				"id": 2,

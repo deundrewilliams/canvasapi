@@ -26,6 +26,8 @@ from canvasapi.user import User
 from tests import settings
 from tests.util import cleanup_file, register_uris
 
+from tests import object_ids
+
 
 @requests_mock.Mocker()
 class TestUser(unittest.TestCase):
@@ -36,7 +38,7 @@ class TestUser(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"user": ["get_by_id"]}, m)
 
-            self.user = self.canvas.get_user(1)
+            self.user = self.canvas.get_user(object_ids.USER_ID)
 
     # __str__()
     def test__str__(self, m):
@@ -184,12 +186,12 @@ class TestUser(unittest.TestCase):
             m,
         )
 
-        assignments_by_id = self.user.get_assignments(1)
+        assignments_by_id = self.user.get_assignments(object_ids.COURSE_ID)
         assignment_list = [assignment for assignment in assignments_by_id]
         self.assertIsInstance(assignments_by_id[0], Assignment)
         self.assertEqual(len(assignment_list), 4)
 
-        course_obj = self.canvas.get_course(1)
+        course_obj = self.canvas.get_course(object_ids.COURSE_ID)
         assignments_by_obj = self.user.get_assignments(course_obj)
         assignment_list = [assignment for assignment in assignments_by_obj]
         self.assertIsInstance(assignments_by_obj[0], Assignment)
@@ -263,7 +265,7 @@ class TestUser(unittest.TestCase):
     def test_get_file(self, m):
         register_uris({"user": ["get_file"]}, m)
 
-        file_by_id = self.user.get_file(1)
+        file_by_id = self.user.get_file(object_ids.FILE_ID)
         self.assertIsInstance(file_by_id, File)
         self.assertEqual(file_by_id.display_name, "User_File.docx")
         self.assertEqual(file_by_id.size, 1024)
@@ -277,7 +279,7 @@ class TestUser(unittest.TestCase):
     def test_get_folder(self, m):
         register_uris({"user": ["get_folder"]}, m)
 
-        folder_by_id = self.user.get_folder(1)
+        folder_by_id = self.user.get_folder(object_ids.FOLDER_ID)
         self.assertEqual(folder_by_id.name, "Folder 1")
         self.assertIsInstance(folder_by_id, Folder)
 
@@ -380,13 +382,13 @@ class TestUser(unittest.TestCase):
         register_uris({"user": ["create_content_migration"]}, m)
 
         with self.assertRaises(TypeError):
-            self.user.create_content_migration(1)
+            self.user.create_content_migration(object_ids.CONTENT_MIGRATION_ID)
 
     # get_content_migration
     def test_get_content_migration(self, m):
         register_uris({"user": ["get_content_migration_single"]}, m)
 
-        content_migration = self.user.get_content_migration(1)
+        content_migration = self.user.get_content_migration(object_ids.CONTENT_MIGRATION_ID)
 
         self.assertIsInstance(content_migration, ContentMigration)
         self.assertTrue(hasattr(content_migration, "migration_type"))
@@ -592,8 +594,8 @@ class TestUserDisplay(unittest.TestCase):
                 m,
             )
 
-            self.course = self.canvas.get_course(1)
-            self.assignment = self.course.get_assignment(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
+            self.assignment = self.course.get_assignment(object_ids.ASSIGNMENT_ID)
             self.userDisplays = self.assignment.get_gradeable_students()
             self.userDisplayList = [ud for ud in self.userDisplays]
             self.userDisplay = self.userDisplayList[0]

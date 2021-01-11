@@ -6,6 +6,8 @@ from canvasapi import Canvas
 from tests import settings
 from tests.util import register_uris
 
+from tests import object_ids
+
 
 @requests_mock.Mocker()
 class TestUsageRights(unittest.TestCase):
@@ -17,7 +19,7 @@ class TestUsageRights(unittest.TestCase):
 
             register_uris(requires, m)
 
-            self.user = self.canvas.get_user(1)
+            self.user = self.canvas.get_user(object_ids.USER_ID)
             self.usage_rights = self.user.set_usage_rights(
                 file_ids=[1, 2], usage_rights={"use_justification": "fair_use"}
             )
