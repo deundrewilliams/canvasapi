@@ -6,6 +6,7 @@ from canvasapi import Canvas
 from canvasapi.outcome_import import OutcomeImport
 from tests import settings
 
+from tests import object_ids
 
 @requests_mock.Mocker()
 class TestOutcomeImport(unittest.TestCase):

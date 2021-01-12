@@ -6,6 +6,7 @@ from canvasapi import Canvas
 from canvasapi.course_epub_export import CourseEpubExport
 from tests import settings
 
+from tests import object_ids
 
 @requests_mock.Mocker()
 class TestCourseEpubExport(unittest.TestCase):

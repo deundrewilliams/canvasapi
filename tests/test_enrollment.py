@@ -7,6 +7,7 @@ from canvasapi.enrollment import Enrollment
 from tests import settings
 from tests.util import register_uris
 
+from tests import object_ids
 
 @requests_mock.Mocker()
 class TestEnrollment(unittest.TestCase):

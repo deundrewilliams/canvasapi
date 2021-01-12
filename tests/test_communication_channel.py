@@ -7,6 +7,7 @@ from canvasapi.notification_preference import NotificationPreference
 from tests import settings
 from tests.util import register_uris
 
+from tests import object_ids
 
 @requests_mock.Mocker()
 class TestCommunicationChannel(unittest.TestCase):

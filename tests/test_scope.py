@@ -6,6 +6,8 @@ from canvasapi import Canvas
 from canvasapi.scope import Scope
 from tests import settings
 
+from tests import object_idsx
+
 
 @requests_mock.Mocker()
 class TestGradingPeriod(unittest.TestCase):

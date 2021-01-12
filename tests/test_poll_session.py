@@ -8,6 +8,7 @@ from canvasapi.poll_session import PollSession
 from tests import settings
 from tests.util import register_uris
 
+from tests import object_ids
 
 @requests_mock.Mocker()
 class TestPollSession(unittest.TestCase):
