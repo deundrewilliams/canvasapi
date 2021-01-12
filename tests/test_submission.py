@@ -9,6 +9,8 @@ from canvasapi.submission import GroupedSubmission, Submission
 from tests import settings
 from tests.util import cleanup_file, register_uris
 
+from tests import object_ids
+
 
 @requests_mock.Mocker()
 class TestSubmission(unittest.TestCase):
@@ -26,9 +28,9 @@ class TestSubmission(unittest.TestCase):
                 m,
             )
 
-            self.course = self.canvas.get_course(1)
-            self.assignment = self.course.get_assignment(1)
-            self.submission = self.assignment.get_submission(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
+            self.assignment = self.course.get_assignment(object_ids.ASSIGNMENT_ID)
+            self.submission = self.assignment.get_submission(object_ids.USER_ID)
 
     # __str__()
     def test__str__(self, m):

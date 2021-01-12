@@ -1,7 +1,7 @@
 {
 	"create_submission_peer_review": {
 		"method": "POST",
-		"endpoint": "courses/1/assignments/1/submissions/1/peer_reviews",
+		"endpoint": "courses/29/assignments/8/submissions/82/peer_reviews",
 		"data": {
 			"assessor_id": 23,
 			"asset_id": 13,
@@ -30,7 +30,7 @@
 	},
 	"delete_submission_peer_review": {
 		"method": "DELETE",
-		"endpoint": "courses/1/assignments/1/submissions/1/peer_reviews",
+		"endpoint": "courses/29/assignments/8/submissions/82/peer_reviews",
 		"data": {
 			"assessor_id": 23,
 			"asset_id": 13,
@@ -41,12 +41,12 @@
 	},
 	"get_by_id_course": {
 		"method": "GET",
-		"endpoint": "courses/1/assignments/1/submissions/1",
+		"endpoint": "courses/29/assignments/8/submissions/86",
 		"data": {
-			"id": 1,
-			"assignment_id": 1,
-			"user_id": 1,
-			"html_url": "https://example.com/courses/1/assignments/1/submissions/1",
+			"id": 82,
+			"assignment_id": 8,
+			"user_id": 86,
+			"html_url": "https://example.com/courses/29/assignments/8/submissions/86",
 			"submission_type": "online_upload"
 		},
 		"status_code": 200
@@ -62,20 +62,20 @@
 	},
 	"list_submissions": {
 		"method": "GET",
-		"endpoint": "courses/1/assignments/1/submissions",
+		"endpoint": "courses/29/assignments/8/submissions",
 		"data": [
 			{
 				"id": 1,
 				"assignments_id": 1,
 				"user_id": 1,
-				"html_url": "https://example.com/courses/1/assignments/1/submissions/1",
+				"html_url": "https://example.com/courses/29/assignments/8/submissions/1",
 				"submission_type": "online_upload"
 			},
 			{
 				"id": 2,
 				"assignments_id": 1,
 				"user_id": 2,
-				"html_url": "https://example.com/courses/1/assignments/1/submissions/2",
+				"html_url": "https://example.com/courses/29/assignments/8/submissions/2",
 				"submission_type": "online_upload"
 			}
 		],
@@ -83,7 +83,7 @@
 	},
 	"list_submission_peer_reviews": {
 		"method": "GET",
-		"endpoint": "courses/1/assignments/1/submissions/1/peer_reviews",
+		"endpoint": "courses/29/assignments/8/submissions/82/peer_reviews",
 		"data": [
 			{
 				"assessor_id": 23,
@@ -120,7 +120,7 @@
 	},
 	"upload_comment": {
 		"method": "POST",
-		"endpoint": "courses/1/assignments/1/submissions/1/comments/files",
+		"endpoint": "courses/29/assignments/8/submissions/86/comments/files",
 		"data": {
 			"upload_url": "https://example.com/api/v1/files/upload_response_upload_url",
 			"upload_params": {
@@ -139,12 +139,12 @@
 	},
 	"edit": {
 		"method": "PUT",
-		"endpoint": "courses/1/assignments/1/submissions/1",
+		"endpoint": "courses/29/assignments/8/submissions/86",
 		"data": {
-			"id": 1,
-			"assignments_id": 1,
-			"user_id": 1,
-			"html_url": "https://example.com/courses/1/assignments/1/submissions/1",
+			"id": 82,
+			"assignments_id": 8,
+			"user_id": 86,
+			"html_url": "https://example.com/courses/29/assignments/8/submissions/86",
 			"submission_type": "online_upload",
 			"excused": true
 		},

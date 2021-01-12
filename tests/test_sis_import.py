@@ -8,6 +8,8 @@ from canvasapi.sis_import import SisImport
 from tests import settings
 from tests.util import register_uris
 
+from tests import object_ids
+
 
 @requests_mock.Mocker()
 class TestSisImportGroup(unittest.TestCase):
@@ -21,8 +23,8 @@ class TestSisImportGroup(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.account = self.canvas.get_account(1)
-            self.sis_import = self.account.get_sis_import(2)
+            self.account = self.canvas.get_account(object_ids.ACCOUNT_ID)
+            self.sis_import = self.account.get_sis_import(object_ids.SIS_IMPORT_ID)
 
     # abort()
     def test_abort_sis_import(self, m):

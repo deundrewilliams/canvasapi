@@ -1717,12 +1717,12 @@
 	},
 	"mark_submission_as_read": {
 		"method": "PUT",
-		"endpoint": "courses/29/assignments/1/submissions/1/read",
+		"endpoint": "courses/29/assignments/8/submissions/86/read",
 		"status_code": 204
 	},
 	"mark_submission_as_unread": {
 		"method": "DELETE",
-		"endpoint": "courses/29/assignments/1/submissions/1/read",
+		"endpoint": "courses/29/assignments/8/submissions/86/read",
 		"status_code": 204
 	},
 	"search_all_courses": {

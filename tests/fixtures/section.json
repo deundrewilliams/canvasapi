@@ -1,10 +1,10 @@
 {
 	"get_by_id": {
 		"method": "GET",
-		"endpoint": "sections/1",
+		"endpoint": "sections/80",
 		"data":{
-			"id": 1,
-			"course_id": 1,
+			"id": 80,
+			"course_id": 29,
 			"name": "Section 1"
 		},
 		"status_code": 200
@@ -216,10 +216,10 @@
 	},
 	"update_submissions": {
 		"method": "POST",
-		"endpoint": "sections/1/submissions/update_grades",
+		"endpoint": "sections/80/submissions/update_grades",
 		"data": {
-			"id": 3,
-			"context_id": 1,
+			"id": 2,
+			"context_id": 80,
 			"context_type": "Course",
 			"user_id": null,
 			"tag": "submissions_update",
