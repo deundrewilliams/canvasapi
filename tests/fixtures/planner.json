@@ -1,7 +1,7 @@
 {
   "update_planner_note": {
     "method": "PUT",
-    "endpoint": "planner_notes/1",
+    "endpoint": "planner_notes/61",
     "data": {
       "id": 1,
       "title": "Go to restroom",
@@ -11,9 +11,9 @@
   },
   "delete_planner_note": {
 		"method": "DELETE",
-    "endpoint": "planner_notes/1",
+    "endpoint": "planner_notes/61",
     "data": {
-      "id": 1,
+      "id": 61,
       "title": "Go to restroom",
       "todo_date": "2020-01-07T15:16:18Z"
     },
@@ -38,9 +38,9 @@
 	},
   "single_planner_note": {
 		"method": "GET",
-		"endpoint": "planner_notes/1",
+		"endpoint": "planner_notes/61",
 		"data": {
-      "id": 1,
+      "id": 61,
       "title": "Take a nap",
       "todo_date": "2018-05-09T10:12:00Z"
     },

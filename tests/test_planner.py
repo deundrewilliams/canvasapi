@@ -17,7 +17,7 @@ class TestPlannerNote(unittest.TestCase):
 
         with requests_mock.Mocker() as m:
             register_uris({"planner": ["single_planner_note"]}, m)
-            self.note = self.canvas.get_planner_note(1)
+            self.note = self.canvas.get_planner_note(object_ids.PLANNER_NOTE_ID)
 
     # __str__()
     def test__str__(self, m):
@@ -39,15 +39,15 @@ class TestPlannerNote(unittest.TestCase):
     def test_get_planner_note(self, m):
         register_uris({"planner": ["single_planner_note"]}, m)
 
-        note_by_id = self.canvas.get_planner_note(1)
+        note_by_id = self.canvas.get_planner_note(object_ids.PLANNER_NOTE_ID)
         self.assertIsInstance(note_by_id, PlannerNote)
-        self.assertEqual(note_by_id.id, 1)
+        self.assertEqual(note_by_id.id, object_ids.PLANNER_NOTE_ID)
         self.assertEqual(note_by_id.title, "Take a nap")
         self.assertEqual(note_by_id.todo_date, "2018-05-09T10:12:00Z")
 
         note_by_obj = self.canvas.get_planner_note(note_by_id)
         self.assertIsInstance(note_by_obj, PlannerNote)
-        self.assertEqual(note_by_obj.id, 1)
+        self.assertEqual(note_by_obj.id, object_ids.PLANNER_NOTE_ID)
         self.assertEqual(note_by_obj.title, "Take a nap")
         self.assertEqual(note_by_obj.todo_date, "2018-05-09T10:12:00Z")
 
@@ -92,7 +92,7 @@ class TestPlannerNote(unittest.TestCase):
 
         note_delete = self.note.delete()
         self.assertIsInstance(note_delete, PlannerNote)
-        self.assertEqual(note_delete.id, 1)
+        self.assertEqual(note_delete.id, object_ids.PLANNER_NOTE_ID)
         self.assertEqual(note_delete.title, "Go to restroom")
         self.assertEqual(note_delete.todo_date, "2020-01-07T15:16:18Z")
 
