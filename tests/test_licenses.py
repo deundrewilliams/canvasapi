@@ -18,7 +18,7 @@ class TestLicenses(unittest.TestCase):
 
             register_uris(requires, m)
 
-            self.user = self.canvas.get_user(1)
+            self.user = self.canvas.get_user(object_ids.USER_ID)
             self.licenses = list(self.user.get_licenses())
 
     # __str__()

@@ -25,7 +25,7 @@ class TestAuthenticationEvent(unittest.TestCase):
             self.login = self.account.create_user_login(
                 user={"id": 1}, login={"unique_id": "belieber@example.com"}
             )
-            self.user = self.canvas.get_user(1)
+            self.user = self.canvas.get_user(object_ids.USER_ID)
 
             self.authentication_event_account = (
                 self.account.get_authentication_events()[0]

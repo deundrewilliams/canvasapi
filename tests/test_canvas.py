@@ -189,7 +189,7 @@ class TestCanvas(unittest.TestCase):
     def test_get_user(self, m):
         register_uris({"user": ["get_by_id"]}, m)
 
-        user_by_id = self.canvas.get_user(1)
+        user_by_id = self.canvas.get_user(object_ids.USER_ID)
         self.assertIsInstance(user_by_id, User)
         self.assertTrue(hasattr(user_by_id, "name"))
 

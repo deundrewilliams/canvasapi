@@ -18,7 +18,7 @@ class TestPairingCode(unittest.TestCase):
             requires = {"user": ["get_by_id"]}
             register_uris(requires, m)
 
-            self.user = self.canvas.get_user(1)
+            self.user = self.canvas.get_user(object_ids.USER_ID)
 
     # __str__()
     def test__str__(self, m):

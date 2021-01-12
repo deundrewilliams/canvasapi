@@ -23,10 +23,10 @@ class TestPollSubmission(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.poll = self.canvas.get_poll(1)
-            self.poll.poll_session = self.poll.get_session(1)
+            self.poll = self.canvas.get_poll(object_ids.POLL_ID)
+            self.poll.poll_session = self.poll.get_session(object_ids.POLL_SESSION_ID)
             self.poll.poll_session.poll_submission = (
-                self.poll.poll_session.get_submission(1)
+                self.poll.poll_session.get_submission(object_ids.POLL_SUBMISSION_ID)
             )
 
     # __str__()
@@ -38,7 +38,7 @@ class TestPollSubmission(unittest.TestCase):
     def test_get_submission(self, m):
         register_uris({"poll_submission": ["get_submission"]}, m)
 
-        choice_by_id = self.poll.poll_session.get_submission(1)
+        choice_by_id = self.poll.poll_session.get_submission(object_ids.POLL_SUBMISSION_ID)
         self.assertIsInstance(choice_by_id, PollSubmission)
         self.assertTrue(hasattr(choice_by_id, "id"))
         self.assertTrue(hasattr(choice_by_id, "poll_choice_id"))
@@ -57,10 +57,10 @@ class TestPollSubmission(unittest.TestCase):
         register_uris({"poll_submission": ["create_submission"]}, m)
 
         new_submission = self.poll.poll_session.create_submission(
-            [{"poll_choice_id": 1}]
+            [{"poll_choice_id": object_ids.POLL_CHOICE_ID}]
         )
         self.assertIsInstance(new_submission, PollSubmission)
-        self.assertEqual(new_submission.poll_choice_id, 1)
+        self.assertEqual(new_submission.poll_choice_id, object_ids.POLL_CHOICE_ID)
 
     # create_submission()
     def test_create_submission_fail(self, m):

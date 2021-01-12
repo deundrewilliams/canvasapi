@@ -66,7 +66,7 @@ class TestCourse(unittest.TestCase):
             self.course = self.canvas.get_course(1)
             self.page = self.course.get_page("my-url")
             self.quiz = self.course.get_quiz(1)
-            self.user = self.canvas.get_user(1)
+            self.user = self.canvas.get_user(object_ids.USER_ID)
             self.assignment = self.course.get_assignment(1)
 
     # __str__()

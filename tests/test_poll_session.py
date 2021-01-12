@@ -23,9 +23,9 @@ class TestPollSession(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.user = self.canvas.get_user(1)
-            self.poll = self.canvas.get_poll(1)
-            self.poll.poll_session = self.poll.get_session(1)
+            self.user = self.canvas.get_user(object_ids.USER_ID)
+            self.poll = self.canvas.get_poll(object_ids.POLL_ID)
+            self.poll.poll_session = self.poll.get_session(object_ids.POLL_SESSION_ID)
 
     # __str__()
     def test__str__(self, m):
@@ -45,7 +45,7 @@ class TestPollSession(unittest.TestCase):
     def test_get_session(self, m):
         register_uris({"poll_session": ["get_session"]}, m)
 
-        choice_by_id = self.poll.get_session(1)
+        choice_by_id = self.poll.get_session(object_ids.POLL_SESSION_ID)
         self.assertIsInstance(choice_by_id, PollSession)
         self.assertTrue(choice_by_id.is_published)
         self.assertFalse(choice_by_id.has_public_results)

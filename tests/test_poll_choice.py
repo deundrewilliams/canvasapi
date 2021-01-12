@@ -18,8 +18,8 @@ class TestPollChoice(unittest.TestCase):
         with requests_mock.Mocker() as m:
             requires = {"poll_choice": ["get_choice"], "poll": ["get_poll"]}
             register_uris(requires, m)
-            self.poll = self.canvas.get_poll(1)
-            self.poll.poll_choice = self.poll.get_choice(1)
+            self.poll = self.canvas.get_poll(object_ids.POLL_ID)
+            self.poll.poll_choice = self.poll.get_choice(object_ids.POLL_CHOICE_ID)
 
     # __str__()
     def test__str__(self, m):
@@ -39,7 +39,7 @@ class TestPollChoice(unittest.TestCase):
     def test_get_choice(self, m):
         register_uris({"poll_choice": ["get_choice"]}, m)
 
-        choice_by_id = self.poll.get_choice(1)
+        choice_by_id = self.poll.get_choice(object_ids.POLL_CHOICE_ID)
         self.assertIsInstance(choice_by_id, PollChoice)
         self.assertTrue(choice_by_id.is_correct)
         self.assertEqual(choice_by_id.text, "Example choice")

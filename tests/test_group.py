@@ -635,7 +635,7 @@ class TestGroupMembership(unittest.TestCase):
         self.assertIsInstance(response_by_id, dict)
         self.assertEqual(len(response_by_id), 0)
 
-        user_obj = self.canvas.get_user(1)
+        user_obj = self.canvas.get_user(object_ids.USER_ID)
         response_by_obj = self.membership.remove_user(user_obj)
         self.assertIsInstance(response_by_obj, dict)
         self.assertEqual(len(response_by_obj), 0)

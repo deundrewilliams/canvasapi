@@ -17,7 +17,7 @@ class TestPoll(unittest.TestCase):
 
         with requests_mock.Mocker() as m:
             register_uris({"poll": ["get_poll"]}, m)
-            self.poll = self.canvas.get_poll(1)
+            self.poll = self.canvas.get_poll(object_ids.POLL_ID)
 
     # __str__()
     def test__str__(self, m):
@@ -37,7 +37,7 @@ class TestPoll(unittest.TestCase):
     def test_get_poll(self, m):
         register_uris({"poll": ["get_poll"]}, m)
 
-        poll_by_id = self.canvas.get_poll(1)
+        poll_by_id = self.canvas.get_poll(object_ids.POLL_ID)
         self.assertIsInstance(poll_by_id, Poll)
         self.assertEqual(poll_by_id.question, "Is this a question?")
         self.assertEqual(poll_by_id.description, "This is a test.")

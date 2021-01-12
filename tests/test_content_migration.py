@@ -31,7 +31,7 @@ class TestContentMigration(unittest.TestCase):
             self.account = self.canvas.get_account(1)
             self.course = self.canvas.get_course(1)
             self.group = self.canvas.get_group(1)
-            self.user = self.canvas.get_user(1)
+            self.user = self.canvas.get_user(object_ids.USER_ID)
 
             self.content_migration = self.account.get_content_migration(1)
             self.content_migration_course = self.course.get_content_migration(1)
@@ -184,7 +184,7 @@ class TestMigrationIssue(unittest.TestCase):
             self.account = self.canvas.get_account(1)
             self.course = self.canvas.get_course(1)
             self.group = self.canvas.get_group(1)
-            self.user = self.canvas.get_user(1)
+            self.user = self.canvas.get_user(object_ids.USER_ID)
 
             self.content_migration = self.account.get_content_migration(1)
             self.content_migration_course = self.course.get_content_migration(1)
@@ -246,7 +246,7 @@ class TestMigrator(unittest.TestCase):
             self.account = self.canvas.get_account(1)
             self.course = self.canvas.get_course(1)
             self.group = self.canvas.get_group(1)
-            self.user = self.canvas.get_user(1)
+            self.user = self.canvas.get_user(object_ids.USER_ID)
 
             self.migrator = self.account.get_migration_systems()[0]
             self.migrator_course = self.course.get_migration_systems()[0]

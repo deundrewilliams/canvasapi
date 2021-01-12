@@ -22,7 +22,7 @@ class TestNotificationPreference(unittest.TestCase):
                 m,
             )
 
-            self.user = self.canvas.get_user(1)
+            self.user = self.canvas.get_user(object_ids.USER_ID)
             self.comm_chan = self.user.get_communication_channels()[0]
             self.notif_pref = self.comm_chan.get_preference("new_announcement")
 

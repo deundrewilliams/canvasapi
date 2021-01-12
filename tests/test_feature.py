@@ -24,7 +24,7 @@ class TestFeature(unittest.TestCase):
 
             self.account = self.canvas.get_account(1)
             self.course = self.canvas.get_course(1)
-            self.user = self.canvas.get_user(1)
+            self.user = self.canvas.get_user(object_ids.USER_ID)
             self.feature_account = self.account.get_features()[0]
             self.feature_course = self.course.get_features()[0]
             self.feature_user = self.user.get_features()[0]
@@ -80,7 +80,7 @@ class TestFeatureFlag(unittest.TestCase):
 
             self.account = self.canvas.get_account(1)
             self.course = self.canvas.get_course(1)
-            self.user = self.canvas.get_user(1)
+            self.user = self.canvas.get_user(object_ids.USER_ID)
             self.feature_account = self.account.get_features()[0]
             self.feature_course = self.course.get_features()[0]
             self.feature_user = self.user.get_features()[0]

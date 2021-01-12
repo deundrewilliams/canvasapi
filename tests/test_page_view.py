@@ -16,7 +16,7 @@ class TestPageView(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"user": ["get_by_id", "page_views", "page_views_p2"]}, m)
 
-            self.user = self.canvas.get_user(1)
+            self.user = self.canvas.get_user(object_ids.USER_ID)
             pageviews = self.user.get_page_views()
             self.pageview = pageviews[0]
 

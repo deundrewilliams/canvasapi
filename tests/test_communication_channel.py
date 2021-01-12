@@ -17,7 +17,7 @@ class TestCommunicationChannel(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"user": ["get_by_id", "list_comm_channels"]}, m)
 
-            self.user = self.canvas.get_user(1)
+            self.user = self.canvas.get_user(object_ids.USER_ID)
             self.comm_chan = self.user.get_communication_channels()[0]
 
     # __str__()

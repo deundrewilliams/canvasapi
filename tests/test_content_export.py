@@ -23,7 +23,7 @@ class TestContentExport(unittest.TestCase):
 
             self.course = self.canvas.get_course(1)
             self.group = self.canvas.get_group(1)
-            self.user = self.canvas.get_user(1)
+            self.user = self.canvas.get_user(object_ids.USER_ID)
 
             self.content_export_course = self.course.get_content_export(11)
             self.content_export_group = self.group.get_content_export(11)
