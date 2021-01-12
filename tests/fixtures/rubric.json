@@ -1,18 +1,18 @@
 {
 	"update_rubric_association": {
 		"method": "PUT",
-		"endpoint": "courses/1/rubric_associations/4",
+		"endpoint": "courses/29/rubric_associations/78",
 		"data": {
-			"id": 5,
+			"id": 79,
 			"association_type": "Assignment"
 		},
 		"status_code": 200
 	},
 	"delete_rubric_association": {
 		"method": "DELETE",
-		"endpoint": "courses/1/rubric_associations/4",
+		"endpoint": "courses/29/rubric_associations/78",
 		"data": {
-			"id": 4,
+			"id": 78,
 			"association_type": "Assignment"
 		},
 		"status_code": 200

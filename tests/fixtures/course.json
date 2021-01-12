@@ -254,16 +254,16 @@
 	},
 	"get_by_id_2": {
 		"method": "GET",
-		"endpoint": "courses/2",
+		"endpoint": "courses/29",
 		"data": {
-			"id": 2,
+			"id": 29,
 			"course_code": "TST5678",
 			"name": "Test Course 5678",
 			"workflow_state": "available",
-			"account_id": 1,
-			"root_account_id": 1,
-			"enrollment_term_id": 1,
-			"grading_standard_id": 1
+			"account_id": 2,
+			"root_account_id": 2,
+			"enrollment_term_id": 39,
+			"grading_standard_id": 88
 		},
 		"status_code": 200
 	},
@@ -537,11 +537,11 @@
 	},
 	"get_rubric_single": {
 		"method": "GET",
-		"endpoint": "courses/29/rubrics/1",
+		"endpoint": "courses/29/rubrics/77",
 		"data": {
-			"id": 1,
+			"id": 77,
 			"title": "Course Rubric 1",
-			"context_id": 1,
+			"context_id": 29,
 			"context_type": "Course",
 			"points_possible": 10.0,
 			"reusable": false,
@@ -2139,7 +2139,7 @@
 		"method": "POST",
 		"endpoint": "courses/29/rubric_associations",
 		"data": {
-			"id": 4,
+			"id": 78,
 			"association_type": "Course"
 		},
 		"status_code": 200

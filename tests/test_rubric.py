@@ -7,6 +7,8 @@ from canvasapi.rubric import RubricAssociation
 from tests import settings
 from tests.util import register_uris
 
+from tests import object_ids
+
 
 @requests_mock.Mocker()
 class TestGradingStandard(unittest.TestCase):
@@ -16,8 +18,8 @@ class TestGradingStandard(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"course": ["get_by_id", "get_rubric_single"]}, m)
 
-            self.course = self.canvas.get_course(1)
-            self.rubric = self.course.get_rubric(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
+            self.rubric = self.course.get_rubric(object_ids.RUBRIC_ID)
 
     # __str__()
     def test__str__(self, m):
@@ -42,7 +44,7 @@ class TestRubricAssociation(unittest.TestCase):
                 m,
             )
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.rubric = self.course.create_rubric()
             self.association = self.course.create_rubric_association()
 
@@ -55,12 +57,12 @@ class TestRubricAssociation(unittest.TestCase):
     def test_update(self, m):
         register_uris({"rubric": ["update_rubric_association"]}, m)
 
-        self.assertEqual(self.association.id, 4)
+        self.assertEqual(self.association.id, object_ids.RUBRIC_ASSOCIATION_ID)
 
         rubric_association = self.association.update()
 
         self.assertEqual(rubric_association, self.association)
-        self.assertEqual(rubric_association.id, 5)
+        self.assertEqual(rubric_association.id, object_ids.RUBRIC_ASSOCIATION_ID + 1)
         self.assertIsInstance(rubric_association, RubricAssociation)
         self.assertEqual(rubric_association.association_type, "Assignment")
 
@@ -71,5 +73,5 @@ class TestRubricAssociation(unittest.TestCase):
         rubric_association = self.association.delete()
 
         self.assertIsInstance(rubric_association, RubricAssociation)
-        self.assertEqual(rubric_association.id, 4)
+        self.assertEqual(rubric_association.id, object_ids.RUBRIC_ASSOCIATION_ID)
         self.assertEqual(rubric_association.association_type, "Assignment")
