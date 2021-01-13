@@ -18,7 +18,7 @@ class TestModule(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"course": ["get_by_id", "get_module_by_id"]}, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.module = self.course.get_module(1)
 
     # edit()
@@ -126,7 +126,7 @@ class TestModuleItem(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.module = self.course.get_module(1)
             self.module_item = self.module.get_module_item(1)
 

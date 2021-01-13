@@ -102,7 +102,7 @@ class TestCurrentUser(unittest.TestCase):
         self.assertEqual(fav_by_id.context_type, "course")
         self.assertEqual(fav_by_id.context_id, 1)
 
-        obj = self.canvas.get_course(1)
+        obj = self.canvas.get_course(object_ids.COURSE_ID)
         fav_by_obj = self.user.add_favorite_course(obj)
         self.assertIsInstance(fav_by_obj, Favorite)
         self.assertEqual(fav_by_obj.context_type, "course")
@@ -128,7 +128,7 @@ class TestCurrentUser(unittest.TestCase):
         self.assertEqual(fav_by_id.context_type, "group")
         self.assertEqual(fav_by_id.context_id, 1)
 
-        obj = self.canvas.get_group(1)
+        obj = self.canvas.get_group(object_ids.GROUP_ID)
         fav_by_obj = self.user.add_favorite_group(obj)
         self.assertIsInstance(fav_by_obj, Favorite)
         self.assertEqual(fav_by_obj.context_type, "group")

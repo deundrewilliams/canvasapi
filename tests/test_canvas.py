@@ -145,7 +145,7 @@ class TestCanvas(unittest.TestCase):
     def test_get_course(self, m):
         register_uris({"course": ["get_by_id"]}, m)
 
-        course_by_id = self.canvas.get_course(1)
+        course_by_id = self.canvas.get_course(object_ids.COURSE_ID)
         self.assertIsInstance(course_by_id, Course)
         self.assertTrue(hasattr(course_by_id, "name"))
 
@@ -273,7 +273,7 @@ class TestCanvas(unittest.TestCase):
         self.assertIsInstance(nickname_by_id, CourseNickname)
         self.assertTrue(hasattr(nickname_by_id, "nickname"))
 
-        course_for_obj = self.canvas.get_course(1)
+        course_for_obj = self.canvas.get_course(object_ids.COURSE_ID)
         nickname_by_obj = self.canvas.get_course_nickname(course_for_obj)
         self.assertIsInstance(nickname_by_obj, CourseNickname)
         self.assertTrue(hasattr(nickname_by_obj, "nickname"))
@@ -294,7 +294,7 @@ class TestCanvas(unittest.TestCase):
         self.assertTrue(hasattr(nickname_by_id, "nickname"))
         self.assertEqual(nickname_by_id.nickname, name)
 
-        course_for_obj = self.canvas.get_course(1)
+        course_for_obj = self.canvas.get_course(object_ids.COURSE_ID)
         nickname_by_obj = self.canvas.set_course_nickname(course_for_obj, name)
         self.assertIsInstance(nickname_by_obj, CourseNickname)
         self.assertTrue(hasattr(nickname_by_obj, "nickname"))
@@ -348,7 +348,7 @@ class TestCanvas(unittest.TestCase):
     def test_get_group(self, m):
         register_uris({"group": ["get_by_id"]}, m)
 
-        group_by_id = self.canvas.get_group(1)
+        group_by_id = self.canvas.get_group(object_ids.GROUP_ID)
         self.assertIsInstance(group_by_id, Group)
         self.assertTrue(hasattr(group_by_id, "name"))
         self.assertTrue(hasattr(group_by_id, "description"))
@@ -718,7 +718,7 @@ class TestCanvas(unittest.TestCase):
         register_uris(
             {"course": ["get_by_id"], "announcements": ["list_announcements"]}, m
         )
-        course = self.canvas.get_course(1)
+        course = self.canvas.get_course(object_ids.COURSE_ID)
         announcements = self.canvas.get_announcements([course])
 
         self.assertIsInstance(announcements, PaginatedList)
@@ -727,7 +727,7 @@ class TestCanvas(unittest.TestCase):
         register_uris(
             {"course": ["get_by_id"], "announcements": ["list_announcements"]}, m
         )
-        course = self.canvas.get_course(1)
+        course = self.canvas.get_course(object_ids.COURSE_ID)
         course_ids = [course, 2]
         announcements = self.canvas.get_announcements(course_ids)
 

@@ -21,8 +21,8 @@ class TestContentExport(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
-            self.group = self.canvas.get_group(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
+            self.group = self.canvas.get_group(object_ids.GROUP_ID)
             self.user = self.canvas.get_user(object_ids.USER_ID)
 
             self.content_export_course = self.course.get_content_export(11)

@@ -33,7 +33,7 @@ class TestQuiz(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"course": ["get_by_id"], "quiz": ["get_by_id"]}, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.quiz = self.course.get_quiz(1)
 
     # __str__()
@@ -352,7 +352,7 @@ class TestQuizReport(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.quiz = self.course.get_quiz(1)
             self.quiz_report = self.quiz.get_quiz_report(1)
 
@@ -558,7 +558,7 @@ class TestQuizQuestion(unittest.TestCase):
                 {"course": ["get_by_id"], "quiz": ["get_by_id", "get_question"]}, m
             )
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.quiz = self.course.get_quiz(1)
             self.question = self.quiz.get_question(1)
 
@@ -607,7 +607,7 @@ class TestQuizStatistic(unittest.TestCase):
                 {"course": ["get_by_id"], "quiz": ["get_by_id", "get_statistics"]}, m
             )
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.quiz = self.course.get_quiz(1)
             self.quiz_statistics = self.quiz.get_statistics()
             self.quiz_statistic = self.quiz_statistics[0]

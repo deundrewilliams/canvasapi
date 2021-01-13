@@ -33,8 +33,8 @@ class TestGroup(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"course": ["get_by_id"], "group": ["get_by_id"]}, m)
 
-            self.course = self.canvas.get_course(1)
-            self.group = self.canvas.get_group(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
+            self.group = self.canvas.get_group(object_ids.GROUP_ID)
 
     # __str__()
     def test__str__(self, m):
@@ -612,7 +612,7 @@ class TestGroupMembership(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"group": ["get_by_id", "get_membership"]}, m)
 
-            self.group = self.canvas.get_group(1)
+            self.group = self.canvas.get_group(object_ids.GROUP_ID)
             self.membership = self.group.get_membership(1, "users")
 
     # __str__()
@@ -657,7 +657,7 @@ class TestGroupCategory(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"course": ["get_by_id", "create_group_category"]}, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.group_category = self.course.create_group_category("Test String")
 
     # __str__()

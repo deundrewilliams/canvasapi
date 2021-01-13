@@ -16,7 +16,7 @@ class TestExternalFeed(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"course": ["get_by_id", "list_external_feeds"]}, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.external_feed = self.course.get_external_feeds()[0]
 
     # __str__()

@@ -28,13 +28,13 @@ class TestAssignment(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"course": ["get_by_id", "get_assignment_by_id"]}, m)
 
-            self.course = self.canvas.get_course(1)
-            self.assignment = self.course.get_assignment(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
+            self.assignment = self.course.get_assignment(object_ids.ASSIGNMENT_ID)
 
     def test__init__overrides(self, m):
         register_uris({"assignment": ["get_assignment_with_overrides"]}, m)
 
-        assignment = self.course.get_assignment(1)
+        assignment = self.course.get_assignment(object_ids.ASSIGNMENT_ID)
 
         self.assertTrue(hasattr(assignment, "overrides"))
         self.assertIsInstance(assignment.overrides, list)
@@ -315,7 +315,7 @@ class TestAssignmentGroup(unittest.TestCase):
                 {"course": ["get_by_id"], "assignment": ["get_assignment_group"]}, m
             )
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.assignment_group = self.course.get_assignment_group(5)
 
     # edit()
@@ -361,8 +361,8 @@ class TestAssignmentOverride(unittest.TestCase):
                 m,
             )
 
-            self.course = self.canvas.get_course(1)
-            self.assignment = self.course.get_assignment(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
+            self.assignment = self.course.get_assignment(object_ids.ASSIGNMENT_ID)
             self.assignment_override = self.assignment.get_override(1)
 
     # __str__()

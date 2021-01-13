@@ -1,7 +1,7 @@
 {
 	"update": {
 		"method": "PUT",
-		"endpoint": "courses/1/quizzes/5/groups/10",
+		"endpoint": "courses/29/quizzes/5/groups/10",
 		"data": {"quiz_groups": [
 			{
 				"id": 10,
@@ -16,12 +16,12 @@
 	},
 	"delete": {
 		"method": "DELETE",
-		"endpoint": "courses/1/quizzes/5/groups/10",
+		"endpoint": "courses/29/quizzes/5/groups/10",
 		"status_code": 204
 	},
 	"reorder_question_group": {
 		"method": "POST",
-		"endpoint": "courses/1/quizzes/5/groups/10/reorder",
+		"endpoint": "courses/29/quizzes/5/groups/10/reorder",
 		"status_code": 204
 	}
 }

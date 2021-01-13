@@ -16,7 +16,7 @@ class TestGradingStandard(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"course": ["get_by_id", "get_single_grading_standard"]}, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.grading_standard = self.course.get_single_grading_standard(1)
 
     # __str__()

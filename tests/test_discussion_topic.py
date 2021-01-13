@@ -24,8 +24,8 @@ class TestDiscussionTopic(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
-            self.group = self.canvas.get_group(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
+            self.group = self.canvas.get_group(object_ids.GROUP_ID)
             self.discussion_topic = self.course.get_discussion_topic(1)
             self.discussion_topic_group = self.group.get_discussion_topic(1)
 
@@ -232,8 +232,8 @@ class TestDiscussionEntry(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
-            self.group = self.canvas.get_group(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
+            self.group = self.canvas.get_group(object_ids.GROUP_ID)
             self.discussion_topic = self.course.get_discussion_topic(1)
             self.discussion_topic_group = self.group.get_discussion_topic(1)
             self.discussion_entry = self.discussion_topic.get_entries([1])[0]

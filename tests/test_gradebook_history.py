@@ -18,7 +18,7 @@ class TestDay(unittest.TestCase):
             requires = {"course": ["get_by_id", "get_gradebook_history_dates"]}
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.gradebook_history_dates = self.course.get_gradebook_history_dates()[0]
 
     # __str__()
@@ -37,7 +37,7 @@ class TestGrader(unittest.TestCase):
             requires = {"course": ["get_by_id", "get_gradebook_history_details"]}
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.gradebook_history_details = self.course.get_gradebook_history_details(
                 "03-26-2019"
             )[0]
@@ -58,7 +58,7 @@ class TestSubmissionHistory(unittest.TestCase):
             requires = {"course": ["get_by_id", "get_submission_history"]}
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.submission_history = self.course.get_submission_history(
                 "08-23-2019", 1, 1
             )[0]
@@ -79,7 +79,7 @@ class TestSubmissionVersion(unittest.TestCase):
             requires = {"course": ["get_by_id", "get_uncollated_submissions"]}
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.uncollated_submissions = self.course.get_uncollated_submissions()[0]
 
     # __str__()

@@ -19,7 +19,7 @@ class TestQuizGroup(unittest.TestCase):
                 {"course": ["get_by_id"], "quiz": ["get_by_id_5", "get_quiz_group"]}, m
             )
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.quiz_group = self.course.get_quiz(5).get_quiz_group(10)
 
     # __str__()

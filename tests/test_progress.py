@@ -22,7 +22,7 @@ class TestProgress(unittest.TestCase):
 
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.group_category = self.course.create_group_category("Test String")
             self.progress = self.group_category.assign_members()
 

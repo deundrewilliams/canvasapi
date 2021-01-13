@@ -20,7 +20,7 @@ class TestCustomGradebookColumn(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"course": ["get_by_id", "get_custom_columns"]}, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.gradebook_column = self.course.get_custom_columns()[1]
 
     # __str__()
@@ -104,7 +104,7 @@ class TestColumnData(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.gradebook_column = self.course.get_custom_columns()[1]
             self.data = self.gradebook_column.get_column_entries()[1]
 

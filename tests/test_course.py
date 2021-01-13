@@ -63,11 +63,11 @@ class TestCourse(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.page = self.course.get_page("my-url")
             self.quiz = self.course.get_quiz(1)
             self.user = self.canvas.get_user(object_ids.USER_ID)
-            self.assignment = self.course.get_assignment(1)
+            self.assignment = self.course.get_assignment(object_ids.ASSIGNMENT_ID)
 
     # __str__()
     def test__str__(self, m):
@@ -484,7 +484,7 @@ class TestCourse(unittest.TestCase):
     def test_get_assignment(self, m):
         register_uris({"course": ["get_assignment_by_id"]}, m)
 
-        assignment_by_id = self.course.get_assignment(1)
+        assignment_by_id = self.course.get_assignment(object_ids.ASSIGNMENT_ID)
         self.assertIsInstance(assignment_by_id, Assignment)
         self.assertTrue(hasattr(assignment_by_id, "name"))
 

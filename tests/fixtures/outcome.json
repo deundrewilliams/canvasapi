@@ -191,7 +191,7 @@
     },
     "course_root_outcome_group": {
         "method": "GET",
-        "endpoint": "courses/1/root_outcome_group",
+        "endpoint": "courses/29/root_outcome_group",
         "data": {
             "id": 1,
             "url": "/api/v1/courses/1/outcome_groups/1",
@@ -209,7 +209,7 @@
     },
     "course_get_outcome_group": {
         "method": "GET",
-        "endpoint": "courses/1/outcome_groups/1",
+        "endpoint": "courses/29/outcome_groups/1",
         "data": {
             "id": 1,
             "url": "/api/v1/courses/1/outcome_groups/1",
@@ -227,7 +227,7 @@
     },
     "course_outcome_groups_in_context": {
         "method": "GET",
-        "endpoint": "courses/1/outcome_groups",
+        "endpoint": "courses/29/outcome_groups",
         "data":[
             {
                 "id": 1,
@@ -265,7 +265,7 @@
     },
     "course_outcome_links_in_context": {
         "method": "GET",
-        "endpoint": "courses/1/outcome_group_links",
+        "endpoint": "courses/29/outcome_group_links",
         "data": [
             {
                 "context_id": 1,
@@ -324,7 +324,7 @@
     },
     "course_get_outcome_results": {
         "method": "GET",
-        "endpoint": "courses/1/outcome_results",
+        "endpoint": "courses/29/outcome_results",
         "data": {
             "outcome_results": [
                 {
@@ -354,7 +354,7 @@
     },
     "course_get_outcome_result_rollups": {
         "method": "GET",
-        "endpoint": "courses/1/outcome_rollups",
+        "endpoint": "courses/29/outcome_rollups",
         "data": {
             "rollups": [
                 {
@@ -450,7 +450,7 @@
     },
     "outcome_group_example_course": {
         "method": "GET",
-        "endpoint": "courses/1/outcome_groups/2",
+        "endpoint": "courses/29/outcome_groups/2",
         "data": {
             "id": 2,
             "url": "/api/v1/courses/1/outcome_groups/2",
@@ -526,7 +526,7 @@
     },
     "outcome_group_update_course": {
         "method": "PUT",
-        "endpoint": "courses/1/outcome_groups/1",
+        "endpoint": "courses/29/outcome_groups/1",
         "data": {
             "id": 1,
             "url": "/api/v1/courses/1/outcome_groups/1",
@@ -580,7 +580,7 @@
     },
     "outcome_group_delete_course": {
         "method": "DELETE",
-        "endpoint": "courses/1/outcome_groups/1",
+        "endpoint": "courses/29/outcome_groups/1",
         "data": {
             "id": 1,
             "url": "/api/v1/courses/1/outcome_groups/1",
@@ -714,7 +714,7 @@
     },
     "outcome_group_list_linked_outcomes_courses": {
         "method": "GET",
-        "endpoint": "courses/1/outcome_groups/1/outcomes",
+        "endpoint": "courses/29/outcome_groups/1/outcomes",
         "data": [
             {
                 "context_id": 1,
@@ -832,7 +832,7 @@
     },
     "outcome_group_link_existing_course": {
         "method": "PUT",
-        "endpoint": "courses/1/outcome_groups/1/outcomes/3",
+        "endpoint": "courses/29/outcome_groups/1/outcomes/3",
         "data": {
             "context_id": 1,
             "context_type": "Course",
@@ -922,7 +922,7 @@
     },
     "outcome_group_link_new_course": {
         "method": "POST",
-        "endpoint": "courses/1/outcome_groups/1/outcomes",
+        "endpoint": "courses/29/outcome_groups/1/outcomes",
         "data": {
             "context_id": 1,
             "context_type": "Course",
@@ -1012,7 +1012,7 @@
     },
     "outcome_group_unlink_outcome_course": {
         "method": "DELETE",
-        "endpoint": "courses/1/outcome_groups/1/outcomes/3",
+        "endpoint": "courses/29/outcome_groups/1/outcomes/3",
         "data": {
             "context_id": 1,
             "context_type": "Course",
@@ -1090,7 +1090,7 @@
     },
     "outcome_group_list_subgroups_course": {
         "method": "GET",
-        "endpoint": "courses/1/outcome_groups/1/subgroups",
+        "endpoint": "courses/29/outcome_groups/1/subgroups",
         "data": [
             {
                 "id": 2,
@@ -1166,7 +1166,7 @@
     },
     "outcome_group_create_subgroup_course": {
         "method": "POST",
-        "endpoint": "courses/1/outcome_groups/1/subgroups",
+        "endpoint": "courses/29/outcome_groups/1/subgroups",
         "data": {
             "id": 2,
             "title": "New Subgroup Title",
@@ -1244,7 +1244,7 @@
     },
     "outcome_group_import_outcome_group_course": {
         "method": "POST",
-        "endpoint": "courses/1/outcome_groups/1/import",
+        "endpoint": "courses/29/outcome_groups/1/import",
         "data": {
             "id": 4,
             "title": "Course Imported Subgroup Title",

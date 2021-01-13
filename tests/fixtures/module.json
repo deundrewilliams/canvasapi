@@ -1,7 +1,7 @@
 {
 	"delete": {
 		"method":"DELETE",
-		"endpoint": "courses/1/modules/1",
+		"endpoint": "courses/29/modules/1",
 		"data": {
 			"id": 1,
 			"name": "Name",
@@ -12,7 +12,7 @@
 	},
 	"edit": {
 		"method": "PUT",
-		"endpoint": "courses/1/modules/1",
+		"endpoint": "courses/29/modules/1",
 		"data": {
 			"id": 1,
 			"name": "New Name",
@@ -23,7 +23,7 @@
 	},
 	"relock": {
 		"method": "PUT",
-		"endpoint": "courses/1/modules/1/relock",
+		"endpoint": "courses/29/modules/1/relock",
 		"data": {
 			"id": 1,
 			"name": "New Name",
@@ -35,7 +35,7 @@
 	},
 	"list_module_items": {
 		"method": "GET",
-		"endpoint": "courses/1/modules/1/items",
+		"endpoint": "courses/29/modules/1/items",
 		"data": [
 			{
 				"id": 1,
@@ -57,7 +57,7 @@
 	},
 	"list_module_items2": {
 		"method": "GET",
-		"endpoint": "courses/1/modules/1/items/list_module_items?page=2&per_page=2",
+		"endpoint": "courses/29/modules/1/items/list_module_items?page=2&per_page=2",
 		"data": [
 			{
 				"id": 3,
@@ -79,7 +79,7 @@
 	},
 	"get_module_item_by_id": {
 		"method": "GET",
-		"endpoint": "courses/1/modules/1/items/1",
+		"endpoint": "courses/29/modules/1/items/1",
 		"data": {
 			"id": 1,
 			"title": "Test Module Item 1234",
@@ -91,7 +91,7 @@
 	},
 	"create_module_item": {
 		"method": "POST",
-		"endpoint": "courses/1/modules/1/items",
+		"endpoint": "courses/29/modules/1/items",
 		"data": {
 			"id": 1,
 			"title": "Module Item Name",
@@ -103,7 +103,7 @@
 	},
 	"edit_module_item": {
 		"method": "PUT",
-		"endpoint": "courses/1/modules/1/items/1",
+		"endpoint": "courses/29/modules/1/items/1",
 		"data": {
 			"id": 1,
 			"title": "New Title",
@@ -115,7 +115,7 @@
 	},
 	"delete_module_item": {
 		"method": "DELETE",
-		"endpoint": "courses/1/modules/1/items/1",
+		"endpoint": "courses/29/modules/1/items/1",
 		"data": {
 			"id": 1,
 			"title": "New Title",
@@ -127,7 +127,7 @@
 	},
 	"complete_module_item": {
 		"method": "PUT",
-		"endpoint": "courses/1/modules/1/items/1/done",
+		"endpoint": "courses/29/modules/1/items/1/done",
 		"data": {
 			"id": 1,
 			"title": "New Title",
@@ -141,7 +141,7 @@
 	},
 	"uncomplete_module_item": {
 		"method": "DELETE",
-		"endpoint": "courses/1/modules/1/items/1/done",
+		"endpoint": "courses/29/modules/1/items/1/done",
 		"data": {
 			"id": 1,
 			"title": "New Title",

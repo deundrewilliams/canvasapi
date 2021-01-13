@@ -1,7 +1,7 @@
 {
 	"deactivate": {
 		"method": "DELETE",
-		"endpoint": "courses/1/enrollments/1",
+		"endpoint": "courses/29/enrollments/1",
 		"data": {
 			"id": 1,
 			"course_id": 1,
@@ -24,7 +24,7 @@
 	},
 	"reactivate": {
 		"method": "PUT",
-		"endpoint": "courses/1/enrollments/1/reactivate",
+		"endpoint": "courses/29/enrollments/1/reactivate",
 		"data": {
 			"id": 1,
 			"course_id": 1,

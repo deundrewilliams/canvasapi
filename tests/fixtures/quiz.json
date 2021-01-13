@@ -1,19 +1,19 @@
 {
 	"abort_or_delete_report": {
 		"method": "DELETE",
-		"endpoint": "courses/1/quizzes/1/reports/1",
+		"endpoint": "courses/29/quizzes/1/reports/1",
 		"data": "True",
 		"status_code": 204
 	},
 	"abort_or_delete_report_failure": {
 		"method": "DELETE",
-		"endpoint": "courses/1/quizzes/1/reports/1",
+		"endpoint": "courses/29/quizzes/1/reports/1",
 		"data": "False",
 		"status_code": 200
 	},
 	"broadcast_message": {
 		"method":"POST",
-		"endpoint": "courses/1/quizzes/1/submission_users/message",
+		"endpoint": "courses/29/quizzes/1/submission_users/message",
 		"data": {
 			"status": "created"
 		},
@@ -21,7 +21,7 @@
 	},
 	"delete": {
 		"method":"DELETE",
-		"endpoint": "courses/1/quizzes/1",
+		"endpoint": "courses/29/quizzes/1",
 		"data": {
 			"id": 1,
 			"title": "Great Title"
@@ -30,12 +30,12 @@
 	},
 	"delete_question": {
 		"method": "DELETE",
-		"endpoint": "courses/1/quizzes/1/questions/1",
+		"endpoint": "courses/29/quizzes/1/questions/1",
 		"status_code": 204
 	},
 	"edit": {
 		"method": "PUT",
-		"endpoint": "courses/1/quizzes/1",
+		"endpoint": "courses/29/quizzes/1",
 		"data": {
 			"id": 1,
 			"title": "New Title"
@@ -44,7 +44,7 @@
 	},
 	"edit_question": {
 		"method": "PUT",
-		"endpoint": "courses/1/quizzes/1/questions/1",
+		"endpoint": "courses/29/quizzes/1/questions/1",
 		"data": {
 			"id": 1,
 			"quiz_id": 1,
@@ -61,7 +61,7 @@
 	},
 	"get_by_id": {
 		"method": "GET",
-		"endpoint": "courses/1/quizzes/1",
+		"endpoint": "courses/29/quizzes/1",
 		"data": {
 			"id": 1,
 			"title": "Quizzy McQuizFace"
@@ -70,7 +70,7 @@
 	},
 	"get_by_id_5": {
 		"method": "GET",
-		"endpoint": "courses/1/quizzes/5",
+		"endpoint": "courses/29/quizzes/5",
 		"data": {
 			"id": 5,
 			"title": "Quiz Numbah Five"
@@ -79,7 +79,7 @@
 	},
 	"get_quiz_group": {
 		"method": "GET",
-		"endpoint": "courses/1/quizzes/5/groups/10",
+		"endpoint": "courses/29/quizzes/5/groups/10",
 		"data": {
 			"id": 10,
 			"quiz_id": 5,
@@ -92,7 +92,7 @@
 	},
 	"create_question": {
 		"method": "POST",
-		"endpoint": "courses/1/quizzes/1/questions",
+		"endpoint": "courses/29/quizzes/1/questions",
 		"data": {
 			"id": 1,
 			"quiz_id": 1,
@@ -109,7 +109,7 @@
 	},
 	"create_question_group": {
 		"method": "POST",
-		"endpoint": "courses/1/quizzes/1/groups",
+		"endpoint": "courses/29/quizzes/1/groups",
 		"data": {
 			"quiz_groups": [
 				{
@@ -126,7 +126,7 @@
 	},
 	"create_submission": {
 		"method": "POST",
-		"endpoint": "courses/1/quizzes/1/submissions",
+		"endpoint": "courses/29/quizzes/1/submissions",
 		"data": {
 			"quiz_submissions": [
 				{
@@ -143,7 +143,7 @@
 	},
 	"get_all_quiz_submissions": {
 		"method": "GET",
-		"endpoint": "courses/1/quizzes/1/submissions",
+		"endpoint": "courses/29/quizzes/1/submissions",
 		"data": {
 			"quiz_submissions": [
 				{
@@ -169,7 +169,7 @@
 	},
 	"get_question": {
 		"method": "GET",
-		"endpoint": "courses/1/quizzes/1/questions/1",
+		"endpoint": "courses/29/quizzes/1/questions/1",
 		"data": {
 			"id": 1,
 			"quiz_id": 1,
@@ -186,7 +186,7 @@
 	},
 	"get_questions": {
 		"method": "GET",
-		"endpoint": "courses/1/quizzes/1/questions",
+		"endpoint": "courses/29/quizzes/1/questions",
 		"data": [
 			{
 				"id": 1,
@@ -217,7 +217,7 @@
 	},
 	"get_quiz_submission": {
 		"method": "GET",
-		"endpoint": "courses/1/quizzes/1/submissions/1",
+		"endpoint": "courses/29/quizzes/1/submissions/1",
 		"data": {
 			"quiz_submissions": [
 				{
@@ -258,7 +258,7 @@
 	},
 	"get_submission_events": {
 		"method": "GET",
-		"endpoint": "courses/1/quizzes/1/submissions/1/events",
+		"endpoint": "courses/29/quizzes/1/submissions/1/events",
 		"data": {
 			"quiz_submission_events": [
 				{
@@ -278,7 +278,7 @@
 	},
 	"set_extensions": {
 		"method": "POST",
-		"endpoint": "courses/1/quizzes/1/extensions",
+		"endpoint": "courses/29/quizzes/1/extensions",
 		"data": {
 			"quiz_extensions": [
 				{
@@ -302,13 +302,13 @@
 	},
 	"submit_events": {
 		"method": "POST",
-		"endpoint": "courses/1/quizzes/1/submissions/1/events",
+		"endpoint": "courses/29/quizzes/1/submissions/1/events",
 		"data": {},
 		"status_code": 204
 	},
 	"get_all_quiz_reports": {
 		"method": "GET",
-		"endpoint": "courses/1/quizzes/1/reports",
+		"endpoint": "courses/29/quizzes/1/reports",
 		"data": [
 			{
 				"id": 1,
@@ -327,7 +327,7 @@
 	},
 	"get_quiz_report": {
 		"method": "GET",
-		"endpoint": "courses/1/quizzes/1/reports/1",
+		"endpoint": "courses/29/quizzes/1/reports/1",
 		"data": {
 			"id": 1,
 			"quiz_id": 1,
@@ -338,7 +338,7 @@
 	},
 	"get_statistics": {
 		"method": "GET",
-		"endpoint": "courses/1/quizzes/1/statistics",
+		"endpoint": "courses/29/quizzes/1/statistics",
 		"data": {
 			"quiz_statistics": [
                 {
@@ -566,7 +566,7 @@
 	},
 	"create_report": {
 		"method": "POST",
-		"endpoint": "courses/1/quizzes/1/reports",
+		"endpoint": "courses/29/quizzes/1/reports",
 		"data": {
 			"id": 1,
 			"quiz_id": 1,

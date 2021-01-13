@@ -25,8 +25,8 @@ class TestPage(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
-            self.group = self.canvas.get_group(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
+            self.group = self.canvas.get_group(object_ids.GROUP_ID)
             self.page_course = self.course.get_page("my-url")
             self.page_group = self.group.get_page("my-url")
 
@@ -73,7 +73,7 @@ class TestPage(unittest.TestCase):
     def test_get_revision_by_id_course(self, m):
         register_uris({"page": ["get_latest_rev_by_id"]}, m)
 
-        revision_by_id = self.page_course.get_revision_by_id(2)
+        revision_by_id = self.page_course.get_revision_by_id(object_ids.PAGE_REVISION_ID)
         self.assertIsInstance(revision_by_id, PageRevision)
 
         revision_by_obj = self.page_course.get_revision_by_id(revision_by_id)
@@ -82,7 +82,7 @@ class TestPage(unittest.TestCase):
     def test_get_revision_by_id_group(self, m):
         register_uris({"page": ["get_latest_rev_by_id_group"]}, m)
 
-        revision_by_id = self.page_group.get_revision_by_id(2)
+        revision_by_id = self.page_group.get_revision_by_id(object_ids.PAGE_REVISION_ID)
         self.assertIsInstance(revision_by_id, PageRevision)
 
         revision_by_obj = self.page_group.get_revision_by_id(revision_by_id)
@@ -91,23 +91,23 @@ class TestPage(unittest.TestCase):
     def test_revert_to_revision_course(self, m):
         register_uris({"page": ["revert_to_revision"]}, m)
 
-        revision = self.page_course.revert_to_revision(3)
+        revision = self.page_course.revert_to_revision(object_ids.PAGE_REVISION_ID)
 
         self.assertIsInstance(revision, PageRevision)
 
     def test_revert_to_revision_group(self, m):
         register_uris({"page": ["revert_to_revision_group"]}, m)
 
-        revision = self.page_group.revert_to_revision(3)
+        revision = self.page_group.revert_to_revision(object_ids.PAGE_REVISION_ID)
 
         self.assertIsInstance(revision, PageRevision)
 
     # parent_id
     def test_parent_id_course(self, m):
-        self.assertEqual(self.page_course.parent_id, 1)
+        self.assertEqual(self.page_course.parent_id, object_ids.COURSE_ID)
 
     def test_parent_id_group(self, m):
-        self.assertEqual(self.page_group.parent_id, 1)
+        self.assertEqual(self.page_group.parent_id, object_ids.GROUP_ID)
 
     def test_parent_id_no_id(self, m):
         page = Page(self.canvas._Canvas__requester, {"url": "my-url"})
@@ -151,12 +151,12 @@ class TestPageRevision(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
-            self.group = self.canvas.get_group(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
+            self.group = self.canvas.get_group(object_ids.GROUP_ID)
             self.page_course = self.course.get_page("my-url")
             self.page_group = self.group.get_page("my-url")
-            self.revision = self.page_course.get_revision_by_id(2)
-            self.group_revision = self.page_group.get_revision_by_id(2)
+            self.revision = self.page_course.get_revision_by_id(object_ids.PAGE_REVISION_ID)
+            self.group_revision = self.page_group.get_revision_by_id(object_ids.PAGE_REVISION_ID)
 
     # __str__()
     def test__str__(self, m):

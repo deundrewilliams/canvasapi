@@ -230,8 +230,8 @@
 		"method": "GET",
 		"endpoint": "courses/29/blueprint_templates/default",
 		"data": {
-			"id": 1,
-			"course_id": 1,
+			"id": 16,
+			"course_id": 29,
 			"associated_course_count": 3,
 			"latest_migration": null
 		},

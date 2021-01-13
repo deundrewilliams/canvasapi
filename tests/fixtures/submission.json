@@ -12,7 +12,7 @@
 	},
 	"complete": {
 		"method": "POST",
-		"endpoint": "courses/1/quizzes/1/submissions/1/complete",
+		"endpoint": "courses/29/quizzes/1/submissions/1/complete",
 		"data": {
 			"quiz_submissions": [
 				{
@@ -53,7 +53,7 @@
 	},
 	"get_times": {
 		"method": "GET",
-		"endpoint": "courses/1/quizzes/1/submissions/1/time",
+		"endpoint": "courses/29/quizzes/1/submissions/1/time",
 		"data": {
 		    "end_at": "9999-99-99T59:59:59Z",
 		    "time_left": 0
@@ -102,7 +102,7 @@
 	},
 	"update_score_and_comments": {
 		"method": "PUT",
-		"endpoint": "courses/1/quizzes/1/submissions/1",
+		"endpoint": "courses/29/quizzes/1/submissions/1",
 		"data": {
 			"quiz_submissions": [
 				{

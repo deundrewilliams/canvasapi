@@ -1,7 +1,7 @@
 {
     "get_associated_courses": {
         "method": "GET",
-        "endpoint": "courses/1/blueprint_templates/1/associated_courses",
+        "endpoint": "courses/29/blueprint_templates/1/associated_courses",
         "data": [
             {
                 "id": 1,
@@ -17,7 +17,7 @@
     },
     "update_associated_courses": {
         "method": "PUT",
-        "endpoint": "courses/1/blueprint_templates/1/update_associations",
+        "endpoint": "courses/29/blueprint_templates/1/update_associations",
         "data": {
             "success": true
         },
@@ -25,7 +25,7 @@
     },
     "associated_course_migration": {
         "method": "POST",
-        "endpoint": "courses/1/blueprint_templates/1/migrations",
+        "endpoint": "courses/29/blueprint_templates/1/migrations",
         "data": {
             "id": 1,
             "comment": "test1",
@@ -35,7 +35,7 @@
     },
     "change_blueprint_restrictions": {
         "method": "PUT",
-        "endpoint": "courses/1/blueprint_templates/1/restrict_item",
+        "endpoint": "courses/29/blueprint_templates/1/restrict_item",
         "data": {
             "success": true
         },
@@ -43,7 +43,7 @@
     },
     "get_unsynced_changes": {
         "method": "GET",
-        "endpoint": "courses/1/blueprint_templates/1/unsynced_changes",
+        "endpoint": "courses/29/blueprint_templates/1/unsynced_changes",
         "data": [{
             "asset_id": 1,
             "asset_type": "quiz",
@@ -54,7 +54,7 @@
     },
     "list_blueprint_migrations": {
         "method": "GET",
-        "endpoint": "courses/1/blueprint_templates/1/migrations",
+        "endpoint": "courses/29/blueprint_templates/1/migrations",
         "data": [{
             "id": 1,
             "user_id": 1,
@@ -64,7 +64,7 @@
     },
     "show_blueprint_migration": {
         "method": "GET",
-        "endpoint": "courses/1/blueprint_templates/1/migrations/1",
+        "endpoint": "courses/29/blueprint_templates/1/migrations/1",
         "data": {
             "id": 1,
             "user_id": 1,
@@ -75,7 +75,7 @@
     },
     "get_details": {
         "method": "GET",
-        "endpoint": "courses/1/blueprint_templates/1/migrations/1/details",
+        "endpoint": "courses/29/blueprint_templates/1/migrations/1/details",
         "data": [
             {
                 "asset_id": 1,
@@ -96,7 +96,7 @@
     },
     "list_blueprint_imports": {
         "method": "GET",
-        "endpoint": "courses/1/blueprint_subscriptions/10/migrations",
+        "endpoint": "courses/29/blueprint_subscriptions/10/migrations",
         "data": [{
             "course_id": 1,
             "id": 3,
@@ -107,7 +107,7 @@
     },
     "show_blueprint_import": {
         "method": "GET",
-        "endpoint": "courses/1/blueprint_subscriptions/10/migrations/3",
+        "endpoint": "courses/29/blueprint_subscriptions/10/migrations/3",
         "data": {
             "id": 3,
             "template_id": 3,
@@ -117,7 +117,7 @@
     },
     "get_import_details": {
         "method": "GET",
-        "endpoint": "courses/1/blueprint_subscriptions/10/migrations/3/details",
+        "endpoint": "courses/29/blueprint_subscriptions/10/migrations/3/details",
         "data": [
             {
                 "asset_id": 1,

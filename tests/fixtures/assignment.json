@@ -1,7 +1,7 @@
 {
 	"batch_create_assignment_overrides": {
 		"method": "POST",
-		"endpoint": "courses/1/assignments/overrides",
+		"endpoint": "courses/29/assignments/overrides",
 		"data": [
 			{
 				"id": 10,
@@ -20,7 +20,7 @@
 	},
 	"batch_get_assignment_overrides": {
 		"method": "GET",
-		"endpoint": "courses/1/assignments/overrides",
+		"endpoint": "courses/29/assignments/overrides",
 		"data": [{
 			"id": 1,
 			"assignment_id": 1,
@@ -36,7 +36,7 @@
 	},
 	"batch_get_assignment_overrides_p2": {
 		"method": "GET",
-		"endpoint": "courses/1/assignments/overrides?page=2&per_page=1",
+		"endpoint": "courses/29/assignments/overrides?page=2&per_page=1",
 		"data": [{
 			"id": 20,
 			"assignment_id": 2,
@@ -49,7 +49,7 @@
 	},
 	"batch_update_assignment_overrides": {
 		"method": "PUT",
-		"endpoint": "courses/1/assignments/overrides",
+		"endpoint": "courses/29/assignments/overrides",
 		"data": [
 			{
 				"id": 10,
@@ -68,7 +68,7 @@
 	},
 	"create_assignment_group": {
 		"method": "POST",
-		"endpoint": "courses/1/assignment_groups",
+		"endpoint": "courses/29/assignment_groups",
 		"data": {
 			"id": 3,
 			"course_id": 1,
@@ -78,7 +78,7 @@
 	},
 	"create_override": {
 		"method": "POST",
-		"endpoint": "courses/1/assignments/1/overrides",
+		"endpoint": "courses/29/assignments/8/overrides",
 		"data": {
 			"id": 10,
 			"assignment_id": 1,
@@ -89,7 +89,7 @@
 	},
 	"delete_assignment": {
 		"method": "DELETE",
-		"endpoint": "courses/1/assignments/1",
+		"endpoint": "courses/29/assignments/8",
 		"data": {
 			"id": 1,
 			"course_id": 1,
@@ -100,7 +100,7 @@
 	},
 	"delete_assignment_group": {
 		"method": "DELETE",
-		"endpoint": "courses/1/assignment_groups/5",
+		"endpoint": "courses/29/assignment_groups/5",
 		"data": {
 			"id": 5,
 			"course_id": 1,
@@ -110,7 +110,7 @@
 	},
 	"delete_override": {
 		"method": "DELETE",
-		"endpoint": "courses/1/assignments/1/overrides/1",
+		"endpoint": "courses/29/assignments/8/overrides/1",
 		"data": {
 			"id": 1,
 			"assignment_id": 1,
@@ -123,7 +123,7 @@
 	},
 	"edit_assignment": {
 		"method": "PUT",
-		"endpoint": "courses/1/assignments/1",
+		"endpoint": "courses/29/assignments/8",
 		"data": {
 			"id": 1,
 			"course_id": 1,
@@ -134,7 +134,7 @@
 	},
 	"edit_assignment_group": {
 		"method": "PUT",
-		"endpoint": "courses/1/assignment_groups/5",
+		"endpoint": "courses/29/assignment_groups/5",
 		"data": {
 			"id": 5,
 			"course_id": 1,
@@ -144,7 +144,7 @@
 	},
 	"edit_override": {
 		"method": "PUT",
-		"endpoint": "courses/1/assignments/1/overrides/1",
+		"endpoint": "courses/29/assignments/8/overrides/1",
 		"data": {
 			"id": 1,
 			"title": "New Title",
@@ -154,7 +154,7 @@
 	},
 	"get_assignment_group": {
 		"method": "GET",
-		"endpoint": "courses/1/assignment_groups/5",
+		"endpoint": "courses/29/assignment_groups/5",
 		"data": {
 			"id": 5,
 			"course_id": 1,
@@ -164,7 +164,7 @@
 	},
 	"list_assignment_groups": {
 		"method": "GET",
-		"endpoint": "courses/1/assignment_groups",
+		"endpoint": "courses/29/assignment_groups",
 		"data": [
 			{
 				"id": 5,
@@ -176,7 +176,7 @@
 	},
 	"list_assignment_overrides": {
 		"method": "GET",
-		"endpoint": "courses/1/assignments/1/overrides",
+		"endpoint": "courses/29/assignments/8/overrides",
 		"data": [
 			{
 				"id": 1,
@@ -202,7 +202,7 @@
 	},
 	"list_assignment_overrides_p2": {
 		"method": "GET",
-		"endpoint": "courses/1/assignments/1/overrides?page=2&per_page=2",
+		"endpoint": "courses/29/assignments/8/overrides?page=2&per_page=2",
 		"data": [
 			{
 				"id": 3,
@@ -225,7 +225,7 @@
 	},
 	"list_peer_reviews": {
 		"method": "GET",
-		"endpoint": "courses/1/assignments/1/peer_reviews",
+		"endpoint": "courses/29/assignments/8/peer_reviews",
 		"data": [
 			{
 				"assessor_id": 23,
@@ -244,7 +244,7 @@
 	},
 	"get_assignment_override": {
 		"method": "GET",
-		"endpoint": "courses/1/assignments/1/overrides/1",
+		"endpoint": "courses/29/assignments/8/overrides/1",
 		"data": {
 			"id": 1,
 			"assignment_id": 1,
@@ -257,7 +257,7 @@
 	},
 	"get_assignment_with_overrides": {
 		"method": "GET",
-		"endpoint": "courses/1/assignments/1",
+		"endpoint": "courses/29/assignments/8",
 		"data": {
 			"id": 1,
 			"course_id": 1,
@@ -298,7 +298,7 @@
 	},
 	"set_extensions":{
 		"method": "POST",
-		"endpoint": "courses/1/assignments/1/extensions",
+		"endpoint": "courses/29/assignments/8/extensions",
 		"data": {
 			"assignment_extensions": [
 				{
@@ -316,7 +316,7 @@
 	},
 	"submit": {
 		"method": "POST",
-		"endpoint": "courses/1/assignments/1/submissions",
+		"endpoint": "courses/29/assignments/8/submissions",
 		"data": {
 			"id": 1,
 			"assignment_id": 1,
@@ -328,7 +328,7 @@
 	},
 	"update_submissions": {
 		"method": "POST",
-		"endpoint": "courses/1/assignments/1/submissions/update_grades",
+		"endpoint": "courses/29/assignments/8/submissions/update_grades",
 		"data": {
 			"id": 3,
 			"context_id": 1,
@@ -345,7 +345,7 @@
 	},
 	"upload": {
 		"method": "POST",
-		"endpoint": "courses/1/assignments/1/submissions/self/files",
+		"endpoint": "courses/29/assignments/8/submissions/self/files",
 		"data": {
 			"upload_url": "https://example.com/api/v1/files/upload_response_upload_url",
 			"upload_params": {
@@ -356,7 +356,7 @@
 	},
 	"upload_by_id": {
 		"method": "POST",
-		"endpoint": "courses/1/assignments/1/submissions/1/files",
+		"endpoint": "courses/29/assignments/8/submissions/1/files",
 		"data": {
 			"upload_url": "https://example.com/api/v1/files/upload_response_upload_url",
 			"upload_params": {

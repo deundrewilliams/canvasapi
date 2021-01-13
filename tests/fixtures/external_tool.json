@@ -11,7 +11,7 @@
 	},
 	"create_tool_course": {
 		"method": "POST",
-		"endpoint": "courses/1/external_tools",
+		"endpoint": "courses/29/external_tools",
 		"data": {
 			"id": 20,
 			"name": "External Tool - Course",
@@ -21,7 +21,7 @@
 	},
 	"delete_tool_course": {
 		"method": "DELETE",
-		"endpoint": "courses/1/external_tools/1",
+		"endpoint": "courses/29/external_tools/1",
 		"data": {
 			"id": 1,
 			"name": "External Tool #1 (Course)",
@@ -35,7 +35,7 @@
 	},
 	"edit_tool_course": {
 		"method": "PUT",
-		"endpoint": "courses/1/external_tools/1",
+		"endpoint": "courses/29/external_tools/1",
 		"data": {
 			"id": 1,
 			"name": "New Tool Name",
@@ -63,7 +63,7 @@
 	},
 	"get_by_id_course": {
 		"method": "GET",
-		"endpoint": "courses/1/external_tools/1",
+		"endpoint": "courses/29/external_tools/1",
 		"data": {
 			"id": 1,
 			"name": "External Tool #1 (Course)",
@@ -91,7 +91,7 @@
 	},
 	"get_sessionless_launch_url_course": {
 		"method": "GET",
-		"endpoint": "courses/1/external_tools/sessionless_launch",
+		"endpoint": "courses/29/external_tools/sessionless_launch",
 		"data": {
 			"id": "1",
 			"name": "External Tool #1 (Course)",

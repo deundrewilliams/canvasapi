@@ -21,8 +21,8 @@ class TestPeerReview(unittest.TestCase):
 
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
-            self.assignment = self.course.get_assignment(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
+            self.assignment = self.course.get_assignment(object_ids.ASSIGNMENT_ID)
             self.peer_reviews = [
                 peer_review for peer_review in self.assignment.get_peer_reviews()
             ]

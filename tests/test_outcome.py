@@ -29,7 +29,7 @@ class TestOutcome(unittest.TestCase):
                 m,
             )
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.course_outcome_links = self.course.get_all_outcome_links_in_context()
             self.example_outcome = self.course_outcome_links[0].get_outcome()
 
@@ -68,7 +68,7 @@ class TestOutcomeLink(unittest.TestCase):
 
             self.account = self.canvas.get_account(1)
             self.account_outcome_links = self.account.get_all_outcome_links_in_context()
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.course_outcome_links = self.course.get_all_outcome_links_in_context()
 
     # __str__()
@@ -132,7 +132,7 @@ class TestOutcomeGroup(unittest.TestCase):
             self.account_outcome_groups = self.account.get_outcome_groups_in_context()
             self.account_outcome_links = self.account.get_all_outcome_links_in_context()
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.course_outcome_group = self.course.get_root_outcome_group()
             self.course_outcome_groups = self.course.get_outcome_groups_in_context()
             self.course_outcome_links = self.course.get_all_outcome_links_in_context()

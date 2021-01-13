@@ -26,7 +26,7 @@
 	},
 	"get_parent_course": {
 		"method": "GET",
-		"endpoint": "courses/1",
+		"endpoint": "courses/29",
 		"data": {
 			"id": 1,
 			"name": "Dummy Parent"
@@ -66,7 +66,7 @@
 	},
 	"get_migration_issue_single_course": {
 		"method": "GET",
-		"endpoint": "courses/1/content_migrations/1/migration_issues/1",
+		"endpoint": "courses/29/content_migrations/1/migration_issues/1",
 		"data": {
 			"id": 1,
 			"content_migration_url": "https://example.com/api/v1/courses/1/content_migrations/1",

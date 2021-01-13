@@ -27,7 +27,7 @@ class TestBlueprint(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.blueprint = self.course.get_blueprint(1)
             self.blueprint_migration = self.blueprint.show_blueprint_migration(1)
 
@@ -113,7 +113,7 @@ class TestBlueprintSubscription(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.blueprint = self.course.get_blueprint(1)
             self.blueprint_migration = self.blueprint.show_blueprint_migration(1)
             self.blueprint_subscription = self.course.list_blueprint_subscriptions()[0]
@@ -161,7 +161,7 @@ class TestBlueprintMigration(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.blueprint = self.course.get_blueprint(1)
             self.blueprint_migration = self.blueprint.show_blueprint_migration(1)
             self.blueprint_subscription = self.course.list_blueprint_subscriptions()[0]
@@ -210,7 +210,7 @@ class TestChangeRecord(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.course = self.canvas.get_course(1)
+            self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.blueprint = self.course.get_blueprint(1)
             self.change_record = self.blueprint.get_unsynced_changes()[0]
 

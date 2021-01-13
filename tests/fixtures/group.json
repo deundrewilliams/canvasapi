@@ -12,12 +12,12 @@
 	},
 	"get_by_id": {
 		"method": "GET",
-		"endpoint": "groups/1",
+		"endpoint": "groups/47",
 		"data": {
-			"id": 1,
+			"id": 47,
 			"name": "group1",
 			"description": "best group ever",
-			"course_id": 1
+			"course_id": 29
 		},
 		"status_code": 200
 	},
@@ -35,9 +35,9 @@
 	},
 	"pages_get_page": {
 		"method": "GET",
-		"endpoint": "groups/1/pages/my-url",
+		"endpoint": "groups/47/pages/my-url",
 		"data": {
-			"id": 1,
+			"id": 47,
 			"url": "my-url",
 			"title": "Awesome Page"
 		},
@@ -45,7 +45,7 @@
 	},
 	"create_folder": {
 		"method": "POST",
-		"endpoint": "groups/1/folders",
+		"endpoint": "groups/47/folders",
 		"data": {
 			"id": 2,
 			"name": "Test String",
@@ -56,7 +56,7 @@
 	},
 	"create_page": {
 		"method": "POST",
-		"endpoint": "groups/1/pages",
+		"endpoint": "groups/47/pages",
 		"data": {
 			"id": 2,
 			"url": "new-page",
@@ -66,7 +66,7 @@
 	},
 	"edit_front_page": {
 		"method": "PUT",
-		"endpoint": "groups/1/front_page",
+		"endpoint": "groups/47/front_page",
 		"data": {
 			"id": 1,
 			"url": "front-page-1",
@@ -76,7 +76,7 @@
 	},
 	"show_front_page": {
 		"method": "GET",
-		"endpoint": "groups/1/front_page",
+		"endpoint": "groups/47/front_page",
 		"data":{
 			"id": 1,
 			"url": "front-page",
@@ -86,9 +86,9 @@
 	},
 	"get_page": {
 		"method": "GET",
-		"endpoint": "groups/1/pages/my-url",
+		"endpoint": "groups/47/pages/my-url",
 		"data": {
-			"id": 1,
+			"id": 58,
 			"url": "my-url",
 			"title": "Awesome Page"
 		},
@@ -96,7 +96,7 @@
 	},
 	"get_pages": {
 		"method": "GET",
-		"endpoint": "groups/1/pages",
+		"endpoint": "groups/47/pages",
 		"data": [
 			{
 				"id": 1,
@@ -111,12 +111,12 @@
 		],
 		"status_code": 200,
 		"headers": {
-			"Link": "<https://example.com/api/v1/groups/1/get_pages?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/groups/47/get_pages?page=2&per_page=2>; rel=\"next\""
 		}
 	},
 	"get_pages2": {
 		"method": "GET",
-		"endpoint": "groups/1/get_pages?page=2&per_page=2",
+		"endpoint": "groups/47/get_pages?page=2&per_page=2",
 		"data": [
 			{
 				"id": 3,
@@ -133,7 +133,7 @@
 	},
 	"edit": {
 		"method": "PUT",
-		"endpoint": "groups/1",
+		"endpoint": "groups/47",
 		"data": {
 			"id": 1,
 			"name": "group-none",
@@ -144,7 +144,7 @@
 	},
 	"delete": {
 		"method": "DELETE",
-		"endpoint": "groups/1",
+		"endpoint": "groups/47",
 		"data": {
 			"id": 1,
 			"name": "group-none",
@@ -155,7 +155,7 @@
 	},
 	"invite": {
 		"method": "POST",
-		"endpoint": "groups/1/invite",
+		"endpoint": "groups/47/invite",
 		"data": [
 			{
 				"id": 4,
@@ -178,7 +178,7 @@
 	},
 	"list_users": {
 		"method": "GET",
-		"endpoint": "groups/1/users",
+		"endpoint": "groups/47/users",
 		"data": [
 			{
 				"id": 1,
@@ -196,7 +196,7 @@
 	},
 	"list_users_p2": {
 		"method": "GET",
-		"endpoint": "groups/1/users?page=2&per_page=2",
+		"endpoint": "groups/47/users?page=2&per_page=2",
 		"data": [
 			{
 				"id": 3,
@@ -211,7 +211,7 @@
 	},
 	"upload": {
 		"method": "POST",
-		"endpoint": "groups/1/files",
+		"endpoint": "groups/47/files",
 		"data": {
 			"upload_url": "https://example.com/api/v1/files/upload_response_upload_url",
 			"upload_params": {
@@ -229,7 +229,7 @@
 	},
 	"preview_processed_html": {
 		"method": "POST",
-		"endpoint": "groups/1/preview_html",
+		"endpoint": "groups/47/preview_html",
 		"data": {
 			"html": "<p>processed html</p>"
 		},
@@ -237,7 +237,7 @@
 	},
 	"activity_stream_summary": {
 		"method": "GET",
-		"endpoint": "groups/1/activity_stream/summary",
+		"endpoint": "groups/47/activity_stream/summary",
 		"data": [
 			{
 				"type": "DiscussionTopic",
@@ -254,7 +254,7 @@
 	},
 	"list_memberships": {
 		"method": "GET",
-		"endpoint": "groups/1/memberships",
+		"endpoint": "groups/47/memberships",
 		"data": [
 			{
 				"id": 1,
@@ -282,7 +282,7 @@
 	},
 	"list_memberships_p2": {
 		"method": "GET",
-		"endpoint": "groups/1/memberships?page=2&per_page=2",
+		"endpoint": "groups/47/memberships?page=2&per_page=2",
 		"data": [
 			{
 				"id": 3,
@@ -307,7 +307,7 @@
 	},
 	"get_membership": {
 		"method": "GET",
-		"endpoint": "groups/1/users/1",
+		"endpoint": "groups/47/users/1",
 		"data": {
 			"id": 1,
 			"group_id": 1,
@@ -321,7 +321,7 @@
 	},
 	"create_membership": {
 		"method": "POST",
-		"endpoint": "groups/1/memberships",
+		"endpoint": "groups/47/memberships",
 		"data": {
 			"id": 1,
 			"group_id": 1,
@@ -335,7 +335,7 @@
 	},
 	"update_membership_user": {
 		"method": "PUT",
-		"endpoint": "groups/1/users/1",
+		"endpoint": "groups/47/users/1",
 		"data": {
 			"id": 1,
 			"group_id": 1,
@@ -349,7 +349,7 @@
 	},
 	"update_membership_membership": {
 		"method": "PUT",
-		"endpoint": "groups/1/memberships/1",
+		"endpoint": "groups/47/memberships/1",
 		"data": {
 			"id": 1,
 			"group_id": 1,
@@ -363,13 +363,13 @@
 	},
 	"remove_user": {
 		"method": "DELETE",
-		"endpoint": "groups/1/users/1",
+		"endpoint": "groups/47/users/1",
 		"data": {},
 		"status_code": 200
 	},
 	"remove_self": {
 		"method": "DELETE",
-		"endpoint": "groups/1/memberships/self",
+		"endpoint": "groups/47/memberships/self",
 		"data": {},
 		"status_code": 200
 	},
@@ -617,7 +617,7 @@
 	},
 	"get_discussion_topic": {
 		"method": "GET",
-		"endpoint": "groups/1/discussion_topics/1",
+		"endpoint": "groups/47/discussion_topics/1",
 		"data": {
 				"id": 1,
 				"title": "Topic 1"
@@ -626,7 +626,7 @@
 	},
 	"get_file": {
 		"method": "GET",
-		"endpoint": "groups/1/files/1",
+		"endpoint": "groups/47/files/1",
 		"data": {
 			"id": 1,
 			"display_name": "Group_File.docx",
@@ -636,7 +636,7 @@
 	},
 	"get_full_discussion_topic": {
 		"method": "GET",
-		"endpoint": "groups/1/discussion_topics/1/view",
+		"endpoint": "groups/47/discussion_topics/1/view",
 		"data": {
 			"id": 1,
 			"view": [
@@ -653,7 +653,7 @@
 	},
 	"get_discussion_topics": {
 		"method": "GET",
-		"endpoint": "groups/1/discussion_topics",
+		"endpoint": "groups/47/discussion_topics",
 		"data": [
 			{
 				"id": 1,
@@ -668,7 +668,7 @@
 	},
 	"create_discussion_topic": {
 		"method": "POST",
-		"endpoint": "groups/1/discussion_topics",
+		"endpoint": "groups/47/discussion_topics",
 		"data": {
 			"id": 1,
 			"title": "Topic 1"
@@ -677,7 +677,7 @@
 	},
 	"reorder_pinned_topics": {
 		"method": "POST",
-		"endpoint": "groups/1/discussion_topics/reorder",
+		"endpoint": "groups/47/discussion_topics/reorder",
 		"data": {
 			"reorder": true,
 			"order": [1, 2, 3]
@@ -686,7 +686,7 @@
 	},
 	"delete_external_feed": {
 		"method": "DELETE",
-		"endpoint": "groups/1/external_feeds/1",
+		"endpoint": "groups/47/external_feeds/1",
 		"data": {
 			"id": 1,
 			"display_name": "My Blog",
@@ -696,7 +696,7 @@
 	},
 	"list_external_feeds": {
 		"method": "GET",
-		"endpoint": "groups/1/external_feeds",
+		"endpoint": "groups/47/external_feeds",
 		"data": [
 			{
 				"id": 1,
@@ -713,7 +713,7 @@
 	},
 	"create_external_feed": {
 		"method": "POST",
-		"endpoint": "groups/1/external_feeds",
+		"endpoint": "groups/47/external_feeds",
 		"data": {
 			"id": 1,
 			"display_name": "My Blog",
@@ -723,7 +723,7 @@
 	},
 	"list_group_files": {
 		"method": "GET",
-		"endpoint": "groups/1/files",
+		"endpoint": "groups/47/files",
 		"data": [
 			{
 				"id": 1,
@@ -743,7 +743,7 @@
 	},
 	"list_group_files2": {
 		"method": "GET",
-		"endpoint": "groups/1/files?page=2&per_page=2",
+		"endpoint": "groups/47/files?page=2&per_page=2",
 		"data": [
 			{
 				"id": 3,
@@ -760,7 +760,7 @@
 	},
 	"get_folder": {
 		"method": "GET",
-		"endpoint": "groups/1/folders/1",
+		"endpoint": "groups/47/folders/1",
 		"data": {
 			"id": 1,
 			"files_count": 10,
@@ -772,7 +772,7 @@
   },
   "list_folders": {
 	"method": "GET",
-	"endpoint": "groups/1/folders",
+	"endpoint": "groups/47/folders",
 	"data": [
 	  {
 		"id": 2,
@@ -793,7 +793,7 @@
   },
   "list_tabs": {
 		"method": "GET",
-		"endpoint": "groups/1/tabs",
+		"endpoint": "groups/47/tabs",
 		"data": [
 			{
 				"id": "home",
@@ -816,7 +816,7 @@
 	},
 	"get_collaborations": {
 		"method": "GET",
-		"endpoint": "groups/1/collaborations",
+		"endpoint": "groups/47/collaborations",
 		"data": {
 			"collaborations": [
 				{
@@ -857,7 +857,7 @@
 	},
 	"create_content_migration": {
 		"method": "POST",
-		"endpoint": "groups/1/content_migrations",
+		"endpoint": "groups/47/content_migrations",
 		"data": {
 			"id": 1,
 			"migration_type": "dummy_importer",
@@ -867,7 +867,7 @@
 	},
 	"get_content_migration_single": {
 		"method": "GET",
-		"endpoint": "groups/1/content_migrations/1",
+		"endpoint": "groups/47/content_migrations/1",
 		"data": {
 			"id": 1,
 			"migration_type": "dummy_importer",
@@ -878,7 +878,7 @@
 	},
 	"get_content_migration_multiple": {
 		"method": "GET",
-		"endpoint": "groups/1/content_migrations",
+		"endpoint": "groups/47/content_migrations",
 		"data": [
 			{
 				"id": 1,
@@ -895,7 +895,7 @@
 	},
 	"get_migration_systems_multiple": {
 		"method": "GET",
-		"endpoint": "groups/1/content_migrations/migrators",
+		"endpoint": "groups/47/content_migrations/migrators",
 		"data": [
 			{
 				"type": "dummy_importer",
@@ -912,7 +912,7 @@
 	},
 	"multiple_content_exports": {
 		"method": "GET",
-		"endpoint": "groups/1/content_exports",
+		"endpoint": "groups/47/content_exports",
 		"data": [
 			{
 				"user_id": 1,
@@ -929,7 +929,7 @@
 	},
 	"single_content_export": {
 		"method": "GET",
-		"endpoint": "groups/1/content_exports/11",
+		"endpoint": "groups/47/content_exports/11",
 		"data": {
 			"user_id": 1,
 			"id": 11,
@@ -939,7 +939,7 @@
 	},
 	"export_content": {
 		"method": "POST",
-		"endpoint": "groups/1/content_exports",
+		"endpoint": "groups/47/content_exports",
 		"data": {
 			"user_id": 1,
 			"id": 111,
@@ -949,7 +949,7 @@
 	},
 	"set_usage_rights": {
 		"method": "PUT",
-		"endpoint": "groups/1/usage_rights",
+		"endpoint": "groups/47/usage_rights",
 		"data": {
 			"use_justification": "fair_use",
 			"license": "private",
@@ -960,7 +960,7 @@
 	},
 	"remove_usage_rights": {
 		"method": "DELETE",
-		"endpoint": "groups/1/usage_rights",
+		"endpoint": "groups/47/usage_rights",
 		"data": {
 			"message": "2 files updated",
 			"file_ids": [1,2]
@@ -969,7 +969,7 @@
 	},
 	"get_licenses": {
 		"method": "GET",
-		"endpoint": "groups/1/content_licenses",
+		"endpoint": "groups/47/content_licenses",
 		"data": [
 			{
 				"id": "private",
@@ -986,7 +986,7 @@
 	},
     "resolve_path": {
 		"method": "GET",
-		"endpoint": "groups/1/folders/by_path/Folder_Level_1/Folder_Level_2/Folder_Level_3",
+		"endpoint": "groups/47/folders/by_path/Folder_Level_1/Folder_Level_2/Folder_Level_3",
 		"data": [
             {
 				"id": 2,
@@ -1021,7 +1021,7 @@
 	},
     "resolve_path_null": {
 		"method": "GET",
-		"endpoint": "groups/1/folders/by_path",
+		"endpoint": "groups/47/folders/by_path",
 		"data": [
             {
 				"id": 2,

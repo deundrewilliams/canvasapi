@@ -152,7 +152,7 @@ class TestPaginatedList(unittest.TestCase):
         register_uris({"account": ["get_enrollment_terms"]}, m)
 
         pag_list = PaginatedList(
-            EnrollmentTerm, self.requester, "GET", "accounts/1/terms", _root="wrong"
+            EnrollmentTerm, self.requester, "GET", "accounts/2/terms", _root="wrong"
         )
 
         with self.assertRaises(ValueError):
@@ -165,7 +165,7 @@ class TestPaginatedList(unittest.TestCase):
             EnrollmentTerm,
             self.requester,
             "GET",
-            "accounts/1/terms",
+            "accounts/2/terms",
             _root="enrollment_terms",
         )
 
