@@ -17,7 +17,7 @@ class TestGradingPeriod(unittest.TestCase):
 
         self.grading_period = GradingPeriod(
             self.canvas._Canvas__requester,
-            {"title": "grading period 1", "id": 1, "course_id": 1},
+            {"title": "grading period 1", "id": object_ids.GRADING_PERIOD_ID, "course_id": object_ids.COURSE_ID},
         )
 
     def test_str(self, m):
@@ -42,7 +42,7 @@ class TestGradingPeriod(unittest.TestCase):
         self.assertTrue(hasattr(edited_grading_period, "title"))
         self.assertTrue(hasattr(edited_grading_period, "course_id"))
         self.assertEqual(edited_grading_period.title, "Grading period 1")
-        self.assertEqual(edited_grading_period.course_id, 1)
+        self.assertEqual(edited_grading_period.course_id, object_ids.COURSE_ID)
         self.assertTrue(hasattr(edited_grading_period, "start_date"))
         self.assertTrue(hasattr(edited_grading_period, "end_date"))
         self.assertEqual(edited_grading_period.start_date, "2019-05-23T06:00:00Z")

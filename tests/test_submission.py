@@ -125,7 +125,7 @@ class TestGroupedSubmission(unittest.TestCase):
                         "id": 1,
                         "assignment_id": 1,
                         "user_id": 86,
-                        "html_url": "https://example.com/courses/1/assignments/1/submissions/1",
+                        "html_url": "https://example.com/courses/29/assignments/8/submissions/1",
                         "submission_type": "online_upload",
                     }
                 ],

@@ -30,7 +30,7 @@
 			"title": "Assignment Override 1"
 		}],
 		"headers": {
-			"Link": "<https://example.com/api/v1/courses/1/assignments/overrides?page=2&per_page=1>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/courses/29/assignments/overrides?page=2&per_page=1>; rel=\"next\""
 		},
 		"status_code": 200
 	},
@@ -196,7 +196,7 @@
 			}
 		],
 		"headers": {
-			"Link": "<https://example.com/api/v1/courses/1/assignments/1/overrides?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/courses/29/assignments/8/overrides?page=2&per_page=2>; rel=\"next\""
 		},
 		"status_code": 200
 	},
@@ -278,7 +278,7 @@
 	},
 	"override_group_alias": {
 		"method": "GET",
-		"endpoint": "groups/1/assignments/1/override",
+		"endpoint": "groups/1/assignments/8/override",
 		"data": {
 			"id": 30,
 			"assignment_id": 1,
@@ -288,7 +288,7 @@
 	},
 	"override_section_alias": {
 		"method": "GET",
-		"endpoint": "sections/1/assignments/1/override",
+		"endpoint": "sections/1/assignments/8/override",
 		"data": {
 			"id": 31,
 			"assignment_id": 1,
@@ -321,7 +321,7 @@
 			"id": 1,
 			"assignment_id": 1,
 			"user_id": 86,
-			"html_url": "https://example.com/courses/1/assignments/1/submissions/1",
+			"html_url": "https://example.com/courses/29/assignments/8/submissions/1",
 			"submission_type": "online_upload"
 		},
 		"status_code": 200

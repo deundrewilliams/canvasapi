@@ -163,7 +163,7 @@
 		],
 		"status_code": 200,
 		"headers": {
-			"Link": "<https://example.com/api/v1/courses/1/list_assignments?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/courses/29/list_assignments?page=2&per_page=2>; rel=\"next\""
 		}
 	},
 	"get_all_assignments2": {
@@ -376,7 +376,7 @@
 			}
 		],
 		"headers": {
-			"Link": "<https://example.com/api/v1/courses/1/external_tools?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/courses/29/external_tools?page=2&per_page=2>; rel=\"next\""
 		},
 		"status_code": 200
 	},
@@ -517,7 +517,7 @@
 			}
 		],
 		"headers": {
-			"Link": "<https://example.com/api/v1/courses/1/recent_students?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/courses/29/recent_students?page=2&per_page=2>; rel=\"next\""
 		},
 		"status_code": 200
 	},
@@ -606,7 +606,7 @@
 			}
 		],
 		"headers": {
-			"Link": "<https://example.com/api/v1/courses/1/sections?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/courses/29/sections?page=2&per_page=2>; rel=\"next\""
 		},
 		"status_code": 200
 	},
@@ -629,7 +629,7 @@
 	},
 	"get_submission_history": {
 		"method": "GET",
-		"endpoint": "courses/29/gradebook_history/08-23-2019/graders/1/assignments/1/submissions",
+		"endpoint": "courses/29/gradebook_history/08-23-2019/graders/89/assignments/8/submissions",
 		"data": [
 			{
                 "submission_id": 4,
@@ -718,7 +718,7 @@
 			}
 		],
 		"headers": {
-			"Link": "<https://example.com/api/v1/courses/1/search_users?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/courses/29/search_users?page=2&per_page=2>; rel=\"next\""
 		},
 		"status_code": 200
 	},
@@ -773,7 +773,7 @@
 		],
 		"status_code": 200,
 		"headers": {
-			"Link": "<https://example.com/api/v1/courses/1/list_enrollments?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/courses/29/list_enrollments?page=2&per_page=2>; rel=\"next\""
 		}
 	},
 	"list_enrollments_2": {
@@ -831,7 +831,7 @@
 		],
 		"status_code": 200,
 		"headers": {
-			"Link": "<https://example.com/api/v1/courses/1/files?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/courses/29/files?page=2&per_page=2>; rel=\"next\""
 		}
 	},
 	"list_course_files2": {
@@ -889,7 +889,7 @@
 		],
 		"status_code": 200,
 		"headers": {
-			"Link": "<https://example.com/api/v1/courses/1/list_quizzes?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/courses/29/list_quizzes?page=2&per_page=2>; rel=\"next\""
 		}
 	},
 	"list_quizzes2": {
@@ -1071,7 +1071,7 @@
 		],
 		"status_code": 200,
 		"headers": {
-			"Link": "<https://example.com/api/v1/courses/1/list_modules?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/courses/29/list_modules?page=2&per_page=2>; rel=\"next\""
 		}
 	},
 	"upload": {
@@ -1168,7 +1168,7 @@
 		],
 		"status_code": 200,
 		"headers": {
-			"Link": "<https://example.com/api/v1/courses/1/get_pages?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/courses/29/get_pages?page=2&per_page=2>; rel=\"next\""
 		}
 	},
 	"get_pages2": {
@@ -1252,7 +1252,7 @@
 		],
 		"status_code": 200,
 		"headers": {
-			"Link": "<https://example.com/api/v1/courses/1/groups?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/courses/29/groups?page=2&per_page=2>; rel=\"next\""
 		}
 	},
 	"list_groups_context2": {
@@ -1630,14 +1630,14 @@
 				"id": 1,
 				"assignments_id": 1,
 				"user_id": 86,
-				"html_url": "https://example.com/courses/1/assignments/1/submissions/1",
+				"html_url": "https://example.com/courses/29/assignments/8/submissions/1",
 				"submission_type": "online_upload"
 			},
 			{
 				"id": 2,
 				"assignments_id": 1,
 				"user_id": 2,
-				"html_url": "https://example.com/courses/1/assignments/1/submissions/2",
+				"html_url": "https://example.com/courses/29/assignments/8/submissions/2",
 				"submission_type": "online_upload"
 			}
 		],
@@ -1654,7 +1654,7 @@
 						"id": 1,
 						"assignments_id": 1,
 						"user_id": 86,
-						"html_url": "https://example.com/courses/1/assignments/1/submissions/1",
+						"html_url": "https://example.com/courses/29/assignments/8/submissions/1",
 						"submission_type": "online_upload"
 					}
 				]
@@ -1666,7 +1666,7 @@
 						"id": 2,
 						"assignments_id": 1,
 						"user_id": 2,
-						"html_url": "https://example.com/courses/1/assignments/1/submissions/2",
+						"html_url": "https://example.com/courses/29/assignments/8/submissions/2",
 						"submission_type": "online_upload"
 					}
 				]
@@ -1704,12 +1704,12 @@
 	},
 	"update_submission": {
 		"method": "PUT",
-		"endpoint": "courses/29/assignments/1/submissions/1",
+		"endpoint": "courses/29/assignments/8/submissions/1",
 		"data": {
 				"id": 1,
 				"assignments_id": 1,
 				"user_id": 86,
-				"html_url": "https://example.com/courses/1/assignments/1/submissions/1",
+				"html_url": "https://example.com/courses/29/assignments/8/submissions/1",
 				"submission_type": "online_upload",
 				"excused": true
 		},
@@ -1783,7 +1783,7 @@
 	},
 	"get_grading_period": {
 		"method": "GET",
-		"endpoint": "courses/29/grading_periods/1",
+		"endpoint": "courses/29/grading_periods/46",
 		"data": {
 			"grading_periods": [
 				{
@@ -1878,7 +1878,7 @@
 	},
 	"get_single_grading_standard": {
 		"method": "GET",
-		"endpoint": "courses/29/grading_standards/1",
+		"endpoint": "courses/29/grading_standards/88",
 		"data": {
 			"title": "Grading Standard 1",
 			"id": 1,

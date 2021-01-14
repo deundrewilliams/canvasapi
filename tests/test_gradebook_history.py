@@ -60,7 +60,7 @@ class TestSubmissionHistory(unittest.TestCase):
 
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.submission_history = self.course.get_submission_history(
-                "08-23-2019", 1, 1
+                "08-23-2019", object_ids.GRADER_ID, object_ids.ASSIGNMENT_ID
             )[0]
 
     # __str__()

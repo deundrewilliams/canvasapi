@@ -1,7 +1,7 @@
 {
 	"add_favorite_course": {
 		"method": "POST",
-		"endpoint": "users/self/favorites/courses/1",
+		"endpoint": "users/self/favorites/courses/29",
 		"data":
 			{
 				"context_id": 1,
@@ -115,7 +115,7 @@
 	},
 	"remove_favorite_course": {
 		"method": "DELETE",
-		"endpoint": "users/self/favorites/courses/1",
+		"endpoint": "users/self/favorites/courses/29",
 		"data":
 		{
 			"context_id": 1,

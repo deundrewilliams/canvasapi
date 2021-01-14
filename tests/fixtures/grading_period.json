@@ -1,7 +1,7 @@
 {
 	"update": {
 		"method": "PUT",
-		"endpoint": "courses/29/grading_periods/1",
+		"endpoint": "courses/29/grading_periods/46",
 		"data": {
 			"grading_periods": [
                 {
@@ -18,7 +18,7 @@
 	},
 	"delete": {
 		"method": "DELETE",
-		"endpoint": "courses/29/grading_periods/1",
+		"endpoint": "courses/29/grading_periods/46",
 		"status_code": 204
 	}
 }

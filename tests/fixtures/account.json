@@ -1264,7 +1264,7 @@
 	},
 	"delete_grading_period": {
         "method": "DELETE",
-        "endpoint": "accounts/2/grading_periods/1",
+        "endpoint": "accounts/2/grading_periods/46",
         "data": {
             "delete": true
         },
@@ -1317,7 +1317,7 @@
 	},
 	"get_single_grading_standard": {
 		"method": "GET",
-		"endpoint": "accounts/2/grading_standards/1",
+		"endpoint": "accounts/2/grading_standards/88",
 		"data": {
 			"title": "Grading Standard 1",
 			"id": 1,

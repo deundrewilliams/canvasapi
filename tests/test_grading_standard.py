@@ -17,7 +17,7 @@ class TestGradingStandard(unittest.TestCase):
             register_uris({"course": ["get_by_id", "get_single_grading_standard"]}, m)
 
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
-            self.grading_standard = self.course.get_single_grading_standard(1)
+            self.grading_standard = self.course.get_single_grading_standard(object_ids.GRADING_STANDARD_ID)
 
     # __str__()
     def test__str__(self, m):

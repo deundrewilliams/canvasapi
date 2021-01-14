@@ -96,32 +96,32 @@
 	},
 	"submit_assignment": {
 		"method": "POST",
-		"endpoint": "sections/1/assignments/1/submissions",
+		"endpoint": "sections/1/assignments/8/submissions",
 		"data": {
 			"id": 1,
 			"assignment_id": 1,
 			"user_id": 86,
-			"html_url": "https://example.com/sections/1/assignments/1/submissions/1",
+			"html_url": "https://example.com/sections/1/assignments/8/submissions/1",
 			"submission_type": "online_upload"
 		},
 		"status_code": 200
 	},
 	"list_submissions": {
 		"method": "GET",
-		"endpoint": "sections/1/assignments/1/submissions",
+		"endpoint": "sections/1/assignments/8/submissions",
 		"data": [
 			{
 				"id": 1,
 				"assignments_id": 1,
 				"user_id": 86,
-				"html_url": "https://example.com/sections/1/assignments/1/submissions/1",
+				"html_url": "https://example.com/sections/1/assignments/8/submissions/1",
 				"submission_type": "online_upload"
 			},
 			{
 				"id": 2,
 				"assignments_id": 1,
 				"user_id": 2,
-				"html_url": "https://example.com/sections/1/assignments/1/submissions/2",
+				"html_url": "https://example.com/sections/1/assignments/8/submissions/2",
 				"submission_type": "online_upload"
 			}
 		],
@@ -135,14 +135,14 @@
 				"id": 1,
 				"assignments_id": 1,
 				"user_id": 86,
-				"html_url": "https://example.com/sections/1/assignments/1/submissions/1",
+				"html_url": "https://example.com/sections/1/assignments/8/submissions/1",
 				"submission_type": "online_upload"
 			},
 			{
 				"id": 2,
 				"assignments_id": 1,
 				"user_id": 2,
-				"html_url": "https://example.com/sections/1/assignments/1/submissions/2",
+				"html_url": "https://example.com/sections/1/assignments/8/submissions/2",
 				"submission_type": "online_upload"
 			}
 		],
@@ -159,7 +159,7 @@
 						"id": 1,
 						"assignments_id": 1,
 						"user_id": 86,
-						"html_url": "https://example.com/sections/1/assignments/1/submissions/1",
+						"html_url": "https://example.com/sections/1/assignments/8/submissions/1",
 						"submission_type": "online_upload"
 					}
 				]
@@ -171,7 +171,7 @@
 						"id": 2,
 						"assignments_id": 1,
 						"user_id": 2,
-						"html_url": "https://example.com/sections/1/assignments/1/submissions/2",
+						"html_url": "https://example.com/sections/1/assignments/8/submissions/2",
 						"submission_type": "online_upload"
 					}
 				]
@@ -181,24 +181,24 @@
 	},
 	"get_submission": {
 		"method": "GET",
-		"endpoint": "sections/1/assignments/1/submissions/1",
+		"endpoint": "sections/1/assignments/8/submissions/1",
 		"data": {
 				"id": 1,
 				"assignments_id": 1,
 				"user_id": 86,
-				"html_url": "https://example.com/sections/1/assignments/1/submissions/1",
+				"html_url": "https://example.com/sections/1/assignments/8/submissions/1",
 				"submission_type": "online_upload"
 		},
 		"status_code": 200
 	},
 	"update_submission": {
 		"method": "PUT",
-		"endpoint": "sections/1/assignments/1/submissions/1",
+		"endpoint": "sections/1/assignments/8/submissions/1",
 		"data": {
 				"id": 1,
 				"assignments_id": 1,
 				"user_id": 86,
-				"html_url": "https://example.com/sections/1/assignments/1/submissions/1",
+				"html_url": "https://example.com/sections/1/assignments/8/submissions/1",
 				"submission_type": "online_upload",
 				"excused": true
 		},
@@ -206,12 +206,12 @@
 	},
 	"mark_submission_as_read": {
 		"method": "PUT",
-		"endpoint": "sections/1/assignments/1/submissions/1/read",
+		"endpoint": "sections/1/assignments/8/submissions/1/read",
 		"status_code": 204
 	},
 	"mark_submission_as_unread": {
 		"method": "DELETE",
-		"endpoint": "sections/1/assignments/1/submissions/1/read",
+		"endpoint": "sections/1/assignments/8/submissions/1/read",
 		"status_code": 204
 	},
 	"update_submissions": {

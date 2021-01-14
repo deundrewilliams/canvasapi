@@ -56,7 +56,7 @@
 		"endpoint": "accounts/2/content_migrations/1/migration_issues/1",
 		"data": {
 			"id": 1,
-			"content_migration_url": "https://example.com/api/v1/courses/1/content_migrations/1",
+			"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/1",
 			"description": "A Dummy Error",
 			"workflow_state": "active",
 			"issue_type": "dummy",
@@ -69,7 +69,7 @@
 		"endpoint": "courses/29/content_migrations/1/migration_issues/1",
 		"data": {
 			"id": 1,
-			"content_migration_url": "https://example.com/api/v1/courses/1/content_migrations/1",
+			"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/1",
 			"description": "A Dummy Error",
 			"workflow_state": "active",
 			"issue_type": "dummy",
@@ -82,7 +82,7 @@
 		"endpoint": "groups/1/content_migrations/1/migration_issues/1",
 		"data": {
 			"id": 1,
-			"content_migration_url": "https://example.com/api/v1/courses/1/content_migrations/1",
+			"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/1",
 			"description": "A Dummy Error",
 			"workflow_state": "active",
 			"issue_type": "dummy",
@@ -95,7 +95,7 @@
 		"endpoint": "users/86/content_migrations/1/migration_issues/1",
 		"data": {
 			"id": 1,
-			"content_migration_url": "https://example.com/api/v1/courses/1/content_migrations/1",
+			"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/1",
 			"description": "A Dummy Error",
 			"workflow_state": "active",
 			"issue_type": "dummy",
@@ -109,14 +109,14 @@
 		"data": [
 			{
 				"id": 1,
-				"content_migration_url": "https://example.com/api/v1/courses/1/content_migrations/1",
+				"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/1",
 				"description": "A Dummy Error",
 				"workflow_state": "active",
 				"issue_type": "dummy"
 			},
 			{
 				"id": 2,
-				"content_migration_url": "https://example.com/api/v1/courses/1/content_migrations/1",
+				"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/1",
 				"description": "Another Dummy Error",
 				"workflow_state": "active",
 				"issue_type": "dummy"
@@ -146,7 +146,7 @@
 		"endpoint": "accounts/2/content_migrations/1/migration_issues/1",
 		"data": {
 			"id": 1,
-				"content_migration_url": "https://example.com/api/v1/courses/1/content_migrations/1",
+				"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/1",
 				"description": "A Dummy Error",
 				"workflow_state": "active",
 				"issue_type": "dummy"

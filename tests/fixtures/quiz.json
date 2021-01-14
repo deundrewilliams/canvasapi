@@ -343,8 +343,8 @@
 			"quiz_statistics": [
                 {
                     "id": "1",
-                    "url": "http://localhost:3000/api/v1/courses/12/quizzes/43/statistics",
-                    "html_url": "http://localhost:3000/courses/12/quizzes/43/statistics",
+                    "url": "http://localhost:3000/api/v1/courses/292/quizzes/43/statistics",
+                    "html_url": "http://localhost:3000/courses/292/quizzes/43/statistics",
                     "multiple_attempts_exist": false,
                     "generated_at": "2019-11-20T18:48:20Z",
                     "includes_all_versions": false,
@@ -352,7 +352,7 @@
                     "points_possible": null,
                     "anonymous_survey": false,
                     "speed_grader_url": null,
-                    "quiz_submissions_zip_url": "http://localhost:3000/courses/12/quizzes/43/submissions?zip=1",
+                    "quiz_submissions_zip_url": "http://localhost:3000/courses/292/quizzes/43/submissions?zip=1",
                     "question_statistics": [
                         {
                             "id": "47",
@@ -557,7 +557,7 @@
                         "unique_count": 3
                     },
                     "links": {
-                        "quiz": "http://localhost:3000/api/v1/courses/12/quizzes/43"
+                        "quiz": "http://localhost:3000/api/v1/courses/292/quizzes/43"
                     }
                 }
 			]

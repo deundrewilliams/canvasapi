@@ -1,7 +1,7 @@
 {
     "get_course_by_id": {
             "method": "GET",
-            "endpoint": "/users/self/favorites/courses/1",
+            "endpoint": "/users/self/favorites/courses/29",
             "data": {
                 "context_id": 1,
                 "context_type": "course"
