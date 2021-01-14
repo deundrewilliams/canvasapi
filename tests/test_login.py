@@ -20,7 +20,7 @@ class TestLogin(unittest.TestCase):
 
             self.account = self.canvas.get_account(object_ids.ACCOUNT_ID)
             self.login = self.account.create_user_login(
-                user={"id": 1}, login={"unique_id": "belieber@example.com"}
+                user={"id": object_ids.USER_ID}, login={"unique_id": "belieber@example.com"}
             )
 
     # delete()
@@ -39,7 +39,7 @@ class TestLogin(unittest.TestCase):
 
         unique_id = "newemail@example.com"
         edited_user_login = self.login.edit(
-            user={"id": 1}, login={"unique_id": unique_id}
+            user={"id": object_ids.USER_ID}, login={"unique_id": unique_id}
         )
 
         self.assertIsInstance(edited_user_login, Login)

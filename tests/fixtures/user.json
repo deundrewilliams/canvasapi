@@ -272,7 +272,7 @@
 		"method": "POST",
 		"endpoint": "users/86/observer_pairing_codes",
 		"data": {
-			"user_id": 1,
+			"user_id": 86,
 			"code": "abc123",
 			"expires_at": "2020-10-30T17:00:00Z",
 			"workflow_state": "active"
@@ -383,7 +383,7 @@
 				"address": "user@example.com",
 				"type": "email",
 				"position": 1,
-				"user_id": 1,
+				"user_id": 86,
 				"workflow_state": "active"
 			},
 			{
@@ -391,7 +391,7 @@
 				"address": "user2@example.com",
 				"type": "email",
 				"position": 2,
-				"user_id": 1,
+				"user_id": 86,
 				"workflow_state": "active"
 			}
 		],
@@ -409,7 +409,7 @@
 				"address": "5555555555@example.com",
 				"type": "sms",
 				"position": 3,
-				"user_id": 1,
+				"user_id": 86,
 				"workflow_state": "active"
 			},
 			{
@@ -417,7 +417,7 @@
 				"address": "For All Devices",
 				"type": "push",
 				"position": 4,
-				"user_id": 1,
+				"user_id": 86,
 				"workflow_state": "active"
 			}
 		],
@@ -431,7 +431,7 @@
 			"address": "username@example.org",
 			"type": "email",
 			"position": 1,
-			"user_id": 1,
+			"user_id": 86,
 			"workflow_state": "active"
 		},
 		"status_code": 200
@@ -663,7 +663,7 @@
 		"endpoint": "users/86/logins",
 		"data": [
 			{
-				"account_id": 1,
+				"account_id": 2,
 				"id": 2,
 				"sis_user_id": null,
 				"unique_id": "belieber@example.com",
@@ -682,7 +682,7 @@
 		"endpoint": "users/86/logins/?page=2&per_page=2",
 		"data": [
 			{
-				"account_id": 1,
+				"account_id": 2,
 				"id": 3,
 				"sis_user_id": null,
 				"unique_id": "belieber@example.com",
@@ -837,12 +837,12 @@
 		"endpoint": "users/86/content_exports",
 		"data": [
 			{
-				"user_id": 1,
+				"user_id": 86,
 				"id": 2,
 				"export_type": "a"
 			},
 			{
-				"user_id": 1,
+				"user_id": 86,
 				"id": 22,
 				"export_type": "b"
 			}
@@ -853,7 +853,7 @@
 		"method": "GET",
 		"endpoint": "users/86/content_exports/11",
 		"data": {
-			"user_id": 1,
+			"user_id": 86,
 			"id": 11,
 			"export_type": "c"
 		},
@@ -863,7 +863,7 @@
 		"method": "POST",
 		"endpoint": "users/86/content_exports",
 		"data": {
-			"user_id": 1,
+			"user_id": 86,
 			"id": 111,
 			"export_type": "d"
 		},

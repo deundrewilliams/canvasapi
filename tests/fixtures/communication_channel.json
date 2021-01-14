@@ -1,7 +1,7 @@
 {
 	"list_preferences": {
 		"method": "GET",
-		"endpoint": "users/1/communication_channels/11/notification_preferences",
+		"endpoint": "users/86/communication_channels/11/notification_preferences",
 		"data": {
 			"notification_preferences": [
 				{
@@ -20,7 +20,7 @@
 	},
 	"get_preference": {
 		"method": "GET",
-		"endpoint": "users/1/communication_channels/11/notification_preferences/new_announcement",
+		"endpoint": "users/86/communication_channels/11/notification_preferences/new_announcement",
 		"data": {
 			"notification_preferences": [
 				{
@@ -34,7 +34,7 @@
 	},
 	"list_preference_categories": {
 		"method": "GET",
-		"endpoint": "users/1/communication_channels/11/notification_preference_categories",
+		"endpoint": "users/86/communication_channels/11/notification_preference_categories",
 		"data": {
 			"categories": [
 				"announcement",
@@ -102,26 +102,26 @@
 	},
 	"create_comm_channel": {
 		"method": "POST",
-		"endpoint": "users/1/communication_channels",
+		"endpoint": "users/86/communication_channels",
 		"data": {
 			"id": 1,
 			"address": "username@example.org",
 			"type": "email",
 			"position": 1,
-			"user_id": 1,
+			"user_id": 86,
 			"workflow_state": "active"
 		},
 		"status_code": 200
 	},
 	"delete_comm_channel": {
 		"method": "DELETE",
-		"endpoint": "users/1/communication_channels/1",
+		"endpoint": "users/86/communication_channels/1",
 		"data": {
 			"id": 1,
 			"address": "username@example.org",
 			"type": "email",
 			"position": 1,
-			"user_id": 1,
+			"user_id": 86,
 			"workflow_state": "deleted"
 		},
 		"status_code": 200

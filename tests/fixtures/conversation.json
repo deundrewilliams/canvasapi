@@ -16,7 +16,7 @@
             "subject": "Slightly Entertaining Conversation"
         },
         "status_code": 200
-    }, 
+    },
     "get_conversations": {
         "method": "GET",
         "endpoint": "conversations",
@@ -343,7 +343,7 @@
             "id": 1,
             "context_id": 1,
             "context_type": "Account",
-            "user_id": 123,
+            "user_id": 8623,
             "tag": "course_batch_update",
             "completion": 100,
             "workflow_state": "completed",

@@ -100,7 +100,7 @@
 		"data": {
 			"id": 1,
 			"assignment_id": 1,
-			"user_id": 1,
+			"user_id": 86,
 			"html_url": "https://example.com/sections/1/assignments/1/submissions/1",
 			"submission_type": "online_upload"
 		},
@@ -113,7 +113,7 @@
 			{
 				"id": 1,
 				"assignments_id": 1,
-				"user_id": 1,
+				"user_id": 86,
 				"html_url": "https://example.com/sections/1/assignments/1/submissions/1",
 				"submission_type": "online_upload"
 			},
@@ -134,7 +134,7 @@
 			{
 				"id": 1,
 				"assignments_id": 1,
-				"user_id": 1,
+				"user_id": 86,
 				"html_url": "https://example.com/sections/1/assignments/1/submissions/1",
 				"submission_type": "online_upload"
 			},
@@ -153,12 +153,12 @@
 		"endpoint": "sections/1/students/submissions",
 		"data": [
 			{
-				"user_id": 1,
+				"user_id": 86,
 				"submissions": [
 					{
 						"id": 1,
 						"assignments_id": 1,
-						"user_id": 1,
+						"user_id": 86,
 						"html_url": "https://example.com/sections/1/assignments/1/submissions/1",
 						"submission_type": "online_upload"
 					}
@@ -185,7 +185,7 @@
 		"data": {
 				"id": 1,
 				"assignments_id": 1,
-				"user_id": 1,
+				"user_id": 86,
 				"html_url": "https://example.com/sections/1/assignments/1/submissions/1",
 				"submission_type": "online_upload"
 		},
@@ -197,7 +197,7 @@
 		"data": {
 				"id": 1,
 				"assignments_id": 1,
-				"user_id": 1,
+				"user_id": 86,
 				"html_url": "https://example.com/sections/1/assignments/1/submissions/1",
 				"submission_type": "online_upload",
 				"excused": true

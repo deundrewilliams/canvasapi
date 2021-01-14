@@ -1,7 +1,7 @@
 {
 	"create_enrollment_term": {
 		"method": "POST",
-		"endpoint": "accounts/1/terms",
+		"endpoint": "accounts/2/terms",
 		"data": {
 			"id": 45,
 			"name": "Test Enrollment Term"
@@ -10,7 +10,7 @@
 	},
 	"delete_enrollment_term": {
 		"method": "DELETE",
-		"endpoint": "accounts/1/terms/45",
+		"endpoint": "accounts/2/terms/45",
 		"data": {
 			"id": 45,
 			"name": "Test Enrollment Term"
@@ -19,7 +19,7 @@
 	},
 	"edit_enrollment_term": {
 		"method": "PUT",
-		"endpoint": "accounts/1/terms/45",
+		"endpoint": "accounts/2/terms/45",
 		"data": {
 			"id": 45,
 			"name": "New Name"
@@ -28,7 +28,7 @@
 	},
 	"get_enrollment_term": {
 		"method": "GET",
-		"endpoint": "accounts/1/terms/45",
+		"endpoint": "accounts/2/terms/45",
 		"data": {
 			"id": 45,
 			"name": "Test Enrollment Term 3"
@@ -37,7 +37,7 @@
 	},
 	"list_enrollment_terms": {
 		"method": "GET",
-		"endpoint": "accounts/1/terms",
+		"endpoint": "accounts/2/terms",
 		"data": [
 			{
 				"id": 56,

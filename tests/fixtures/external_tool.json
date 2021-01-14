@@ -1,7 +1,7 @@
 {
 	"create_tool_account": {
 		"method": "POST",
-		"endpoint": "accounts/1/external_tools",
+		"endpoint": "accounts/2/external_tools",
 		"data": {
 			"id": 10,
 			"name": "External Tool - Account",

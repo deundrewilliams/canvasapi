@@ -200,7 +200,7 @@ class TestQuiz(unittest.TestCase):
         register_uris({"quiz": ["set_extensions"]}, m)
 
         extension = self.quiz.set_extensions(
-            [{"user_id": 1, "extra_time": 60}, {"user_id": 2, "extra_attempts": 3}]
+            [{"user_id": 86, "extra_time": 60}, {"user_id": 2, "extra_attempts": 3}]
         )
 
         self.assertIsInstance(extension, list)
@@ -218,7 +218,7 @@ class TestQuiz(unittest.TestCase):
 
     def test_set_extensions_not_list(self, m):
         with self.assertRaises(ValueError):
-            self.quiz.set_extensions({"user_id": 1, "extra_time": 60})
+            self.quiz.set_extensions({"user_id": 86, "extra_time": 60})
 
     def test_set_extensions_empty_list(self, m):
         with self.assertRaises(ValueError):
@@ -388,7 +388,7 @@ class TestQuizSubmission(unittest.TestCase):
             {
                 "id": 1,
                 "quiz_id": 1,
-                "user_id": 1,
+                "user_id": 86,
                 "course_id": 1,
                 "submission_id": 1,
                 "attempt": 3,
@@ -533,7 +533,7 @@ class TestQuizExtension(unittest.TestCase):
         self.extension = QuizExtension(
             self.canvas._Canvas__requester,
             {
-                "user_id": 1,
+                "user_id": 86,
                 "quiz_id": 1,
                 "extra_time": 60,
                 "extra_attempts": 3,

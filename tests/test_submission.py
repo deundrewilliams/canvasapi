@@ -119,12 +119,12 @@ class TestGroupedSubmission(unittest.TestCase):
         self.grouped_submission = GroupedSubmission(
             self.canvas._Canvas__requester,
             {
-                "user_id": 1,
+                "user_id": 86,
                 "submissions": [
                     {
                         "id": 1,
                         "assignment_id": 1,
-                        "user_id": 1,
+                        "user_id": 86,
                         "html_url": "https://example.com/courses/1/assignments/1/submissions/1",
                         "submission_type": "online_upload",
                     }
@@ -135,7 +135,7 @@ class TestGroupedSubmission(unittest.TestCase):
     # __init__()
     def test__init__no_submission_key(self):
         grouped_submission = GroupedSubmission(
-            self.canvas._Canvas__requester, {"user_id": 1}
+            self.canvas._Canvas__requester, {"user_id": 86}
         )
 
         self.assertIsInstance(grouped_submission, GroupedSubmission)

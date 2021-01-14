@@ -122,7 +122,7 @@
 		"data": {
 			"id": 1,
 			"course_id": 1,
-			"user_id": 1,
+			"user_id": 86,
 			"type": "TeacherEnrollment"
 		},
 		"status_code": 200
@@ -276,7 +276,7 @@
 			"course_code": "SIS101",
 			"name": "SIS Course",
 			"workflow_state": "available",
-			"account_id": 1,
+			"account_id": 2,
 			"root_account_id": 1,
 			"enrollment_term_id": 1,
 			"grading_standard_id": 1
@@ -687,7 +687,7 @@
 	},
 	"get_user": {
 		"method": "GET",
-		"endpoint": "courses/29/users/1",
+		"endpoint": "courses/29/users/86",
 		"data": {
 			"id": 1,
 			"name": "John Doe"
@@ -761,7 +761,7 @@
 			{
 				"id": 1,
 				"course_id": 1,
-				"user_id": 1,
+				"user_id": 86,
 				"type": "StudentEnrollment"
 			},
 			{
@@ -783,7 +783,7 @@
 			{
 				"id": 3,
 				"course_id": 1,
-				"user_id": 10,
+				"user_id": 860,
 				"type": "StudentEnrollment"
 			},
 			{
@@ -916,7 +916,7 @@
 				"course_code": "TST1234",
 				"name": "Test Course 1234",
 				"workflow_state": "available",
-				"account_id": 1,
+				"account_id": 2,
 				"root_account_id": 1,
 				"enrollment_term_id": 1,
 				"grading_standard_id": 1
@@ -926,7 +926,7 @@
 				"course_code": "TST5678",
 				"name": "Test Course 5678",
 				"workflow_state": "available",
-				"account_id": 1,
+				"account_id": 2,
 				"root_account_id": 1,
 				"enrollment_term_id": 1,
 				"grading_standard_id": 1
@@ -946,7 +946,7 @@
 				"course_code": "HAI5555",
 				"name": "Hello 5555",
 				"workflow_state": "available",
-				"account_id": 1,
+				"account_id": 2,
 				"root_account_id": 1,
 				"enrollment_term_id": 1,
 				"grading_standard_id": 1
@@ -956,7 +956,7 @@
 				"course_code": "UCF1963",
 				"name": "University Birthday",
 				"workflow_state": "available",
-				"account_id": 1,
+				"account_id": 2,
 				"root_account_id": 1,
 				"enrollment_term_id": 1,
 				"grading_standard_id": 1
@@ -990,7 +990,7 @@
 			"course_code": "TEST_DATE",
 			"name": "Testing Start At Date",
 			"workflow_state": "available",
-			"account_id": 1,
+			"account_id": 2,
 			"root_account_id": 1,
 			"enrollment_term_id": 1,
 			"grading_standard_id": 1,
@@ -1031,7 +1031,7 @@
 			"course_code": "TST1234",
 			"name": "New Name",
 			"workflow_state": "available",
-			"account_id": 1,
+			"account_id": 2,
 			"root_account_id": 1,
 			"enrollment_term_id": 1,
 			"grading_standard_id": 1
@@ -1280,7 +1280,7 @@
 			"self_signup": null,
 			"auto_leader": null,
 			"context_type": "Account",
-			"account_id": 1,
+			"account_id": 2,
 			"group_limit": null,
 			"progress": null
 		},
@@ -1517,7 +1517,7 @@
 	},
 	"get_user_in_a_course_level_participation_data": {
 		"method": "GET",
-		"endpoint": "courses/29/analytics/users/1/activity",
+		"endpoint": "courses/29/analytics/users/86/activity",
 		"data": [
 			{
 				"page_views": {
@@ -1540,7 +1540,7 @@
 	},
 	"get_user_in_a_course_level_assignment_data": {
 		"method": "GET",
-		"endpoint": "courses/29/analytics/users/1/assignments",
+		"endpoint": "courses/29/analytics/users/86/assignments",
 		"data": [
 			{
 				"assignment_id": 1234,
@@ -1586,7 +1586,7 @@
 	},
 	"get_user_in_a_course_level_messaging_data": {
 		"method": "GET",
-		"endpoint": "courses/29/analytics/users/1/communication",
+		"endpoint": "courses/29/analytics/users/86/communication",
 		"data": [
 			{
 				"2012-01-24":{
@@ -1629,7 +1629,7 @@
 			{
 				"id": 1,
 				"assignments_id": 1,
-				"user_id": 1,
+				"user_id": 86,
 				"html_url": "https://example.com/courses/1/assignments/1/submissions/1",
 				"submission_type": "online_upload"
 			},
@@ -1648,12 +1648,12 @@
 		"endpoint": "courses/29/students/submissions",
 		"data": [
 			{
-				"user_id": 1,
+				"user_id": 86,
 				"submissions": [
 					{
 						"id": 1,
 						"assignments_id": 1,
-						"user_id": 1,
+						"user_id": 86,
 						"html_url": "https://example.com/courses/1/assignments/1/submissions/1",
 						"submission_type": "online_upload"
 					}
@@ -1708,7 +1708,7 @@
 		"data": {
 				"id": 1,
 				"assignments_id": 1,
-				"user_id": 1,
+				"user_id": 86,
 				"html_url": "https://example.com/courses/1/assignments/1/submissions/1",
 				"submission_type": "online_upload",
 				"excused": true
@@ -1993,12 +1993,12 @@
 		"endpoint": "courses/29/content_exports",
 		"data": [
 			{
-				"user_id": 1,
+				"user_id": 86,
 				"id": 2,
 				"export_type": "a"
 			},
 			{
-				"user_id": 1,
+				"user_id": 86,
 				"id": 22,
 				"export_type": "b"
 			}
@@ -2009,7 +2009,7 @@
 		"method": "GET",
 		"endpoint": "courses/29/content_exports/11",
 		"data": {
-			"user_id": 1,
+			"user_id": 86,
 			"id": 11,
 			"export_type": "c"
 		},
@@ -2019,7 +2019,7 @@
 		"method": "POST",
 		"endpoint": "courses/29/content_exports",
 		"data": {
-			"user_id": 1,
+			"user_id": 86,
 			"id": 111,
 			"export_type": "d"
 		},

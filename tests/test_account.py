@@ -264,7 +264,7 @@ class TestAccount(unittest.TestCase):
                 },
                 "report": "zero_activity_csv",
                 "last_run": "null",
-                "account_id": 1,
+                "account_id": 2,
                 "id": 1,
             },
         )
@@ -1219,7 +1219,7 @@ class TestAccount(unittest.TestCase):
                 "start_at": "",
                 "end_at": "",
                 "id": 1,
-                "account_id": 1,
+                "account_id": 2,
             },
         )
 
@@ -1259,7 +1259,7 @@ class TestAccountNotification(unittest.TestCase):
                 "start_at": "2015-04-01T00:00:00Z",
                 "end_at": "2018-04-01T00:00:00Z",
                 "id": 1,
-                "account_id": 1,
+                "account_id": 2,
             },
         )
 

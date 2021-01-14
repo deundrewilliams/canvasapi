@@ -82,7 +82,7 @@ class TestCourse(unittest.TestCase):
         )
         progress = self.course.column_data_bulk_update(
             column_data=[
-                {"column_id": 1, "user_id": 1, "content": "Test Content One"},
+                {"column_id": 1, "user_id": 86, "content": "Test Content One"},
                 {"column_id": 2, "user_id": 2, "content": "Test Content Two"},
             ]
         )
@@ -1410,7 +1410,7 @@ class TestCourse(unittest.TestCase):
         register_uris({"course": ["set_quiz_extensions"]}, m)
 
         extension = self.course.set_quiz_extensions(
-            [{"user_id": 1, "extra_time": 60}, {"user_id": 2, "extra_attempts": 3}]
+            [{"user_id": 86, "extra_time": 60}, {"user_id": 2, "extra_attempts": 3}]
         )
 
         self.assertIsInstance(extension, list)
@@ -1428,7 +1428,7 @@ class TestCourse(unittest.TestCase):
 
     def test_set_extensions_not_list(self, m):
         with self.assertRaises(ValueError):
-            self.course.set_quiz_extensions({"user_id": 1, "extra_time": 60})
+            self.course.set_quiz_extensions({"user_id": 86, "extra_time": 60})
 
     def test_set_extensions_empty_list(self, m):
         with self.assertRaises(ValueError):

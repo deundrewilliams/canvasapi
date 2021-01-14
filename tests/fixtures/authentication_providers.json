@@ -1,7 +1,7 @@
 {
 	"list_authentication_providers": {
 		"method": "GET",
-		"endpoint": "accounts/1/authentication_providers",
+		"endpoint": "accounts/2/authentication_providers",
 		"data": [
 			{
 				"id": 1,
@@ -15,13 +15,13 @@
 			}
 		],
 		"headers": {
-			"Link": "<https://example.com/api/v1/accounts/1/authentication_providers/?page=2&per_page=2>; rel=\"next\""
+			"Link": "<https://example.com/api/v1/accounts/2/authentication_providers/?page=2&per_page=2>; rel=\"next\""
 		},
 		"status_code": 200
 	},
 	"list_authentication_providers_2": {
 		"method": "GET",
-		"endpoint": "accounts/1/authentication_providers/?page=2&per_page=2",
+		"endpoint": "accounts/2/authentication_providers/?page=2&per_page=2",
 		"data": [
 			{
 				"id": 3,
@@ -38,7 +38,7 @@
 	},
 	"add_authentication_providers": {
 		"method": "POST",
-		"endpoint": "accounts/1/authentication_providers",
+		"endpoint": "accounts/2/authentication_providers",
 		"data":{
 			"id": 1,
 			"auth_type": "saml",
@@ -48,7 +48,7 @@
 	},
 	"update_authentication_providers": {
 		"method": "PUT",
-		"endpoint": "accounts/1/authentication_providers/1",
+		"endpoint": "accounts/2/authentication_providers/1",
 		"data": {
 			"id": 1,
 			"auth_type": "New Authentication Providers",
@@ -58,7 +58,7 @@
 	},
 	"delete_authentication_providers": {
 		"method": "DELETE",
-		"endpoint": "accounts/1/authentication_providers/1",
+		"endpoint": "accounts/2/authentication_providers/1",
 		"data": {
 			"id": 1,
 			"auth_type": "Authentication Providers",

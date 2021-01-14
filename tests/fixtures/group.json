@@ -161,7 +161,7 @@
 				"id": 4,
 				"group_id": 1,
 				"workflow_state": "invited",
-				"user_id": 1,
+				"user_id": 86,
 				"moderator": false,
 				"sis_import_id": null
 			},
@@ -259,7 +259,7 @@
 			{
 				"id": 1,
 				"group_id": 1,
-				"user_id": 1,
+				"user_id": 86,
 				"workflow_state": "accepted",
 				"moderator": true,
 				"just_created": true,
@@ -307,11 +307,11 @@
 	},
 	"get_membership": {
 		"method": "GET",
-		"endpoint": "groups/47/users/1",
+		"endpoint": "groups/47/users/86",
 		"data": {
 			"id": 1,
 			"group_id": 1,
-			"user_id": 1,
+			"user_id": 86,
 			"workflow_state": "accepted",
 			"moderator": true,
 			"just_created": true,
@@ -325,7 +325,7 @@
 		"data": {
 			"id": 1,
 			"group_id": 1,
-			"user_id": 1,
+			"user_id": 86,
 			"workflow_state": "accepted",
 			"moderator": true,
 			"just_created": true,
@@ -335,11 +335,11 @@
 	},
 	"update_membership_user": {
 		"method": "PUT",
-		"endpoint": "groups/47/users/1",
+		"endpoint": "groups/47/users/86",
 		"data": {
 			"id": 1,
 			"group_id": 1,
-			"user_id": 1,
+			"user_id": 86,
 			"workflow_state": "accepted",
 			"moderator": true,
 			"just_created": true,
@@ -353,7 +353,7 @@
 		"data": {
 			"id": 1,
 			"group_id": 1,
-			"user_id": 1,
+			"user_id": 86,
 			"workflow_state": "accepted",
 			"moderator": true,
 			"just_created": true,
@@ -363,7 +363,7 @@
 	},
 	"remove_user": {
 		"method": "DELETE",
-		"endpoint": "groups/47/users/1",
+		"endpoint": "groups/47/users/86",
 		"data": {},
 		"status_code": 200
 	},
@@ -490,7 +490,7 @@
 		"endpoint": "group_categories/1/users",
 		"data": [
 			{
-				"user_id": 1,
+				"user_id": 86,
 				"name": "Sam",
 				"display_name": "Sam",
 				"sections": [
@@ -544,7 +544,7 @@
 				"id": 1,
 				"new_members": [
 					{
-						"user_id": 1,
+						"user_id": 86,
 						"name": "Sam",
 						"display_name": "Sam",
 						"sections": [
@@ -915,12 +915,12 @@
 		"endpoint": "groups/47/content_exports",
 		"data": [
 			{
-				"user_id": 1,
+				"user_id": 86,
 				"id": 2,
 				"export_type": "a"
 			},
 			{
-				"user_id": 1,
+				"user_id": 86,
 				"id": 22,
 				"export_type": "b"
 			}
@@ -931,7 +931,7 @@
 		"method": "GET",
 		"endpoint": "groups/47/content_exports/11",
 		"data": {
-			"user_id": 1,
+			"user_id": 86,
 			"id": 11,
 			"export_type": "c"
 		},
@@ -941,7 +941,7 @@
 		"method": "POST",
 		"endpoint": "groups/47/content_exports",
 		"data": {
-			"user_id": 1,
+			"user_id": 86,
 			"id": 111,
 			"export_type": "d"
 		},

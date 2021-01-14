@@ -1,7 +1,7 @@
 {
 	"update": {
 		"method": "PUT",
-		"endpoint": "accounts/1/content_migrations/1",
+		"endpoint": "accounts/2/content_migrations/1",
 		"data": {
 			"id": 1,
 			"migration_type": "dummy_importer",
@@ -11,13 +11,13 @@
 	},
 	"update_fail": {
 		"method": "PUT",
-		"endpoint": "accounts/1/content_migrations/1",
+		"endpoint": "accounts/2/content_migrations/1",
 		"data": {},
 		"status_code": 200
 	},
 	"get_parent_account": {
 		"method": "GET",
-		"endpoint": "accounts/1",
+		"endpoint": "accounts/2",
 		"data": {
 			"id": 1,
 			"name": "Dummy Parent"
@@ -44,7 +44,7 @@
 	},
 	"get_parent_user": {
 		"method": "GET",
-		"endpoint": "users/1",
+		"endpoint": "users/86",
 		"data": {
 			"id": 1,
 			"name": "Dummy Parent"
@@ -53,7 +53,7 @@
 	},
 	"get_migration_issue_single": {
 		"method": "GET",
-		"endpoint": "accounts/1/content_migrations/1/migration_issues/1",
+		"endpoint": "accounts/2/content_migrations/1/migration_issues/1",
 		"data": {
 			"id": 1,
 			"content_migration_url": "https://example.com/api/v1/courses/1/content_migrations/1",
@@ -92,7 +92,7 @@
 	},
 	"get_migration_issue_single_user": {
 		"method": "GET",
-		"endpoint": "users/1/content_migrations/1/migration_issues/1",
+		"endpoint": "users/86/content_migrations/1/migration_issues/1",
 		"data": {
 			"id": 1,
 			"content_migration_url": "https://example.com/api/v1/courses/1/content_migrations/1",
@@ -105,7 +105,7 @@
 	},
 	"get_migration_issue_multiple": {
 		"method": "GET",
-		"endpoint": "accounts/1/content_migrations/1/migration_issues/?per_page=100",
+		"endpoint": "accounts/2/content_migrations/1/migration_issues/?per_page=100",
 		"data": [
 			{
 				"id": 1,
@@ -131,7 +131,7 @@
 			"id": 1,
 			"context_id": 1,
 			"context_type": "Content Migration",
-			"user_id": 123,
+			"user_id": 8623,
 			"tag": "assign_unassigned_members",
 			"completion": 100,
 			"workflow_state": "running",
@@ -143,7 +143,7 @@
 	},
 	"update_issue": {
 		"method": "PUT",
-		"endpoint": "accounts/1/content_migrations/1/migration_issues/1",
+		"endpoint": "accounts/2/content_migrations/1/migration_issues/1",
 		"data": {
 			"id": 1,
 				"content_migration_url": "https://example.com/api/v1/courses/1/content_migrations/1",
@@ -155,7 +155,7 @@
 	},
 	"update_issue_fail": {
 		"method": "PUT",
-		"endpoint": "accounts/1/content_migrations/1/migration_issues/1",
+		"endpoint": "accounts/2/content_migrations/1/migration_issues/1",
 		"data": {},
 		"status_code": 200
 	}

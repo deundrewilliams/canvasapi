@@ -18,11 +18,11 @@
 		"data": [
 			{
 				"content": "Example content",
-				"user_id": 1
+				"user_id": 86
 			},
 			{
 				"content": "More example content",
-				"user_id": 1
+				"user_id": 86
 			}
 		],
 		"status_code": 200
@@ -54,7 +54,7 @@
 		"endpoint": "courses/29/custom_gradebook_columns/2/data/1",
 		"data": {
 			"content": "Updated content",
-			"user_id": 1
+			"user_id": 86
 		},
 		"status_code": 200
 	}
