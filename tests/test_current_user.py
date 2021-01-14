@@ -97,7 +97,7 @@ class TestCurrentUser(unittest.TestCase):
             {"current_user": ["add_favorite_course"], "course": ["get_by_id"]}, m
         )
 
-        fav_by_id = self.user.add_favorite_course(1)
+        fav_by_id = self.user.add_favorite_course(object_ids.COURSE_ID)
         self.assertIsInstance(fav_by_id, Favorite)
         self.assertEqual(fav_by_id.context_type, "course")
         self.assertEqual(fav_by_id.context_id, 1)
@@ -123,7 +123,7 @@ class TestCurrentUser(unittest.TestCase):
             {"current_user": ["add_favorite_group"], "group": ["get_by_id"]}, m
         )
 
-        fav_by_id = self.user.add_favorite_group(1)
+        fav_by_id = self.user.add_favorite_course(object_ids.GROUP_ID)
         self.assertIsInstance(fav_by_id, Favorite)
         self.assertEqual(fav_by_id.context_type, "group")
         self.assertEqual(fav_by_id.context_id, 1)

@@ -35,7 +35,7 @@
 	},
 	"get_parent_group": {
 		"method": "GET",
-		"endpoint": "groups/1",
+		"endpoint": "groups/47",
 		"data": {
 			"id": 1,
 			"name": "Dummy Parent"
@@ -79,7 +79,7 @@
 	},
 	"get_migration_issue_single_group": {
 		"method": "GET",
-		"endpoint": "groups/1/content_migrations/1/migration_issues/1",
+		"endpoint": "groups/47/content_migrations/1/migration_issues/1",
 		"data": {
 			"id": 1,
 			"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/1",

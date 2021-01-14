@@ -19,7 +19,7 @@ class TestFolder(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"folder": ["get_by_id"]}, m)
 
-            self.folder = self.canvas.get_folder(1)
+            self.folder = self.canvas.get_folder(object_ids.FOLDER_ID)
 
     # __str__()
     def test__str__(self, m):
@@ -90,7 +90,7 @@ class TestFolder(unittest.TestCase):
     def test_copy_file(self, m):
         register_uris({"folder": ["copy_file"]}, m)
 
-        new_file = self.folder.copy_file(1)
+        new_file = self.folder.copy_file(object_ids.FILE_ID)
         self.assertIsInstance(new_file, File)
         self.assertEqual(new_file.display_name, "Dummy File-1")
-        self.assertEqual(new_file.id, 1)
+        self.assertEqual(new_file.id, object_ids.FILE_ID)

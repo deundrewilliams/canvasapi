@@ -278,7 +278,7 @@
 	},
 	"override_group_alias": {
 		"method": "GET",
-		"endpoint": "groups/1/assignments/8/override",
+		"endpoint": "groups/47/assignments/8/override",
 		"data": {
 			"id": 30,
 			"assignment_id": 1,

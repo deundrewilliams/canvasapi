@@ -25,8 +25,8 @@ class TestFavorite(unittest.TestCase):
             register_uris(requires, m)
 
             self.user = self.canvas.get_current_user()
-            self.favorite_course = self.user.add_favorite_course(1)
-            self.favorite_group = self.user.add_favorite_group(1)
+            self.favorite_course = self.user.add_favorite_course(object_ids.COURSE_ID)
+            self.favorite_group = self.user.add_favorite_group(object_ids.GROUP_ID)
 
     # __str__()
     def test__str__(self, m):
@@ -43,7 +43,7 @@ class TestFavorite(unittest.TestCase):
         evnt = self.favorite_course.remove()
         self.assertIsInstance(evnt, Favorite)
         self.assertEqual(evnt.context_type, "course")
-        self.assertEqual(evnt.context_id, 1)
+        self.assertEqual(evnt.context_id, object_ids.COURSE_ID)
 
     def test_remove_favorite_group(self, m):
         register_uris({"current_user": ["remove_favorite_group"]}, m)
@@ -51,4 +51,4 @@ class TestFavorite(unittest.TestCase):
         evnt = self.favorite_group.remove()
         self.assertIsInstance(evnt, Favorite)
         self.assertEqual(evnt.context_type, "group")
-        self.assertEqual(evnt.context_id, 1)
+        self.assertEqual(evnt.context_id, object_ids.GROUP_ID)

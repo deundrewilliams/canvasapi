@@ -142,7 +142,7 @@
 	},
 	"list_entries_single_group": {
 		"method": "GET",
-		"endpoint": "groups/1/discussion_topics/1/entry_list",
+		"endpoint": "groups/47/discussion_topics/1/entry_list",
 		"data": [
 			{
 				"id": 1,

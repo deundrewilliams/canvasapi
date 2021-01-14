@@ -36,16 +36,16 @@ class TestFeature(unittest.TestCase):
 
     # _parent_id()
     def test_parent_id_account(self, m):
-        self.assertEqual(self.feature_account._parent_id, 1)
+        self.assertEqual(self.feature_account._parent_id, object_ids.ACCOUNT_ID)
 
     def test_parent_id_course(self, m):
-        self.assertEqual(self.feature_course._parent_id, 1)
+        self.assertEqual(self.feature_course._parent_id, object_ids.COURSE_ID)
 
     def test_parent_id_user(self, m):
-        self.assertEqual(self.feature_user._parent_id, 1)
+        self.assertEqual(self.feature_user._parent_id, object_ids.USER_ID)
 
     def test_parent_id_no_id(self, m):
-        feature = Feature(self.canvas._Canvas__requester, {"id": 1})
+        feature = Feature(self.canvas._Canvas__requester, {"id": object_ids.FEATURE_ID})
         with self.assertRaises(ValueError):
             feature._parent_id
 
@@ -60,7 +60,7 @@ class TestFeature(unittest.TestCase):
         self.assertEqual(self.feature_user._parent_type, "user")
 
     def test_parent_type_no_id(self, m):
-        feature = Feature(self.canvas._Canvas__requester, {"id": 1})
+        feature = Feature(self.canvas._Canvas__requester, {"id": object_ids.FEATURE_ID})
         with self.assertRaises(ValueError):
             feature._parent_type
 

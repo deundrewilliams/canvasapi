@@ -1,7 +1,7 @@
 {
   "create_folder": {
     "method": "POST",
-    "endpoint": "folders/1/folders",
+    "endpoint": "folders/45/folders",
     "data": {
       "id": 2,
       "name": "Test String",
@@ -12,7 +12,7 @@
   },
   "upload": {
     "method": "POST",
-    "endpoint": "folders/1/files",
+    "endpoint": "folders/45/files",
     "data": {
       "upload_url": "https://example.com/api/v1/files/upload_response_upload_url",
       "upload_params": {
@@ -30,9 +30,9 @@
   },
   "get_by_id": {
     "method": "GET",
-    "endpoint": "folders/1",
+    "endpoint": "folders/45",
     "data": {
-      "id": 1,
+      "id": 45,
       "files_count": 10,
       "folders_count": 2,
       "name": "Folder 1",
@@ -42,7 +42,7 @@
   },
   "list_folder_files": {
     "method": "GET",
-    "endpoint": "folders/1/files",
+    "endpoint": "folders/45/files",
     "data": [
       {
         "id": 1,
@@ -57,12 +57,12 @@
     ],
     "status_code": 200,
     "headers": {
-      "Link": "<https://example.com/api/v1/folders/1/files?page=2&per_page=2>; rel=\"next\""
+      "Link": "<https://example.com/api/v1/folders/45/files?page=2&per_page=2>; rel=\"next\""
     }
   },
   "list_folder_files2": {
     "method": "GET",
-    "endpoint": "folders/1/files?page=2&per_page=2",
+    "endpoint": "folders/45/files?page=2&per_page=2",
     "data": [
       {
         "id": 3,
@@ -79,7 +79,7 @@
   },
   "delete_folder": {
     "method": "DELETE",
-    "endpoint": "folders/1",
+    "endpoint": "folders/45",
     "data": {
       "id": 1,
       "files_count": 0,
@@ -91,7 +91,7 @@
   },
   "list_folders": {
     "method": "GET",
-    "endpoint": "folders/1/folders",
+    "endpoint": "folders/45/folders",
     "data": [
       {
         "id": 2,
@@ -112,7 +112,7 @@
   },
   "update": {
     "method": "PUT",
-    "endpoint": "folders/1",
+    "endpoint": "folders/45",
     "data": {
       "id": 1,
       "files_count": 0,
@@ -124,9 +124,9 @@
   },
   "copy_file": {
     "method": "POST",
-    "endpoint": "folders/1/copy_file",
+    "endpoint": "folders/45/copy_file",
     "data": {
-      "id": 1,
+      "id": 44,
       "display_name": "Dummy File-1",
       "size": 1298
     },
