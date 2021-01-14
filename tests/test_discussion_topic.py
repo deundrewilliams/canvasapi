@@ -26,8 +26,8 @@ class TestDiscussionTopic(unittest.TestCase):
 
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.group = self.canvas.get_group(object_ids.GROUP_ID)
-            self.discussion_topic = self.course.get_discussion_topic(1)
-            self.discussion_topic_group = self.group.get_discussion_topic(1)
+            self.discussion_topic = self.course.get_discussion_topic(object_ids.DISCUSSION_TOPIC_ID)
+            self.discussion_topic_group = self.group.get_discussion_topic(object_ids.DISCUSSION_TOPIC_ID)
 
     # __str__()
     def test__str__(self, m):
@@ -68,7 +68,7 @@ class TestDiscussionTopic(unittest.TestCase):
         self.assertTrue(hasattr(entry_list[0], "id"))
         self.assertEqual(entry_list[0].id, 1)
         self.assertTrue(hasattr(entry_list[0], "user_id"))
-        self.assertEqual(entry_list[0].user_id, 1)
+        self.assertEqual(entry_list[0].user_id, object_ids.USER_ID)
 
     # get_entries()
     def test_get_entries(self, m):
@@ -182,13 +182,13 @@ class TestDiscussionTopic(unittest.TestCase):
 
     # _parent_id
     def test_parent_id_course(self, m):
-        self.assertEqual(self.discussion_topic._parent_id, 1)
+        self.assertEqual(self.discussion_topic._parent_id, object_ids.COURSE_ID)
 
     def test_parent_id_group(self, m):
-        self.assertEqual(self.discussion_topic_group._parent_id, 1)
+        self.assertEqual(self.discussion_topic_group._parent_id, object_ids.GROUP_ID)
 
     def test_parent_id_no_id(self, m):
-        discussion = DiscussionTopic(self.canvas._Canvas__requester, {"id": 1})
+        discussion = DiscussionTopic(self.canvas._Canvas__requester, {"id": object_ids.DISCUSSION_TOPIC_ID})
         with self.assertRaises(ValueError):
             discussion._parent_id
 
@@ -200,7 +200,7 @@ class TestDiscussionTopic(unittest.TestCase):
         self.assertEqual(self.discussion_topic_group._parent_type, "group")
 
     def test_parent_type_no_id(self, m):
-        discussion = DiscussionTopic(self.canvas._Canvas__requester, {"id": 1})
+        discussion = DiscussionTopic(self.canvas._Canvas__requester, {"id": object_ids.DISCUSSION_TOPIC_ID})
         with self.assertRaises(ValueError):
             discussion._parent_type
 
@@ -234,8 +234,8 @@ class TestDiscussionEntry(unittest.TestCase):
 
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.group = self.canvas.get_group(object_ids.GROUP_ID)
-            self.discussion_topic = self.course.get_discussion_topic(1)
-            self.discussion_topic_group = self.group.get_discussion_topic(1)
+            self.discussion_topic = self.course.get_discussion_topic(object_ids.DISCUSSION_TOPIC_ID)
+            self.discussion_topic_group = self.group.get_discussion_topic(object_ids.DISCUSSION_TOPIC_ID)
             self.discussion_entry = self.discussion_topic.get_entries([1])[0]
             self.discussion_entry_group = self.discussion_topic_group.get_entries([1])[
                 0
@@ -248,13 +248,13 @@ class TestDiscussionEntry(unittest.TestCase):
 
     # _discussion_parent_id
     def test_discussion_parent_id_course(self, m):
-        self.assertEqual(self.discussion_entry._discussion_parent_id, 1)
+        self.assertEqual(self.discussion_entry._discussion_parent_id, object_ids.COURSE_ID)
 
     def test_discussion_parent_id_group(self, m):
-        self.assertEqual(self.discussion_entry_group._discussion_parent_id, 1)
+        self.assertEqual(self.discussion_entry_group._discussion_parent_id, object_ids.GROUP_ID)
 
     def test_discussion_parent_id_no_id(self, m):
-        discussion = DiscussionEntry(self.canvas._Canvas__requester, {"id": 1})
+        discussion = DiscussionEntry(self.canvas._Canvas__requester, {"id": object_ids.DISCUSSION_ENTRY_ID})
         with self.assertRaises(ValueError):
             discussion._discussion_parent_id
 
@@ -266,7 +266,7 @@ class TestDiscussionEntry(unittest.TestCase):
         self.assertEqual(self.discussion_entry_group._discussion_parent_type, "group")
 
     def test_discussion_parent_type_no_id(self, m):
-        discussion = DiscussionEntry(self.canvas._Canvas__requester, {"id": 1})
+        discussion = DiscussionEntry(self.canvas._Canvas__requester, {"id": object_ids.DISCUSSION_ENTRY_ID})
         with self.assertRaises(ValueError):
             discussion._discussion_parent_type
 

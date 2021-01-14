@@ -1,7 +1,7 @@
 {
 	"delete": {
 		"method": "DELETE",
-		"endpoint": "courses/29/discussion_topics/1",
+		"endpoint": "courses/29/discussion_topics/37",
 		"data": {
 			"id": 1,
 			"title": "Topic 1",
@@ -11,7 +11,7 @@
 	},
 	"update": {
 		"method": "PUT",
-		"endpoint": "courses/29/discussion_topics/1",
+		"endpoint": "courses/29/discussion_topics/37",
 		"data": {
 			"id": 1,
 			"course_id": 1,
@@ -21,7 +21,7 @@
 	},
 	"update_entry": {
 		"method": "PUT",
-		"endpoint": "courses/29/discussion_topics/1/entries/1",
+		"endpoint": "courses/29/discussion_topics/37/entries/1",
 		"data": {
 			"id": 1,
 			"user_id": 86,
@@ -33,7 +33,7 @@
 	},
 	"delete_entry": {
 		"method": "DELETE",
-		"endpoint": "courses/29/discussion_topics/1/entries/1",
+		"endpoint": "courses/29/discussion_topics/37/entries/1",
 		"data": {
 			"id": 1,
 			"user_id": 86,
@@ -45,7 +45,7 @@
 	},
 	"post_entry": {
 		"method": "POST",
-		"endpoint": "courses/29/discussion_topics/1/entries",
+		"endpoint": "courses/29/discussion_topics/37/entries",
 		"data": {
 			"id": 4,
 			"user_id": 86,
@@ -57,7 +57,7 @@
 	},
 	"list_topic_entries": {
 		"method": "GET",
-		"endpoint": "courses/29/discussion_topics/1/entries",
+		"endpoint": "courses/29/discussion_topics/37/entries",
 		"data": [
 			{
 				"id": 1,
@@ -76,7 +76,7 @@
 	},
 	"post_reply": {
 		"method": "POST",
-		"endpoint": "courses/29/discussion_topics/1/entries/1/replies",
+		"endpoint": "courses/29/discussion_topics/37/entries/1/replies",
 		"data": {
 			"id": 5,
 			"message": "Reply message 1",
@@ -87,7 +87,7 @@
 	},
 	"list_entry_replies": {
 		"method": "GET",
-		"endpoint": "courses/29/discussion_topics/1/entries/1/replies",
+		"endpoint": "courses/29/discussion_topics/37/entries/1/replies",
 		"data": [
 			{
 				"id": 5,
@@ -104,7 +104,7 @@
 	},
 	"list_entries": {
 		"method": "GET",
-		"endpoint": "courses/29/discussion_topics/1/entry_list",
+		"endpoint": "courses/29/discussion_topics/37/entry_list",
 		"data": [
 			{
 				"id": 1,
@@ -129,7 +129,7 @@
 	},
 	"list_entries_single": {
 		"method": "GET",
-		"endpoint": "courses/29/discussion_topics/1/entry_list",
+		"endpoint": "courses/29/discussion_topics/37/entry_list",
 		"data": [
 			{
 				"id": 1,
@@ -142,7 +142,7 @@
 	},
 	"list_entries_single_group": {
 		"method": "GET",
-		"endpoint": "groups/47/discussion_topics/1/entry_list",
+		"endpoint": "groups/47/discussion_topics/37/entry_list",
 		"data": [
 			{
 				"id": 1,
@@ -155,94 +155,94 @@
 	},
 	"mark_as_read": {
 		"method": "PUT",
-		"endpoint": "courses/29/discussion_topics/1/read",
+		"endpoint": "courses/29/discussion_topics/37/read",
 		"status_code": 204
 	},
 	"mark_as_read_403": {
 		"method": "PUT",
-		"endpoint": "courses/29/discussion_topics/1/read",
+		"endpoint": "courses/29/discussion_topics/37/read",
 		"data": "require_initial_post",
 		"status_code": 403
 	},
 	"mark_as_unread": {
 		"method": "DELETE",
-		"endpoint": "courses/29/discussion_topics/1/read",
+		"endpoint": "courses/29/discussion_topics/37/read",
 		"status_code": 204
 	},
 	"mark_as_unread_403": {
 		"method": "DELETE",
-		"endpoint": "courses/29/discussion_topics/1/read",
+		"endpoint": "courses/29/discussion_topics/37/read",
 		"data": "require_initial_post",
 		"status_code": 403
 	},
 	"mark_entry_as_read": {
 		"method": "PUT",
-		"endpoint": "courses/29/discussion_topics/1/entries/1/read",
+		"endpoint": "courses/29/discussion_topics/37/entries/1/read",
 		"status_code": 204
 	},
 	"mark_entry_as_read_403": {
 		"method": "PUT",
-		"endpoint": "courses/29/discussion_topics/1/entries/1/read",
+		"endpoint": "courses/29/discussion_topics/37/entries/1/read",
 		"data": "require_initial_post",
 		"status_code": 403
 	},
 	"mark_entry_as_unread": {
 		"method": "DELETE",
-		"endpoint": "courses/29/discussion_topics/1/entries/1/read",
+		"endpoint": "courses/29/discussion_topics/37/entries/1/read",
 		"status_code": 204
 	},
 	"mark_entry_as_unread_403": {
 		"method": "DELETE",
-		"endpoint": "courses/29/discussion_topics/1/entries/1/read",
+		"endpoint": "courses/29/discussion_topics/37/entries/1/read",
 		"data": "require_initial_post",
 		"status_code": 403
 	},
 	"mark_entries_as_read": {
 		"method": "PUT",
-		"endpoint": "courses/29/discussion_topics/1/read_all",
+		"endpoint": "courses/29/discussion_topics/37/read_all",
 		"status_code": 204
 	},
 	"mark_entries_as_read_403": {
 		"method": "PUT",
-		"endpoint": "courses/29/discussion_topics/1/read_all",
+		"endpoint": "courses/29/discussion_topics/37/read_all",
 		"data": "require_initial_post",
 		"status_code": 403
 	},
 	"mark_entries_as_unread": {
 		"method": "DELETE",
-		"endpoint": "courses/29/discussion_topics/1/read_all",
+		"endpoint": "courses/29/discussion_topics/37/read_all",
 		"status_code": 204
 	},
 	"mark_entries_as_unread_403": {
 		"method": "DELETE",
-		"endpoint": "courses/29/discussion_topics/1/read_all",
+		"endpoint": "courses/29/discussion_topics/37/read_all",
 		"data": "require_initial_post",
 		"status_code": 403
 	},
 	"rate_entry": {
 		"method": "POST",
-		"endpoint": "courses/29/discussion_topics/1/entries/1/rating",
+		"endpoint": "courses/29/discussion_topics/37/entries/1/rating",
 		"status_code": 204
 	},
 	"subscribe": {
 		"method": "PUT",
-		"endpoint": "courses/29/discussion_topics/1/subscribed",
+		"endpoint": "courses/29/discussion_topics/37/subscribed",
 		"status_code": 204
 	},
 	"subscribe_403": {
 		"method": "PUT",
-		"endpoint": "courses/29/discussion_topics/1/subscribed",
+		"endpoint": "courses/29/discussion_topics/37/subscribed",
 		"data": "require_initial_post",
 		"status_code": 403
 	},
 	"unsubscribe": {
 		"method": "DELETE",
-		"endpoint": "courses/29/discussion_topics/1/subscribed",
+		"endpoint": "courses/29/discussion_topics/37/subscribed",
 		"status_code": 204
 	},
 	"unsubscribe_403": {
 		"method": "DELETE",
-		"endpoint": "courses/29/discussion_topics/1/subscribed",
+		"endpoint": "courses/29/discussion_topics/37/subscribed",
 		"data": "require_initial_post",
 		"status_code": 403
 	}

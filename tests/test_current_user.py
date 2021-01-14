@@ -75,7 +75,7 @@ class TestCurrentUser(unittest.TestCase):
         self.assertIsInstance(fav_courses[1], Course)
         self.assertEqual(len(fav_course_list), 2)
         self.assertEqual(fav_courses[0].name, "Fave Course 1")
-        self.assertEqual(fav_courses[0].id, 1)
+        self.assertEqual(fav_courses[0].id, object_ids.COURSE_ID)
         self.assertEqual(fav_courses[0].course_code, "DND-4848")
         self.assertEqual(fav_courses[1].name, "Fave Course 2")
 
@@ -89,7 +89,7 @@ class TestCurrentUser(unittest.TestCase):
         self.assertIsInstance(fav_groups[0], Group)
         self.assertIsInstance(fav_groups[1], Group)
         self.assertEqual(fav_groups[0].name, "Group 1")
-        self.assertEqual(fav_groups[0].id, 1)
+        self.assertEqual(fav_groups[0].id, object_ids.GROUP_ID)
 
     # add_favorite_course()
     def test_add_favorite_course(self, m):
@@ -100,13 +100,13 @@ class TestCurrentUser(unittest.TestCase):
         fav_by_id = self.user.add_favorite_course(object_ids.COURSE_ID)
         self.assertIsInstance(fav_by_id, Favorite)
         self.assertEqual(fav_by_id.context_type, "course")
-        self.assertEqual(fav_by_id.context_id, 1)
+        self.assertEqual(fav_by_id.context_id, object_ids.COURSE_ID)
 
         obj = self.canvas.get_course(object_ids.COURSE_ID)
         fav_by_obj = self.user.add_favorite_course(obj)
         self.assertIsInstance(fav_by_obj, Favorite)
         self.assertEqual(fav_by_obj.context_type, "course")
-        self.assertEqual(fav_by_obj.context_id, 1)
+        self.assertEqual(fav_by_obj.context_id, object_ids.COURSE_ID)
 
     def test_add_favorite_course_sis_id(self, m):
         register_uris({"current_user": ["add_favorite_course_by_sis_id"]}, m)
@@ -114,7 +114,7 @@ class TestCurrentUser(unittest.TestCase):
         fav_by_sis = self.user.add_favorite_course("test-sis-id", use_sis_id=True)
 
         self.assertIsInstance(fav_by_sis, Favorite)
-        self.assertEqual(fav_by_sis.context_id, 1)
+        self.assertEqual(fav_by_sis.context_id, object_ids.COURSE_ID)
         self.assertEqual(fav_by_sis.context_type, "course")
 
     # add_favorite_group()
@@ -123,16 +123,16 @@ class TestCurrentUser(unittest.TestCase):
             {"current_user": ["add_favorite_group"], "group": ["get_by_id"]}, m
         )
 
-        fav_by_id = self.user.add_favorite_course(object_ids.GROUP_ID)
+        fav_by_id = self.user.add_favorite_group(object_ids.GROUP_ID)
         self.assertIsInstance(fav_by_id, Favorite)
         self.assertEqual(fav_by_id.context_type, "group")
-        self.assertEqual(fav_by_id.context_id, 1)
+        self.assertEqual(fav_by_id.context_id, object_ids.GROUP_ID)
 
         obj = self.canvas.get_group(object_ids.GROUP_ID)
         fav_by_obj = self.user.add_favorite_group(obj)
         self.assertIsInstance(fav_by_obj, Favorite)
         self.assertEqual(fav_by_obj.context_type, "group")
-        self.assertEqual(fav_by_obj.context_id, 1)
+        self.assertEqual(fav_by_obj.context_id, object_ids.GROUP_ID)
 
     def test_add_favorite_group_sis_id(self, m):
         register_uris({"current_user": ["add_favorite_group_by_sis_id"]}, m)
@@ -140,7 +140,7 @@ class TestCurrentUser(unittest.TestCase):
         fav_by_sis = self.user.add_favorite_group("test-sis-id", use_sis_id=True)
 
         self.assertIsInstance(fav_by_sis, Favorite)
-        self.assertEqual(fav_by_sis.context_id, 1)
+        self.assertEqual(fav_by_sis.context_id, object_ids.GROUP_ID)
         self.assertEqual(fav_by_sis.context_type, "group")
 
     # reset_favorite_courses()

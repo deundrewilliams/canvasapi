@@ -53,7 +53,7 @@
 		"endpoint": "users/self/favorites/courses",
 		"data": [
 			{
-				"id": 1,
+				"id": 29,
 				"name": "Fave Course 1",
 				"course_code": "DND-4848"
 			},
@@ -70,7 +70,7 @@
 		"endpoint": "users/self/favorites/groups",
 		"data": [
 			{
-				"id": 1,
+				"id": 47,
 				"name": "Group 1"
 			},
 			{

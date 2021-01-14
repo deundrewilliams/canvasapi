@@ -617,9 +617,9 @@
 	},
 	"get_discussion_topic": {
 		"method": "GET",
-		"endpoint": "groups/47/discussion_topics/1",
+		"endpoint": "groups/47/discussion_topics/37",
 		"data": {
-				"id": 1,
+				"id": 37,
 				"title": "Topic 1"
 			},
 		"status_code": 200
@@ -636,7 +636,7 @@
 	},
 	"get_full_discussion_topic": {
 		"method": "GET",
-		"endpoint": "groups/47/discussion_topics/1/view",
+		"endpoint": "groups/47/discussion_topics/37/view",
 		"data": {
 			"id": 1,
 			"view": [

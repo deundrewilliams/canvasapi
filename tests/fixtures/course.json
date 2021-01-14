@@ -1317,10 +1317,10 @@
 	},
 	"get_discussion_topic": {
 		"method": "GET",
-		"endpoint": "courses/29/discussion_topics/1",
+		"endpoint": "courses/29/discussion_topics/37",
 		"data":
 			{
-				"id": 1,
+				"id": 37,
 				"title": "Topic 1"
 			},
 		"status_code": 200
@@ -1337,7 +1337,7 @@
 	},
 	"get_full_discussion_topic": {
 		"method": "GET",
-		"endpoint": "courses/29/discussion_topics/1/view",
+		"endpoint": "courses/29/discussion_topics/37/view",
 		"data": {
 			"id": 1,
 			"view": [

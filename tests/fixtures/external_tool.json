@@ -3,7 +3,7 @@
 		"method": "POST",
 		"endpoint": "accounts/2/external_tools",
 		"data": {
-			"id": 10,
+			"id": 40,
 			"name": "External Tool - Account",
 			"privacy_level": "public",
 			"consumer_key": "key"
@@ -13,7 +13,7 @@
 		"method": "POST",
 		"endpoint": "courses/29/external_tools",
 		"data": {
-			"id": 20,
+			"id": 40,
 			"name": "External Tool - Course",
 			"privacy_level": "public",
 			"consumer_key": "key"
@@ -21,9 +21,9 @@
 	},
 	"delete_tool_course": {
 		"method": "DELETE",
-		"endpoint": "courses/29/external_tools/1",
+		"endpoint": "courses/29/external_tools/40",
 		"data": {
-			"id": 1,
+			"id": 40,
 			"name": "External Tool #1 (Course)",
 			"description": "This is an external tool in a course.",
 			"url": "http://www.example.com/ims/lti",
@@ -35,9 +35,9 @@
 	},
 	"edit_tool_course": {
 		"method": "PUT",
-		"endpoint": "courses/29/external_tools/1",
+		"endpoint": "courses/29/external_tools/40",
 		"data": {
-			"id": 1,
+			"id": 40,
 			"name": "New Tool Name",
 			"description": "This is an external tool in a course.",
 			"url": "http://www.example.com/ims/lti",
@@ -63,9 +63,9 @@
 	},
 	"get_by_id_course": {
 		"method": "GET",
-		"endpoint": "courses/29/external_tools/1",
+		"endpoint": "courses/29/external_tools/40",
 		"data": {
-			"id": 1,
+			"id": 40,
 			"name": "External Tool #1 (Course)",
 			"description": "This is an external tool in a course.",
 			"url": "http://www.example.com/ims/lti",
@@ -77,9 +77,9 @@
 	},
 	"get_by_id_course_2": {
 		"method": "GET",
-		"endpoint": "courses/2/external_tools/2",
+		"endpoint": "courses/29/external_tools/40",
 		"data": {
-			"id": 2,
+			"id": 40,
 			"name": "External Tool #2 (Course)",
 			"description": "This is an external tool in a course.",
 			"url": "http://www.example.com/ims/lti",
@@ -101,7 +101,7 @@
 	},
 	"sessionless_launch_no_url": {
 		"method": "GET",
-		"endpoint": "courses/2/external_tools/sessionless_launch",
+		"endpoint": "courses/29/external_tools/sessionless_launch",
 		"data": {
 			"id": "2",
 			"name": "External Tool #2 (Course)"

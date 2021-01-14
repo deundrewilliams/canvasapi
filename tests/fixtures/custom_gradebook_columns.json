@@ -51,7 +51,7 @@
 	},
 	"update_column_data": {
 		"method": "PUT",
-		"endpoint": "courses/29/custom_gradebook_columns/2/data/1",
+		"endpoint": "courses/29/custom_gradebook_columns/2/data/86",
 		"data": {
 			"content": "Updated content",
 			"user_id": 86

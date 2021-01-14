@@ -27,8 +27,8 @@ class TestExternalTool(unittest.TestCase):
 
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.account = self.canvas.get_account(object_ids.ACCOUNT_ID)
-            self.ext_tool_course = self.course.get_external_tool(1)
-            self.ext_tool_account = self.account.get_external_tool(1)
+            self.ext_tool_course = self.course.get_external_tool(object_ids.EXTERNAL_TOOL_ID)
+            self.ext_tool_account = self.account.get_external_tool(object_ids.EXTERNAL_TOOL_ID)
 
     # __str__()
     def test__str__(self, m):
@@ -37,13 +37,13 @@ class TestExternalTool(unittest.TestCase):
 
     # parent_id
     def test_parent_id_account(self, m):
-        self.assertEqual(self.ext_tool_account.parent_id, 1)
+        self.assertEqual(self.ext_tool_account.parent_id, object_ids.ACCOUNT_ID)
 
     def test_parent_id_course(self, m):
-        self.assertEqual(self.ext_tool_course.parent_id, 1)
+        self.assertEqual(self.ext_tool_course.parent_id, object_ids.COURSE_ID)
 
     def test_parent_id_no_id(self, m):
-        tool = ExternalTool(self.canvas._Canvas__requester, {"id": 1})
+        tool = ExternalTool(self.canvas._Canvas__requester, {"id": object_ids.EXTERNAL_TOOL_ID})
         with self.assertRaises(ValueError):
             tool.parent_id
 
@@ -55,7 +55,7 @@ class TestExternalTool(unittest.TestCase):
         self.assertEqual(self.ext_tool_course.parent_type, "course")
 
     def test_parent_type_no_id(self, m):
-        tool = ExternalTool(self.canvas._Canvas__requester, {"id": 1})
+        tool = ExternalTool(self.canvas._Canvas__requester, {"id": object_ids.EXTERNAL_TOOL_ID})
         with self.assertRaises(ValueError):
             tool.parent_type
 
@@ -101,7 +101,7 @@ class TestExternalTool(unittest.TestCase):
         }
         register_uris(requires, m)
 
-        course = self.canvas.get_course(2)
-        ext_tool = course.get_external_tool(2)
+        course = self.canvas.get_course(object_ids.COURSE_ID)
+        ext_tool = course.get_external_tool(object_ids.EXTERNAL_TOOL_ID)
         with self.assertRaises(CanvasException):
             ext_tool.get_sessionless_launch_url()

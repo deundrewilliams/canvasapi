@@ -19,7 +19,7 @@ class TestEnrollment(unittest.TestCase):
             register_uris(requires, m)
 
             self.account = self.canvas.get_account(object_ids.ACCOUNT_ID)
-            self.enrollment = self.account.get_enrollment(1)
+            self.enrollment = self.account.get_enrollment(object_ids.ENROLLMENT_ID)
 
     # __str__()
     def test__str__(self, m):

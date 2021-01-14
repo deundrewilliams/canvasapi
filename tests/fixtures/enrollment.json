@@ -1,10 +1,10 @@
 {
 	"deactivate": {
 		"method": "DELETE",
-		"endpoint": "courses/29/enrollments/1",
+		"endpoint": "courses/29/enrollments/38",
 		"data": {
-			"id": 1,
-			"course_id": 1,
+			"id": 38,
+			"course_id": 29,
 			"user_id": 86,
 			"type": "StudentEnrollment",
 			"state": "inactive"
@@ -13,10 +13,10 @@
 	},
 	"get_by_id": {
 		"method": "GET",
-		"endpoint": "accounts/2/enrollments/1",
+		"endpoint": "accounts/2/enrollments/38",
 		"data": {
-			"id": 1,
-			"course_id": 1,
+			"id": 38,
+			"course_id": 29,
 			"user_id": 86,
 			"type": "StudentEnrollment"
 		},
@@ -24,10 +24,10 @@
 	},
 	"reactivate": {
 		"method": "PUT",
-		"endpoint": "courses/29/enrollments/1/reactivate",
+		"endpoint": "courses/29/enrollments/38/reactivate",
 		"data": {
-			"id": 1,
-			"course_id": 1,
+			"id": 38,
+			"course_id": 29,
 			"user_id": 86,
 			"type": "StudentEnrollment",
 			"state": "active"
