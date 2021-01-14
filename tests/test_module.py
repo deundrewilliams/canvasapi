@@ -19,7 +19,7 @@ class TestModule(unittest.TestCase):
             register_uris({"course": ["get_by_id", "get_module_by_id"]}, m)
 
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
-            self.module = self.course.get_module(1)
+            self.module = self.course.get_module(object_ids.MODULE_ID)
 
     # edit()
     def test_edit_module(self, m):
@@ -70,7 +70,7 @@ class TestModule(unittest.TestCase):
     def test_get_module_item(self, m):
         register_uris({"module": ["get_module_item_by_id"]}, m)
 
-        module_item_by_id = self.module.get_module_item(1)
+        module_item_by_id = self.module.get_module_item(object_ids.MODULE_ITEM_ID)
 
         self.assertIsInstance(module_item_by_id, ModuleItem)
         self.assertTrue(hasattr(module_item_by_id, "course_id"))
@@ -87,7 +87,7 @@ class TestModule(unittest.TestCase):
         register_uris({"module": ["create_module_item"]}, m)
 
         module_item = self.module.create_module_item(
-            module_item={"type": "Assignment", "content_id": 1}
+            module_item={"type": "Assignment", "content_id": object_ids.MODULE_ITEM_ID}
         )
 
         self.assertIsInstance(module_item, ModuleItem)
@@ -96,7 +96,7 @@ class TestModule(unittest.TestCase):
 
     def test_create_module_item_fail1(self, m):
         with self.assertRaises(RequiredFieldMissing):
-            self.module.create_module_item(module_item={"content_id": 1})
+            self.module.create_module_item(module_item={"content_id": object_ids.MODULE_ITEM_ID})
 
     def test_create_module_item_fail2(self, m):
         with self.assertRaises(RequiredFieldMissing):
@@ -127,8 +127,8 @@ class TestModuleItem(unittest.TestCase):
             register_uris(requires, m)
 
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
-            self.module = self.course.get_module(1)
-            self.module_item = self.module.get_module_item(1)
+            self.module = self.course.get_module(object_ids.MODULE_ID)
+            self.module_item = self.module.get_module_item(object_ids.MODULE_ITEM_ID)
 
     # edit()
     def test_edit_module_item(self, m):

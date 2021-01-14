@@ -1111,9 +1111,9 @@
 	},
 	"get_module_by_id": {
 		"method": "GET",
-		"endpoint": "courses/29/modules/1",
+		"endpoint": "courses/29/modules/52",
 		"data": {
-			"id": 1,
+			"id": 52,
 			"name": "Test Module 1234",
 			"workflow_state": "active",
 			"position": 1
@@ -1124,7 +1124,7 @@
 		"method": "POST",
 		"endpoint": "courses/29/modules",
 		"data": {
-			"id": 1,
+			"id": 52,
 			"name": "Name",
 			"workflow_state": "active",
 			"position": 1

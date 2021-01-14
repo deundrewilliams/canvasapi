@@ -405,7 +405,7 @@ class TestCourse(unittest.TestCase):
     def test_get_module(self, m):
         register_uris({"course": ["get_module_by_id"]}, m)
 
-        target_module_by_id = self.course.get_module(1)
+        target_module_by_id = self.course.get_module(object_ids.MODULE_ID)
 
         self.assertIsInstance(target_module_by_id, Module)
         self.assertTrue(hasattr(target_module_by_id, "course_id"))

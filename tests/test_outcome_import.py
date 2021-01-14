@@ -14,7 +14,7 @@ class TestOutcomeImport(unittest.TestCase):
         self.canvas = Canvas(settings.BASE_URL, settings.API_KEY)
 
         self.outcome_import = OutcomeImport(
-            self.canvas._Canvas__requester, {"id": 1, "workflow_state": 1}
+            self.canvas._Canvas__requester, {"id": object_ids.OUTCOME_IMPORT_ID, "workflow_state": 1}
         )
 
     def test_str(self, m):
