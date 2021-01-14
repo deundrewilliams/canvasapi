@@ -169,7 +169,7 @@
 		"method": "GET",
 		"endpoint": "accounts/2",
 		"data": {
-			"id": 1,
+			"id": 2,
 			"name": "Old Name",
 			"parent_account_id": null,
 			"root_account_id": null,

@@ -17,7 +17,7 @@ class TestEnrollmentTerm(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"account": ["get_by_id", "create_enrollment_term"]}, m)
 
-            self.account = self.canvas.get_account(1)
+            self.account = self.canvas.get_account(object_ids.ACCOUNT_ID)
             self.enrollment_term = self.account.create_enrollment_term(
                 enrollment_term={"name": "Test Enrollment Term"}
             )

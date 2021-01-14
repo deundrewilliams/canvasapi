@@ -21,7 +21,7 @@ class TestAuthenticationEvent(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.account = self.canvas.get_account(1)
+            self.account = self.canvas.get_account(object_ids.ACCOUNT_ID)
             self.login = self.account.create_user_login(
                 user={"id": 1}, login={"unique_id": "belieber@example.com"}
             )

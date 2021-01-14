@@ -26,7 +26,7 @@ class TestExternalTool(unittest.TestCase):
             register_uris(requires, m)
 
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
-            self.account = self.canvas.get_account(1)
+            self.account = self.canvas.get_account(object_ids.ACCOUNT_ID)
             self.ext_tool_course = self.course.get_external_tool(1)
             self.ext_tool_account = self.account.get_external_tool(1)
 

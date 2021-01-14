@@ -18,7 +18,7 @@ class TestEnrollment(unittest.TestCase):
             requires = {"account": ["get_by_id"], "enrollment": ["get_by_id"]}
             register_uris(requires, m)
 
-            self.account = self.canvas.get_account(1)
+            self.account = self.canvas.get_account(object_ids.ACCOUNT_ID)
             self.enrollment = self.account.get_enrollment(1)
 
     # __str__()

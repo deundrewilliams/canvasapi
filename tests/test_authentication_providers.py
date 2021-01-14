@@ -17,7 +17,7 @@ class TestAuthenticationProvider(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"account": ["get_by_id", "add_authentication_providers"]}, m)
 
-            self.account = self.canvas.get_account(1)
+            self.account = self.canvas.get_account(object_ids.ACCOUNT_ID)
             self.authentication_providers = self.account.add_authentication_providers(
                 authentication_providers={"auth_type": "Authentication Providers"}
             )

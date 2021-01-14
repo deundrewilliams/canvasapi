@@ -98,7 +98,7 @@ class TestCanvas(unittest.TestCase):
     def test_get_account(self, m):
         register_uris({"account": ["get_by_id"]}, m)
 
-        account_by_id = self.canvas.get_account(1)
+        account_by_id = self.canvas.get_account(object_ids.ACCOUNT_ID)
         self.assertIsInstance(account_by_id, Account)
 
         account_by_obj = self.canvas.get_account(account_by_id)

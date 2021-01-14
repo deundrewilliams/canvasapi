@@ -28,7 +28,7 @@ class TestContentMigration(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.account = self.canvas.get_account(1)
+            self.account = self.canvas.get_account(object_ids.ACCOUNT_ID)
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.group = self.canvas.get_group(object_ids.GROUP_ID)
             self.user = self.canvas.get_user(object_ids.USER_ID)
@@ -181,7 +181,7 @@ class TestMigrationIssue(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.account = self.canvas.get_account(1)
+            self.account = self.canvas.get_account(object_ids.ACCOUNT_ID)
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.group = self.canvas.get_group(object_ids.GROUP_ID)
             self.user = self.canvas.get_user(object_ids.USER_ID)
@@ -243,7 +243,7 @@ class TestMigrator(unittest.TestCase):
             }
             register_uris(requires, m)
 
-            self.account = self.canvas.get_account(1)
+            self.account = self.canvas.get_account(object_ids.ACCOUNT_ID)
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.group = self.canvas.get_group(object_ids.GROUP_ID)
             self.user = self.canvas.get_user(object_ids.USER_ID)

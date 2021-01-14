@@ -66,7 +66,7 @@ class TestOutcomeLink(unittest.TestCase):
                 m,
             )
 
-            self.account = self.canvas.get_account(1)
+            self.account = self.canvas.get_account(object_ids.ACCOUNT_ID)
             self.account_outcome_links = self.account.get_all_outcome_links_in_context()
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.course_outcome_links = self.course.get_all_outcome_links_in_context()
@@ -127,7 +127,7 @@ class TestOutcomeGroup(unittest.TestCase):
 
             self.canvas_outcome_group = self.canvas.get_root_outcome_group()
 
-            self.account = self.canvas.get_account(1)
+            self.account = self.canvas.get_account(object_ids.ACCOUNT_ID)
             self.account_outcome_group = self.account.get_root_outcome_group()
             self.account_outcome_groups = self.account.get_outcome_groups_in_context()
             self.account_outcome_links = self.account.get_all_outcome_links_in_context()
@@ -217,17 +217,17 @@ class TestOutcomeGroup(unittest.TestCase):
 
         result = self.account_outcome_group.get_linked_outcomes()
         self.assertIsInstance(result[0], OutcomeLink)
-        self.assertEqual(result[0].outcome_group["id"], 2)
+        self.assertEqual(result[0].outcome_group["id"], object_ids.OUTCOME_GROUP_ID)
         self.assertEqual(result[0].outcome_group["title"], "Account Test Outcome Group")
 
         result = self.canvas_outcome_group.get_linked_outcomes()
         self.assertIsInstance(result[0], OutcomeLink)
-        self.assertEqual(result[0].outcome_group["id"], 2)
+        self.assertEqual(result[0].outcome_group["id"], object_ids.OUTCOME_GROUP_ID)
         self.assertEqual(result[0].outcome_group["title"], "Global Test Outcome Group")
 
         result = self.course_outcome_group.get_linked_outcomes()
         self.assertIsInstance(result[0], OutcomeLink)
-        self.assertEqual(result[0].outcome_group["id"], 2)
+        self.assertEqual(result[0].outcome_group["id"], object_ids.OUTCOME_GROUP_ID)
         self.assertEqual(result[0].outcome_group["title"], "Course Test Outcome Group")
 
     # link_existing()
@@ -246,27 +246,27 @@ class TestOutcomeGroup(unittest.TestCase):
 
         result = self.canvas_outcome_group.link_existing(self.example_outcome)
         self.assertIsInstance(result, OutcomeLink)
-        self.assertEqual(result.outcome_group["id"], 2)
+        self.assertEqual(result.outcome_group["id"], object_ids.OUTCOME_GROUP_ID)
 
         result = self.account_outcome_group.link_existing(self.example_outcome)
         self.assertIsInstance(result, OutcomeLink)
-        self.assertEqual(result.outcome_group["id"], 2)
+        self.assertEqual(result.outcome_group["id"], object_ids.OUTCOME_GROUP_ID)
 
         result = self.course_outcome_group.link_existing(self.example_outcome)
         self.assertIsInstance(result, OutcomeLink)
-        self.assertEqual(result.outcome_group["id"], 2)
+        self.assertEqual(result.outcome_group["id"], object_ids.OUTCOME_GROUP_ID)
 
-        result = self.canvas_outcome_group.link_existing(3)
+        result = self.canvas_outcome_group.link_existing(object_ids.OUTCOME_ID)
         self.assertIsInstance(result, OutcomeLink)
-        self.assertEqual(result.outcome_group["id"], 2)
+        self.assertEqual(result.outcome_group["id"], object_ids.OUTCOME_GROUP_ID)
 
-        result = self.account_outcome_group.link_existing(3)
+        result = self.account_outcome_group.link_existing(object_ids.OUTCOME_ID)
         self.assertIsInstance(result, OutcomeLink)
-        self.assertEqual(result.outcome_group["id"], 2)
+        self.assertEqual(result.outcome_group["id"], object_ids.OUTCOME_GROUP_ID)
 
-        result = self.course_outcome_group.link_existing(3)
+        result = self.course_outcome_group.link_existing(object_ids.OUTCOME_ID)
         self.assertIsInstance(result, OutcomeLink)
-        self.assertEqual(result.outcome_group["id"], 2)
+        self.assertEqual(result.outcome_group["id"], object_ids.OUTCOME_GROUP_ID)
 
     # link_new()
     def test_link_new(self, m):
@@ -285,20 +285,20 @@ class TestOutcomeGroup(unittest.TestCase):
 
         result = self.canvas_outcome_group.link_new(title=new_title)
         self.assertIsInstance(result, OutcomeLink)
-        self.assertEqual(result.outcome_group["id"], 1)
-        self.assertEqual(result.outcome["id"], 2)
+        self.assertEqual(result.outcome_group["id"], object_ids.OUTCOME_GROUP_ID)
+        self.assertEqual(result.outcome["id"], object_ids.OUTCOME_ID)
         self.assertEqual(result.outcome["context_type"], None)
 
         result = self.account_outcome_group.link_new(title=new_title)
         self.assertIsInstance(result, OutcomeLink)
-        self.assertEqual(result.outcome_group["id"], 1)
-        self.assertEqual(result.outcome["id"], 2)
+        self.assertEqual(result.outcome_group["id"], object_ids.OUTCOME_GROUP_ID)
+        self.assertEqual(result.outcome["id"], object_ids.OUTCOME_ID)
         self.assertEqual(result.outcome["context_type"], "Account")
 
         result = self.course_outcome_group.link_new(title=new_title)
         self.assertIsInstance(result, OutcomeLink)
-        self.assertEqual(result.outcome_group["id"], 1)
-        self.assertEqual(result.outcome["id"], 2)
+        self.assertEqual(result.outcome_group["id"], object_ids.OUTCOME_GROUP_ID)
+        self.assertEqual(result.outcome["id"], object_ids.OUTCOME_ID)
         self.assertEqual(result.outcome["context_type"], "Course")
 
     # unlink_outcome()
@@ -324,13 +324,13 @@ class TestOutcomeGroup(unittest.TestCase):
         result = self.course_outcome_group.unlink_outcome(self.example_outcome)
         self.assertTrue(result)
 
-        result = self.canvas_outcome_group.unlink_outcome(3)
+        result = self.canvas_outcome_group.unlink_outcome(object_ids.OUTCOME_ID)
         self.assertTrue(result)
 
-        result = self.account_outcome_group.unlink_outcome(3)
+        result = self.account_outcome_group.unlink_outcome(object_ids.OUTCOME_ID)
         self.assertTrue(result)
 
-        result = self.course_outcome_group.unlink_outcome(3)
+        result = self.course_outcome_group.unlink_outcome(object_ids.OUTCOME_ID)
         self.assertTrue(result)
 
     # get_subgroups()
@@ -443,8 +443,8 @@ class TestOutcomeGroup(unittest.TestCase):
             m,
         )
 
-        result = self.canvas_outcome_group.import_outcome_group(3)
-        self.assertEqual(result.id, 4)
+        result = self.canvas_outcome_group.import_outcome_group(object_ids.OUTCOME_GROUP_ID)
+        self.assertEqual(result.id, object_ids.OUTCOME_GROUP_ID)
         self.assertEqual(result.title, "Global Imported Subgroup Title")
         self.assertEqual(
             result.parent_outcome_group["id"], self.canvas_outcome_group.id
@@ -453,8 +453,8 @@ class TestOutcomeGroup(unittest.TestCase):
             result.parent_outcome_group["title"], self.canvas_outcome_group.title
         )
 
-        result = self.account_outcome_group.import_outcome_group(3)
-        self.assertEqual(result.id, 4)
+        result = self.account_outcome_group.import_outcome_group(object_ids.OUTCOME_GROUP_ID)
+        self.assertEqual(result.id, object_ids.OUTCOME_GROUP_ID)
         self.assertEqual(result.title, "Account Imported Subgroup Title")
         self.assertEqual(
             result.parent_outcome_group["id"], self.account_outcome_group.id
@@ -463,8 +463,8 @@ class TestOutcomeGroup(unittest.TestCase):
             result.parent_outcome_group["title"], self.account_outcome_group.title
         )
 
-        result = self.course_outcome_group.import_outcome_group(3)
-        self.assertEqual(result.id, 4)
+        result = self.course_outcome_group.import_outcome_group(object_ids.OUTCOME_GROUP_ID)
+        self.assertEqual(result.id, object_ids.OUTCOME_GROUP_ID)
         self.assertEqual(result.title, "Course Imported Subgroup Title")
         self.assertEqual(
             result.parent_outcome_group["id"], self.course_outcome_group.id
@@ -474,7 +474,7 @@ class TestOutcomeGroup(unittest.TestCase):
         )
 
         result_by_obj = self.course_outcome_group.import_outcome_group(result)
-        self.assertEqual(result_by_obj.id, 4)
+        self.assertEqual(result_by_obj.id, object_ids.OUTCOME_GROUP_ID)
         self.assertEqual(result_by_obj.title, "Course Imported Subgroup Title")
         self.assertEqual(
             result_by_obj.parent_outcome_group["id"], self.course_outcome_group.id

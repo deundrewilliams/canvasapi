@@ -18,7 +18,7 @@ class TestLogin(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"account": ["get_by_id"], "login": ["create_user_login"]}, m)
 
-            self.account = self.canvas.get_account(1)
+            self.account = self.canvas.get_account(object_ids.ACCOUNT_ID)
             self.login = self.account.create_user_login(
                 user={"id": 1}, login={"unique_id": "belieber@example.com"}
             )

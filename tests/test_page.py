@@ -165,7 +165,7 @@ class TestPageRevision(unittest.TestCase):
 
     # parent_id
     def test_parent_id_course(self, m):
-        self.assertEqual(self.revision.parent_id, 1)
+        self.assertEqual(self.revision.parent_id, object_ids.COURSE_ID)
 
     def test_parent_id_no_id(self, m):
         page = PageRevision(self.canvas._Canvas__requester, {"url": "my-url"})

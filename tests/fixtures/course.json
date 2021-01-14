@@ -1202,7 +1202,7 @@
 		"method": "GET",
 		"endpoint": "courses/29/pages/my-url",
 		"data": {
-			"id": 1,
+			"id": 29,
 			"url": "my-url",
 			"title": "Awesome Page"
 		},
