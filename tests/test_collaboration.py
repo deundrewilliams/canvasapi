@@ -18,11 +18,11 @@ class TestCollaboration(unittest.TestCase):
         self.collaboration = Collaboration(
             self.canvas._Canvas__requester,
             {
-                "id": 1,
+                "id": object_ids.COLLABORATION_ID,
                 "collaboration_type": "Microsoft Office",
                 "document_id": "oinwoenfe8w8ef_onweufe89fef",
-                "user_id": 92,
-                "context_id": 77,
+                "user_id": object_ids.USER_ID,
+                "context_id": object_ids.COURSE_ID,
                 "context_type": "Course",
                 "url": "null",
                 "created_at": "2012-06-01T00:00:00-06:00",

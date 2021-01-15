@@ -123,7 +123,7 @@ class TestGroupedSubmission(unittest.TestCase):
                 "submissions": [
                     {
                         "id": 1,
-                        "assignment_id": 1,
+                        "assignment_id": 8,
                         "user_id": 86,
                         "html_url": "https://example.com/courses/29/assignments/8/submissions/1",
                         "submission_type": "online_upload",
@@ -147,4 +147,4 @@ class TestGroupedSubmission(unittest.TestCase):
     def test__str__(self):
         string = str(self.grouped_submission)
         self.assertIsInstance(string, str)
-        self.assertEqual(string, "1 submission(s) for User #1")
+        self.assertEqual(string, "1 submission(s) for User #86")

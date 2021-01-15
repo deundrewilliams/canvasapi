@@ -20,7 +20,7 @@ class TestBookmark(unittest.TestCase):
             )
 
             self.user = self.canvas.get_current_user()
-            self.bookmark = self.user.get_bookmark(45)
+            self.bookmark = self.user.get_bookmark(object_ids.BOOKMARK_ID)
 
     # delete()
     def test_delete_bookmark(self, m):

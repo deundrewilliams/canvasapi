@@ -70,8 +70,8 @@
 		"method": "POST",
 		"endpoint": "courses/29/assignment_groups",
 		"data": {
-			"id": 3,
-			"course_id": 1,
+			"id": 7,
+			"course_id": 29,
 			"name": "Assignment Group 3"
 		},
 		"status_code": 200
@@ -81,7 +81,7 @@
 		"endpoint": "courses/29/assignments/8/overrides",
 		"data": {
 			"id": 10,
-			"assignment_id": 1,
+			"assignment_id": 8,
 			"student_ids": [1, 2, 3],
 			"title": "New Assignment Override"
 		},
@@ -100,22 +100,22 @@
 	},
 	"delete_assignment_group": {
 		"method": "DELETE",
-		"endpoint": "courses/29/assignment_groups/5",
+		"endpoint": "courses/29/assignment_groups/10",
 		"data": {
-			"id": 5,
-			"course_id": 1,
+			"id": 10,
+			"course_id": 29,
 			"name": "Assignment Group 5"
 		},
 		"status_code": 200
 	},
 	"delete_override": {
 		"method": "DELETE",
-		"endpoint": "courses/29/assignments/8/overrides/1",
+		"endpoint": "courses/29/assignments/8/overrides/90",
 		"data": {
-			"id": 1,
-			"assignment_id": 1,
+			"id": 90,
+			"assignment_id": 8,
 			"student_ids": [1],
-			"group_id": 1,
+			"group_id": 47,
 			"course_section_id": 1,
 			"title": "Assignment Override 1"
 		},
@@ -125,8 +125,8 @@
 		"method": "PUT",
 		"endpoint": "courses/29/assignments/8",
 		"data": {
-			"id": 1,
-			"course_id": 1,
+			"id": 8,
+			"course_id": 29,
 			"name": "New Name",
 			"description": "Edit this assignment"
 		},
@@ -134,19 +134,19 @@
 	},
 	"edit_assignment_group": {
 		"method": "PUT",
-		"endpoint": "courses/29/assignment_groups/5",
+		"endpoint": "courses/29/assignment_groups/10",
 		"data": {
-			"id": 5,
-			"course_id": 1,
+			"id": 10,
+			"course_id": 29,
 			"name": "New Name"
 		},
 		"status_code": 200
 	},
 	"edit_override": {
 		"method": "PUT",
-		"endpoint": "courses/29/assignments/8/overrides/1",
+		"endpoint": "courses/29/assignments/8/overrides/90",
 		"data": {
-			"id": 1,
+			"id": 90,
 			"title": "New Title",
 			"student_ids": [1]
 		},
@@ -154,10 +154,10 @@
 	},
 	"get_assignment_group": {
 		"method": "GET",
-		"endpoint": "courses/29/assignment_groups/5",
+		"endpoint": "courses/29/assignment_groups/10",
 		"data": {
-			"id": 5,
-			"course_id": 1,
+			"id": 10,
+			"course_id": 29,
 			"name": "Assignment Group 5"
 		},
 		"status_code": 200
@@ -167,8 +167,8 @@
 		"endpoint": "courses/29/assignment_groups",
 		"data": [
 			{
-				"id": 5,
-				"course_id": 1,
+				"id": 10,
+				"course_id": 29,
 				"name": "Assignment Group 5"
 			}
 		],
@@ -244,13 +244,13 @@
 	},
 	"get_assignment_override": {
 		"method": "GET",
-		"endpoint": "courses/29/assignments/8/overrides/1",
+		"endpoint": "courses/29/assignments/8/overrides/90",
 		"data": {
-			"id": 1,
-			"assignment_id": 1,
+			"id": 90,
+			"assignment_id": 8,
 			"student_ids": [1],
-			"group_id": 1,
-			"course_section_id": 1,
+			"group_id": 47,
+			"course_section_id": 80,
 			"title": "Assignment Override 1"
 		},
 		"status_code": 200
@@ -259,17 +259,17 @@
 		"method": "GET",
 		"endpoint": "courses/29/assignments/8",
 		"data": {
-			"id": 1,
-			"course_id": 1,
+			"id": 8,
+			"course_id": 29,
 			"name": "Assignment 1",
 			"description": "Do this assignment",
 			"overrides": [
 				{
-					"id": 1,
-					"assignment_id": 1,
+					"id": 90,
+					"assignment_id": 8,
 					"student_ids": [1],
-					"group_id": 1,
-					"course_section_id": 1,
+					"group_id": 47,
+					"course_section_id": 29,
 					"title": "Assignment Override 1"
 				}
 			]
@@ -318,8 +318,8 @@
 		"method": "POST",
 		"endpoint": "courses/29/assignments/8/submissions",
 		"data": {
-			"id": 1,
-			"assignment_id": 1,
+			"id": 91,
+			"assignment_id": 8,
 			"user_id": 86,
 			"html_url": "https://example.com/courses/29/assignments/8/submissions/1",
 			"submission_type": "online_upload"
@@ -330,8 +330,8 @@
 		"method": "POST",
 		"endpoint": "courses/29/assignments/8/submissions/update_grades",
 		"data": {
-			"id": 3,
-			"context_id": 1,
+			"id": 67,
+			"context_id": 29,
 			"context_type": "Course",
 			"user_id": null,
 			"tag": "submissions_update",

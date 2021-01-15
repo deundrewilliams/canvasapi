@@ -18,7 +18,7 @@ class TestAppointmentGroup(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"appointment_group": ["get_appointment_group"]}, m)
 
-            self.appointment_group = self.canvas.get_appointment_group(567)
+            self.appointment_group = self.canvas.get_appointment_group(object_ids.APPOINTMENT_GROUP_ID)
 
     # delete()
     def test_delete_appointment_group(self, m):

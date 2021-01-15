@@ -11,9 +11,9 @@
 	},
 	"delete_appointment_group": {
 		"method": "DELETE",
-		"endpoint": "appointment_groups/567",
+		"endpoint": "appointment_groups/7",
 		"data": {
-			"id": 567,
+			"id": 7,
 			"context_codes": ["course_765"],
 			"title": "Test Group 3",
 			"description": "Delete this appointment group"
@@ -22,9 +22,9 @@
 	},
 	"edit_appointment_group": {
 		"method": "PUT",
-		"endpoint": "appointment_groups/567",
+		"endpoint": "appointment_groups/7",
 		"data": {
-			"id": 567,
+			"id": 7,
 			"title": "New Name",
 			"description": "Edit this appointment group"
 		},
@@ -32,9 +32,9 @@
 	},
 	"get_appointment_group": {
 		"method": "GET",
-		"endpoint": "appointment_groups/567",
+		"endpoint": "appointment_groups/7",
 		"data": {
-			"id": 567,
+			"id": 7,
 			"context_codes": ["course_765"],
 			"title": "Test Group 3"
 		},

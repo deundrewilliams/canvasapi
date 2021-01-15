@@ -3,7 +3,7 @@
 		"method": "POST",
 		"endpoint": "users/self/bookmarks",
 		"data": {
-			"id": 45,
+			"id": 18,
 			"name": "Test Bookmark",
 			"url": "https://www.google.com"
 		},
@@ -11,18 +11,18 @@
 	},
 	"delete_bookmark": {
 		"method": "DELETE",
-		"endpoint": "users/self/bookmarks/45",
+		"endpoint": "users/self/bookmarks/18",
 		"data": {
-			"id": 45,
+			"id": 18,
 			"name": "Test Bookmark 3"
 		},
 		"status_code": 200
 	},
 	"edit_bookmark": {
 		"method": "PUT",
-		"endpoint": "users/self/bookmarks/45",
+		"endpoint": "users/self/bookmarks/18",
 		"data": {
-			"id": 45,
+			"id": 18,
 			"name": "New Name",
 			"url": "http://happy-place.com"
 		},
@@ -30,9 +30,9 @@
 	},
 	"get_bookmark": {
 		"method": "GET",
-		"endpoint": "users/self/bookmarks/45",
+		"endpoint": "users/self/bookmarks/18",
 		"data": {
-			"id": 45,
+			"id": 18,
 			"name": "Test Bookmark 3"
 		},
 		"status_code": 200

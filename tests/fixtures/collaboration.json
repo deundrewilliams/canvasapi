@@ -1,7 +1,7 @@
 {
 	"get_collaborators": {
 		"method": "GET",
-		"endpoint": "collaborations/1/members",
+		"endpoint": "collaborations/20/members",
 		"data": {
 			"collaborators": [
 				{

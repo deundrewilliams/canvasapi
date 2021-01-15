@@ -88,7 +88,7 @@ class TestAssignment(unittest.TestCase):
     def test_get_override(self, m):
         register_uris({"assignment": ["get_assignment_override"]}, m)
 
-        override = self.assignment.get_override(1)
+        override = self.assignment.get_override(object_ids.ASSIGNMENT_OVERRIDE_ID)
 
         self.assertIsInstance(override, AssignmentOverride)
 
@@ -125,7 +125,7 @@ class TestAssignment(unittest.TestCase):
     def test_get_submission(self, m):
         register_uris({"submission": ["get_by_id_course"], "user": ["get_by_id"]}, m)
 
-        user_id = 1
+        user_id = object_ids.USER_ID
         submission_by_id = self.assignment.get_submission(user_id)
         self.assertIsInstance(submission_by_id, Submission)
         self.assertTrue(hasattr(submission_by_id, "submission_type"))
@@ -316,7 +316,7 @@ class TestAssignmentGroup(unittest.TestCase):
             )
 
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
-            self.assignment_group = self.course.get_assignment_group(5)
+            self.assignment_group = self.course.get_assignment_group(object_ids.ASSIGNMENT_GROUP_ID)
 
     # edit()
     def test_edit_assignment_group(self, m):
@@ -363,13 +363,13 @@ class TestAssignmentOverride(unittest.TestCase):
 
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
             self.assignment = self.course.get_assignment(object_ids.ASSIGNMENT_ID)
-            self.assignment_override = self.assignment.get_override(1)
+            self.assignment_override = self.assignment.get_override(object_ids.ASSIGNMENT_OVERRIDE_ID)
 
     # __str__()
     def test__str__(self, m):
         string = str(self.assignment_override)
         self.assertIsInstance(string, str)
-        self.assertEqual(string, "Assignment Override 1 (1)")
+        self.assertEqual(string, "Assignment Override 1 (90)")
 
     # delete()
     def test_delete(self, m):

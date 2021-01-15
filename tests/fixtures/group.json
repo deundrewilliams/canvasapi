@@ -929,10 +929,10 @@
 	},
 	"single_content_export": {
 		"method": "GET",
-		"endpoint": "groups/47/content_exports/11",
+		"endpoint": "groups/47/content_exports/24",
 		"data": {
 			"user_id": 86,
-			"id": 11,
+			"id": 24,
 			"export_type": "c"
 		},
 		"status_code": 200

@@ -1,9 +1,9 @@
 {
     "get_by_id": {
         "method": "GET",
-        "endpoint": "conversations/1",
+        "endpoint": "conversations/28",
         "data": {
-            "id": 1,
+            "id": 28,
             "subject": "Amazing Conversation"
         },
         "status_code": 200
@@ -54,7 +54,7 @@
         "method": "POST",
         "endpoint": "conversations",
         "data": [{
-            "id": 1,
+            "id": 28,
             "subject": "A Conversation",
             "workflow_state": "unread",
             "last_message": "Hello, World!",
@@ -110,7 +110,7 @@
         "endpoint": "conversations",
         "data": [
             {
-                "id": 1,
+                "id": 28,
                 "subject": "A Conversation",
                 "workflow_state": "unread",
                 "last_message": "Hey guys!",
@@ -214,7 +214,7 @@
     },
     "edit_conversation": {
         "method": "PUT",
-        "endpoint": "conversations/1",
+        "endpoint": "conversations/28",
         "data": {
             "id": 1,
             "subject": "conversations api example"
@@ -230,7 +230,7 @@
     },
     "delete_conversation": {
         "method": "DELETE",
-        "endpoint": "conversations/1",
+        "endpoint": "conversations/28",
         "data": {
             "id": 1,
             "subject": "conversations api example"
@@ -246,7 +246,7 @@
     },
     "add_recipients": {
         "method": "POST",
-        "endpoint": "conversations/1/add_recipients",
+        "endpoint": "conversations/28/add_recipients",
         "data": {
             "id": 1,
             "subject": "add_recipients test",
@@ -265,7 +265,7 @@
     },
     "add_message": {
         "method": "POST",
-        "endpoint": "conversations/1/add_message",
+        "endpoint": "conversations/28/add_message",
         "data": {
             "id": 1,
             "subject": "add_message test subject",
@@ -284,9 +284,9 @@
     },
     "delete_message": {
         "method": "POST",
-        "endpoint": "conversations/1/remove_messages",
+        "endpoint": "conversations/28/remove_messages",
         "data": {
-            "id": 1,
+            "id": 28,
             "subject": "delete_message example",
             "workflow_state": "read",
             "last_message": "delete_message message",

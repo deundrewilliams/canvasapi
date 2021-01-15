@@ -198,17 +198,17 @@
 	},
 	"get_assignments_for_group": {
 		"method": "GET",
-		"endpoint": "courses/29/assignment_groups/5/assignments",
+		"endpoint": "courses/29/assignment_groups/10/assignments",
 		"data": [
 			{
 				"id": 3,
-				"course_id": 1,
+				"course_id": 29,
 				"name": "Assignment 1",
 				"description": "Do this assignment"
 			},
 			{
 				"id": 4,
-				"course_id": 1,
+				"course_id": 29,
 				"name": "Assignment 2",
 				"description": "Do this assignment too"
 			}
@@ -217,10 +217,10 @@
 	},
 	"get_blueprint": {
 		"method": "GET",
-		"endpoint": "courses/29/blueprint_templates/1",
+		"endpoint": "courses/29/blueprint_templates/16",
 		"data": {
-			"id": 1,
-			"course_id": 1,
+			"id": 16,
+			"course_id": 29,
 			"associated_course_count": 3,
 			"latest_migration": null
 		},
@@ -742,10 +742,10 @@
 		"endpoint": "courses/29/blueprint_subscriptions",
 		"data": [
 			{
-				"id": 10,
-				"template_id": 2,
+				"id": 15,
+				"template_id": 16,
 				"blueprint_course": {
-					"id": 1,
+					"id": 29,
 					"name": "Test Course",
 					"course_code": "TES1337",
 					"term_name": "Summer 2018"
@@ -760,13 +760,13 @@
 		"data": [
 			{
 				"id": 1,
-				"course_id": 1,
+				"course_id": 29,
 				"user_id": 86,
 				"type": "StudentEnrollment"
 			},
 			{
 				"id": 2,
-				"course_id": 1,
+				"course_id": 29,
 				"user_id": 2,
 				"type": "TeacherEnrollment"
 			}
@@ -2007,10 +2007,10 @@
 	},
 	"single_content_export": {
 		"method": "GET",
-		"endpoint": "courses/29/content_exports/11",
+		"endpoint": "courses/29/content_exports/24",
 		"data": {
 			"user_id": 86,
-			"id": 11,
+			"id": 24,
 			"export_type": "c"
 		},
 		"status_code": 200

@@ -17,7 +17,7 @@ class TestConversation(unittest.TestCase):
         with requests_mock.Mocker() as m:
             register_uris({"conversation": ["get_by_id"]}, m)
 
-            self.conversation = self.canvas.get_conversation(1)
+            self.conversation = self.canvas.get_conversation(object_ids.CONVERSATION_ID)
 
     # __str__()
     def test__str__(self, m):
@@ -85,4 +85,4 @@ class TestConversation(unittest.TestCase):
         id_list = [1]
         result = self.conversation.delete_messages(id_list)
         self.assertIn("subject", result)
-        self.assertEqual(result["id"], 1)
+        self.assertEqual(result["id"], object_ids.CONVERSATION_ID)

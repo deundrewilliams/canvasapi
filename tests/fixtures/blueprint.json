@@ -1,10 +1,10 @@
 {
     "get_associated_courses": {
         "method": "GET",
-        "endpoint": "courses/29/blueprint_templates/1/associated_courses",
+        "endpoint": "courses/29/blueprint_templates/16/associated_courses",
         "data": [
             {
-                "id": 1,
+                "id": 29,
                 "name": "Test 1",
                 "course_code": "TST1234"
             },
@@ -17,7 +17,7 @@
     },
     "update_associated_courses": {
         "method": "PUT",
-        "endpoint": "courses/29/blueprint_templates/1/update_associations",
+        "endpoint": "courses/29/blueprint_templates/16/update_associations",
         "data": {
             "success": true
         },
@@ -25,17 +25,17 @@
     },
     "associated_course_migration": {
         "method": "POST",
-        "endpoint": "courses/29/blueprint_templates/1/migrations",
+        "endpoint": "courses/29/blueprint_templates/16/migrations",
         "data": {
-            "id": 1,
+            "id": 14,
             "comment": "test1",
-            "template_id": "1"
+            "template_id": "16"
         },
         "status_code": 200
     },
     "change_blueprint_restrictions": {
         "method": "PUT",
-        "endpoint": "courses/29/blueprint_templates/1/restrict_item",
+        "endpoint": "courses/29/blueprint_templates/16/restrict_item",
         "data": {
             "success": true
         },
@@ -43,9 +43,9 @@
     },
     "get_unsynced_changes": {
         "method": "GET",
-        "endpoint": "courses/29/blueprint_templates/1/unsynced_changes",
+        "endpoint": "courses/29/blueprint_templates/16/unsynced_changes",
         "data": [{
-            "asset_id": 1,
+            "asset_id": 68,
             "asset_type": "quiz",
             "asset_name": "test quiz",
             "change_type": "updated"
@@ -54,38 +54,38 @@
     },
     "list_blueprint_migrations": {
         "method": "GET",
-        "endpoint": "courses/29/blueprint_templates/1/migrations",
+        "endpoint": "courses/29/blueprint_templates/16/migrations",
         "data": [{
-            "id": 1,
+            "id": 14,
             "user_id": 86,
-            "template_id": 1
+            "template_id": 16
         }],
         "status_code": 200
     },
     "show_blueprint_migration": {
         "method": "GET",
-        "endpoint": "courses/29/blueprint_templates/1/migrations/1",
+        "endpoint": "courses/29/blueprint_templates/16/migrations/14",
         "data": {
-            "id": 1,
+            "id": 14,
             "user_id": 86,
             "workflow_state": "completed",
-            "template_id": 1
+            "template_id": 16
         },
         "status_code": 200
     },
     "get_details": {
         "method": "GET",
-        "endpoint": "courses/29/blueprint_templates/1/migrations/1/details",
+        "endpoint": "courses/29/blueprint_templates/16/migrations/14/details",
         "data": [
             {
-                "asset_id": 1,
+                "asset_id": 8,
                 "asset_type": "assignment",
                 "asset_name": "Test Assignment",
                 "change_type": "updated",
                 "locked": true
             },
             {
-                "asset_id": 2,
+                "asset_id": 68,
                 "asset_type": "quiz",
                 "asset_name": "Test Quiz",
                 "change_type": "updated",
@@ -96,38 +96,38 @@
     },
     "list_blueprint_imports": {
         "method": "GET",
-        "endpoint": "courses/29/blueprint_subscriptions/10/migrations",
+        "endpoint": "courses/29/blueprint_subscriptions/15/migrations",
         "data": [{
-            "course_id": 1,
-            "id": 3,
-            "template_id": 3,
-            "subscription_id": 10
+            "course_id": 29,
+            "id": 14,
+            "template_id": 16,
+            "subscription_id": 15
         }],
         "status_code": 200
     },
     "show_blueprint_import": {
         "method": "GET",
-        "endpoint": "courses/29/blueprint_subscriptions/10/migrations/3",
+        "endpoint": "courses/29/blueprint_subscriptions/15/migrations/14",
         "data": {
-            "id": 3,
-            "template_id": 3,
-            "subscription_id": 10
+            "id": 14,
+            "template_id": 16,
+            "subscription_id": 15
         },
         "status_code": 200
     },
     "get_import_details": {
         "method": "GET",
-        "endpoint": "courses/29/blueprint_subscriptions/10/migrations/3/details",
+        "endpoint": "courses/29/blueprint_subscriptions/15/migrations/14/details",
         "data": [
             {
-                "asset_id": 1,
+                "asset_id": 8,
                 "asset_type": "assignment",
                 "asset_name": "Test Assignment",
                 "change_type": "updated",
                 "locked": false
             },
             {
-                "asset_id": 2,
+                "asset_id": 68,
                 "asset_type": "quiz",
                 "asset_name": "Test Quiz",
                 "change_type": "updated",

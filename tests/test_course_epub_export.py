@@ -22,7 +22,7 @@ class TestCourseEpubExport(unittest.TestCase):
                     "id": 1,
                     "created_at": "2019-01-01T00:00:00Z",
                     "progress_url": "https://dummyurl.com/api/v1/progress/4",
-                    "user_id": 4,
+                    "user_id": object_ids.USER_ID,
                     "workflow_state": "exported",
                 },
             },

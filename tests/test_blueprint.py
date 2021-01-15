@@ -28,8 +28,8 @@ class TestBlueprint(unittest.TestCase):
             register_uris(requires, m)
 
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
-            self.blueprint = self.course.get_blueprint(1)
-            self.blueprint_migration = self.blueprint.show_blueprint_migration(1)
+            self.blueprint = self.course.get_blueprint(object_ids.BLUEPRINT_TEMPLATE_ID)
+            self.blueprint_migration = self.blueprint.show_blueprint_migration(object_ids.BLUEPRINT_MIGRATION_ID)
 
     # __str__()
     def test__str__(self, m):
@@ -41,7 +41,7 @@ class TestBlueprint(unittest.TestCase):
         register_uris({"blueprint": ["get_associated_courses"]}, m)
         associated_courses = self.blueprint.get_associated_courses()
         self.assertIsInstance(associated_courses, PaginatedList)
-        self.assertEqual(associated_courses[0].id, 1)
+        self.assertEqual(associated_courses[0].id, object_ids.COURSE_ID)
         self.assertIsInstance(associated_courses[0], Course)
 
     # update_associated_courses()
@@ -54,7 +54,7 @@ class TestBlueprint(unittest.TestCase):
     def test_associated_course_migration(self, m):
         register_uris({"blueprint": ["associated_course_migration"]}, m)
         associated_migration = self.blueprint.associated_course_migration()
-        self.assertEqual(associated_migration.id, 1)
+        self.assertEqual(associated_migration.id, object_ids.BLUEPRINT_MIGRATION_ID)
         self.assertEqual(associated_migration.comment, "test1")
 
     # change_blueprint_restrictions()
@@ -71,7 +71,7 @@ class TestBlueprint(unittest.TestCase):
         unsynced_changes = self.blueprint.get_unsynced_changes()
         self.assertIsInstance(unsynced_changes, PaginatedList)
         self.assertIsInstance(unsynced_changes[0], ChangeRecord)
-        self.assertEqual(unsynced_changes[0].asset_id, 1)
+        self.assertEqual(unsynced_changes[0].asset_id, object_ids.QUIZ_ID)
         self.assertEqual(unsynced_changes[0].asset_type, "quiz")
         self.assertEqual(unsynced_changes[0].asset_name, "test quiz")
         self.assertEqual(unsynced_changes[0].change_type, "updated")
@@ -82,19 +82,19 @@ class TestBlueprint(unittest.TestCase):
         blueprint_migrations = self.blueprint.list_blueprint_migrations()
         self.assertIsInstance(blueprint_migrations, PaginatedList)
         self.assertIsInstance(blueprint_migrations[0], BlueprintMigration)
-        self.assertEqual(blueprint_migrations[0].id, 1)
-        self.assertEqual(blueprint_migrations[0].user_id, 1)
-        self.assertEqual(blueprint_migrations[0].template_id, 1)
+        self.assertEqual(blueprint_migrations[0].id, object_ids.BLUEPRINT_MIGRATION_ID)
+        self.assertEqual(blueprint_migrations[0].user_id, object_ids.USER_ID)
+        self.assertEqual(blueprint_migrations[0].template_id, object_ids.BLUEPRINT_TEMPLATE_ID)
 
     # show_blueprint_migration()
     def test_show_blueprint_migration(self, m):
         register_uris({"blueprint": ["show_blueprint_migration"]}, m)
-        blueprint_migration = self.blueprint.show_blueprint_migration(1)
+        blueprint_migration = self.blueprint.show_blueprint_migration(object_ids.BLUEPRINT_MIGRATION_ID)
         self.assertIsInstance(blueprint_migration, BlueprintMigration)
-        self.assertEqual(blueprint_migration.id, 1)
-        self.assertEqual(blueprint_migration.user_id, 1)
+        self.assertEqual(blueprint_migration.id, object_ids.BLUEPRINT_MIGRATION_ID)
+        self.assertEqual(blueprint_migration.user_id, object_ids.USER_ID)
         self.assertEqual(blueprint_migration.workflow_state, "completed")
-        self.assertEqual(blueprint_migration.template_id, 1)
+        self.assertEqual(blueprint_migration.template_id, object_ids.BLUEPRINT_TEMPLATE_ID)
 
 
 @requests_mock.Mocker()
@@ -114,8 +114,8 @@ class TestBlueprintSubscription(unittest.TestCase):
             register_uris(requires, m)
 
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
-            self.blueprint = self.course.get_blueprint(1)
-            self.blueprint_migration = self.blueprint.show_blueprint_migration(1)
+            self.blueprint = self.course.get_blueprint(object_ids.BLUEPRINT_TEMPLATE_ID)
+            self.blueprint_migration = self.blueprint.show_blueprint_migration(object_ids.BLUEPRINT_MIGRATION_ID)
             self.blueprint_subscription = self.course.list_blueprint_subscriptions()[0]
 
     # __str__()
@@ -130,14 +130,14 @@ class TestBlueprintSubscription(unittest.TestCase):
         blueprint_imports = self.blueprint_subscription.list_blueprint_imports()
         self.assertIsInstance(blueprint_imports, PaginatedList)
         self.assertIsInstance(blueprint_imports[0], BlueprintMigration)
-        self.assertEqual(blueprint_imports[0].id, 3)
-        self.assertEqual(blueprint_imports[0].subscription_id, 10)
+        self.assertEqual(blueprint_imports[0].id, object_ids.BLUEPRINT_MIGRATION_ID)
+        self.assertEqual(blueprint_imports[0].subscription_id, object_ids.BLUEPRINT_SUBSCRIPTION_ID)
 
         # show_blueprint_import
 
     def test_show_blueprint_import(self, m):
         register_uris({"blueprint": ["show_blueprint_import"]}, m)
-        blueprint_import = self.blueprint_subscription.show_blueprint_import(3)
+        blueprint_import = self.blueprint_subscription.show_blueprint_import(object_ids.BLUEPRINT_MIGRATION_ID)
         self.assertIsInstance(blueprint_import, BlueprintMigration)
 
 
@@ -162,13 +162,13 @@ class TestBlueprintMigration(unittest.TestCase):
             register_uris(requires, m)
 
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
-            self.blueprint = self.course.get_blueprint(1)
-            self.blueprint_migration = self.blueprint.show_blueprint_migration(1)
+            self.blueprint = self.course.get_blueprint(object_ids.BLUEPRINT_TEMPLATE_ID)
+            self.blueprint_migration = self.blueprint.show_blueprint_migration(object_ids.BLUEPRINT_MIGRATION_ID)
             self.blueprint_subscription = self.course.list_blueprint_subscriptions()[0]
             self.blueprint_imports = (
                 self.blueprint_subscription.list_blueprint_imports()[0]
             )
-            self.b_import = self.blueprint_subscription.show_blueprint_import(3)
+            self.b_import = self.blueprint_subscription.show_blueprint_import(object_ids.BLUEPRINT_MIGRATION_ID)
 
     # __str__()
     def test__str__(self, m):
@@ -181,11 +181,11 @@ class TestBlueprintMigration(unittest.TestCase):
         migration_details = self.blueprint_migration.get_details()
         self.assertIsInstance(migration_details, PaginatedList)
         self.assertIsInstance(migration_details[0], ChangeRecord)
-        self.assertEqual(migration_details[0].asset_id, 1)
+        self.assertEqual(migration_details[0].asset_id, object_ids.ASSIGNMENT_ID)
         self.assertEqual(migration_details[0].asset_type, "assignment")
         self.assertEqual(migration_details[0].asset_name, "Test Assignment")
         self.assertEqual(migration_details[0].locked, True)
-        self.assertEqual(migration_details[1].asset_id, 2)
+        self.assertEqual(migration_details[1].asset_id, object_ids.QUIZ_ID)
         self.assertEqual(migration_details[1].asset_type, "quiz")
         self.assertEqual(migration_details[1].asset_name, "Test Quiz")
         self.assertEqual(migration_details[1].locked, False)
@@ -211,7 +211,7 @@ class TestChangeRecord(unittest.TestCase):
             register_uris(requires, m)
 
             self.course = self.canvas.get_course(object_ids.COURSE_ID)
-            self.blueprint = self.course.get_blueprint(1)
+            self.blueprint = self.course.get_blueprint(object_ids.BLUEPRINT_TEMPLATE_ID)
             self.change_record = self.blueprint.get_unsynced_changes()[0]
 
     # __str__()
