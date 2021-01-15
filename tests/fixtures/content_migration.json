@@ -1,7 +1,7 @@
 {
 	"update": {
 		"method": "PUT",
-		"endpoint": "accounts/2/content_migrations/1",
+		"endpoint": "accounts/2/content_migrations/25",
 		"data": {
 			"id": 1,
 			"migration_type": "dummy_importer",
@@ -11,7 +11,7 @@
 	},
 	"update_fail": {
 		"method": "PUT",
-		"endpoint": "accounts/2/content_migrations/1",
+		"endpoint": "accounts/2/content_migrations/25",
 		"data": {},
 		"status_code": 200
 	},
@@ -53,10 +53,10 @@
 	},
 	"get_migration_issue_single": {
 		"method": "GET",
-		"endpoint": "accounts/2/content_migrations/1/migration_issues/1",
+		"endpoint": "accounts/2/content_migrations/25/migration_issues/1",
 		"data": {
 			"id": 1,
-			"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/1",
+			"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/25",
 			"description": "A Dummy Error",
 			"workflow_state": "active",
 			"issue_type": "dummy",
@@ -66,10 +66,10 @@
 	},
 	"get_migration_issue_single_course": {
 		"method": "GET",
-		"endpoint": "courses/29/content_migrations/1/migration_issues/1",
+		"endpoint": "courses/29/content_migrations/25/migration_issues/1",
 		"data": {
 			"id": 1,
-			"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/1",
+			"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/25",
 			"description": "A Dummy Error",
 			"workflow_state": "active",
 			"issue_type": "dummy",
@@ -79,10 +79,10 @@
 	},
 	"get_migration_issue_single_group": {
 		"method": "GET",
-		"endpoint": "groups/47/content_migrations/1/migration_issues/1",
+		"endpoint": "groups/47/content_migrations/25/migration_issues/1",
 		"data": {
 			"id": 1,
-			"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/1",
+			"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/25",
 			"description": "A Dummy Error",
 			"workflow_state": "active",
 			"issue_type": "dummy",
@@ -92,10 +92,10 @@
 	},
 	"get_migration_issue_single_user": {
 		"method": "GET",
-		"endpoint": "users/86/content_migrations/1/migration_issues/1",
+		"endpoint": "users/86/content_migrations/25/migration_issues/1",
 		"data": {
 			"id": 1,
-			"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/1",
+			"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/25",
 			"description": "A Dummy Error",
 			"workflow_state": "active",
 			"issue_type": "dummy",
@@ -105,18 +105,18 @@
 	},
 	"get_migration_issue_multiple": {
 		"method": "GET",
-		"endpoint": "accounts/2/content_migrations/1/migration_issues/?per_page=100",
+		"endpoint": "accounts/2/content_migrations/25/migration_issues/?per_page=100",
 		"data": [
 			{
 				"id": 1,
-				"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/1",
+				"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/25",
 				"description": "A Dummy Error",
 				"workflow_state": "active",
 				"issue_type": "dummy"
 			},
 			{
 				"id": 2,
-				"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/1",
+				"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/25",
 				"description": "Another Dummy Error",
 				"workflow_state": "active",
 				"issue_type": "dummy"
@@ -143,10 +143,10 @@
 	},
 	"update_issue": {
 		"method": "PUT",
-		"endpoint": "accounts/2/content_migrations/1/migration_issues/1",
+		"endpoint": "accounts/2/content_migrations/25/migration_issues/1",
 		"data": {
 			"id": 1,
-				"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/1",
+				"content_migration_url": "https://example.com/api/v1/courses/29/content_migrations/25",
 				"description": "A Dummy Error",
 				"workflow_state": "active",
 				"issue_type": "dummy"
@@ -155,7 +155,7 @@
 	},
 	"update_issue_fail": {
 		"method": "PUT",
-		"endpoint": "accounts/2/content_migrations/1/migration_issues/1",
+		"endpoint": "accounts/2/content_migrations/25/migration_issues/1",
 		"data": {},
 		"status_code": 200
 	}

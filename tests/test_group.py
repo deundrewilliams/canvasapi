@@ -296,7 +296,7 @@ class TestGroup(unittest.TestCase):
         self.assertTrue(hasattr(discussion, "group_id"))
         self.assertIsInstance(discussion, DiscussionTopic)
         self.assertEqual(discussion.title, title)
-        self.assertEqual(discussion.group_id, 1)
+        self.assertEqual(discussion.group_id, object_ids.GROUP_ID)
 
     # reorder_pinned_topics()
     def test_reorder_pinned_topics(self, m):

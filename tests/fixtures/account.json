@@ -460,7 +460,7 @@
 	},
 	"get_outcome_import_status":{
 		"method" : "GET",
-		"endpoint" : "accounts/2/outcome_imports/1",
+		"endpoint" : "accounts/2/outcome_imports/57",
 		"data": {
 			"id": 1,
 			"created_at": "2013-12-01T23:59:00-06:00",
@@ -1368,7 +1368,7 @@
 	},
 	"get_content_migration_single": {
 		"method": "GET",
-		"endpoint": "accounts/2/content_migrations/1",
+		"endpoint": "accounts/2/content_migrations/25",
 		"data": {
 			"id": 1,
 			"migration_type": "dummy_importer",

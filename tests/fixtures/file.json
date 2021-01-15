@@ -1,7 +1,7 @@
 {
     "delete_file": {
         "method": "DELETE",
-        "endpoint": "files/1",
+        "endpoint": "files/44",
         "data": {
             "id": 1,
             "display_name": "Bad File.docx",
@@ -12,7 +12,7 @@
     },
     "get_by_id": {
         "method": "GET",
-        "endpoint": "files/1",
+        "endpoint": "files/44",
         "data": {
             "id": 1,
             "display_name": "File.docx",

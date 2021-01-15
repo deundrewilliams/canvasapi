@@ -26,4 +26,4 @@ class TestPairingCode(unittest.TestCase):
 
         pairing_code = self.user.create_pairing_code()
         self.assertIsInstance(pairing_code, PairingCode)
-        self.assertEqual("1 - abc123", pairing_code.__str__())
+        self.assertEqual("86 - abc123", pairing_code.__str__())

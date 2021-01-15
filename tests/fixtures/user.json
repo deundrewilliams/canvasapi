@@ -92,7 +92,7 @@
 	},
 	"course_nickname_set": {
 		"method": "PUT",
-		"endpoint": "users/self/course_nicknames/1",
+		"endpoint": "users/self/course_nicknames/30",
 		"data": {
 			"course_id": 1,
 			"name": "Course Name",
@@ -587,7 +587,7 @@
 	},
 	"remove_nickname": {
 		"method": "DELETE",
-		"endpoint": "users/self/course_nicknames/1",
+		"endpoint": "users/self/course_nicknames/30",
 		"data": {
 			"course_id": 1,
 			"name": "Electrical Zoning Fundamentals",

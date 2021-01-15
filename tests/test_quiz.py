@@ -308,7 +308,7 @@ class TestQuiz(unittest.TestCase):
         self.assertTrue(hasattr(quiz_submission, "quiz_version"))
         self.assertEqual(quiz_submission.quiz_version, 1)
         self.assertTrue(hasattr(quiz_submission, "user_id"))
-        self.assertEqual(quiz_submission.user_id, 1)
+        self.assertEqual(quiz_submission.user_id, object_ids.USER_ID)
         self.assertTrue(hasattr(quiz_submission, "validation_token"))
         self.assertEqual(quiz_submission.validation_token, "this is a validation token")
         self.assertTrue(hasattr(quiz_submission, "score"))

@@ -626,7 +626,7 @@
 	},
 	"get_file": {
 		"method": "GET",
-		"endpoint": "groups/47/files/1",
+		"endpoint": "groups/47/files/44",
 		"data": {
 			"id": 1,
 			"display_name": "Group_File.docx",
@@ -867,7 +867,7 @@
 	},
 	"get_content_migration_single": {
 		"method": "GET",
-		"endpoint": "groups/47/content_migrations/1",
+		"endpoint": "groups/47/content_migrations/25",
 		"data": {
 			"id": 1,
 			"migration_type": "dummy_importer",

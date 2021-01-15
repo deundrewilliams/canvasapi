@@ -70,7 +70,7 @@
 		"method": "POST",
 		"endpoint": "courses/29/assignment_groups",
 		"data": {
-			"id": 7,
+			"id": 10,
 			"course_id": 29,
 			"name": "Assignment Group 3"
 		},
@@ -288,7 +288,7 @@
 	},
 	"override_section_alias": {
 		"method": "GET",
-		"endpoint": "sections/1/assignments/8/override",
+		"endpoint": "sections/80/assignments/8/override",
 		"data": {
 			"id": 31,
 			"assignment_id": 1,
