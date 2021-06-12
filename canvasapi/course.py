@@ -28,7 +28,7 @@ from canvasapi.rubric import Rubric, RubricAssociation
 from canvasapi.submission import GroupedSubmission, Submission
 from canvasapi.tab import Tab
 from canvasapi.todo import Todo
-from canvasapi.upload import Uploader
+from canvasapi.upload import FileOrPathLike, Uploader
 from canvasapi.usage_rights import UsageRights
 from canvasapi.util import (
     combine_kwargs,
@@ -1311,6 +1311,24 @@ class Course(CanvasObject):
             _kwargs=combine_kwargs(**kwargs),
         )
         return File(self._requester, response.json())
+
+    def get_file_quota(self, **kwargs):
+        """
+        Returns the total and used storage quota for the course.
+
+        :calls: `GET /api/v1/courses/:course_id/files/quota \
+        <https://canvas.instructure.com/doc/api/files.html#method.files.api_quota>`_
+
+        :rtype: dict
+        """
+
+        response = self._requester.request(
+            "GET",
+            "courses/{}/files/quota".format(self.id),
+            _kwargs=combine_kwargs(**kwargs),
+        )
+
+        return response.json()
 
     def get_files(self, **kwargs):
         """
@@ -2603,7 +2621,7 @@ class Course(CanvasObject):
         )
         return response.json()
 
-    def upload(self, file, **kwargs):
+    def upload(self, file: FileOrPathLike, **kwargs):
         """
         Upload a file to this course.
 
